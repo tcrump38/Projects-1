@@ -28,8 +28,8 @@ var config = {
 
                     //gets the rating from giphy data and puts it in a p tag
                     var beerName = results[i].name;
-                    var p = $("<p>").text("Name " + beerName);
-                    showBeers.append(beerName)
+                    var p = $("<ul>").html(beerName);
+                    showBeers.append(p);
 
 
 
