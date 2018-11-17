@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 400px;
+      width: 70%;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="assets/javascript/app.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq8qjNnAwkr_fPwdDQGd7CR_qYMMTWYjY&callback=initMap"></script>
+  
+  <script>
+    // Note: This example requires that you consent to location sharing when
+    // prompted by your browser. If you see the error "The Geolocation service
+    // failed.", it means you probably did not give permission for the browser to
+    // locate you.
+    var map, InfoWindow;
+
+ 
+    // Map Init
+    function initMap() {
+
+      var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h2 id="firstHeading" class="firstHeading">Blue Owl Brewing</h2>'+
+            '<div id="bodyContent">'+
+            '</div>'+
+            '</div>';
+
+      breweryInfoWindow = new google.maps.InfoWindow({content: contentString});
+      youAreHereInfoWindow = new google.maps.InfoWindow({content: contentString});
+
+      var coordn = { lat: 30.2603535, lng: -97.7145152 };
+
+      map = new google.maps.Map(document.getElementById('map'), { center: coordn, zoom: 10 });
+      addMarker(coordn, map, 'Blue Owl');
+
+      // Try HTML5 geolocation. (User location)
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          youAreHereInfoWindow.setPosition(pos);
+          youAreHereInfoWindow.setContent('You Are Here!');/////info little
+          youAreHereInfoWindow.open(map);
+          map.setCenter(pos);
+        }, function() {
+          handleLocationError(true, youAreHereInfoWindow, map.getCenter());
+        });
+      } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, youAreHereInfoWindow, map.getCenter());
+      }
+    }
+
+    // Add Marker
+    function addMarker(location, map, title) {
+      var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      var labelIndex = 0;
+      var marker = new google.maps.Marker({
+        position: location,
+        label: labels[labelIndex++ % labels.length],
+        map: map,
+        title: title
+      });
+       marker.addListener('click', function() {
+        breweryInfoWindow.open(map, marker);
+          console.log("clicked the brewery")
+        });
+    }
+
+    // Handle error loading geolocation
+    function handleLocationError(browserHasGeolocation, youAreHereInfoWindow, pos) {
+      youAreHereInfoWindow.setPosition(pos);
+      youAreHereInfoWindow.setContent(browserHasGeolocation ?
+            'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
+      youAreHereInfoWindow.open(map);
+    }
+
+  </script>
+</head>
+
+<body>
+  <h3>My Google Maps Demo</h3>
+  <!--The div element for the map -->
+  <div id="map"></div>
+  <!-- // Initialize and add the map -->
+</body>
+
+</html>
