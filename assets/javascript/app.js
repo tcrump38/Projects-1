@@ -1,3 +1,11 @@
+
+  
+  // Changes DOM with Materialize
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+    $('.collapsible').collapsible();
+    });
+
 var config = {
     apiKey: "AIzaSyCACl0dIADoUYtr0cU0l6WsUMGbcHhC3Vo",
     authDomain: "project1-388e6.firebaseapp.com",
@@ -7,4 +15,6 @@ var config = {
     messagingSenderId: "62443097997"
   };
   firebase.initializeApp(config);
+
+
 
