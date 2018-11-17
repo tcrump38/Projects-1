@@ -2,11 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Project1</title>
 </head>
 <body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Brewing</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="">Beers</a></li>
+            <li><a href="">Map</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">More</a></li>
+          </ul>
+        </div>
+      </nav>
     
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="">Beers</a></li>
+        <li><a href="">Map</a></li>
+        <li><a href="">Events</a></li>
+        <li><a href="">More</a></li>
+      </ul>
+        <div class="container">
+          <!-- Page Content goes here -->
+
+
+        <ul class="collapsible">
+        <li>
+        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Beers</div>
+        <div class="collapsible-body"><span id="Beer-info"></span></div>
+        </li>
+        <li>
+        <div class="collapsible-header"><i class="material-icons">place</i>Events</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+        <div class="collapsible-header"><i class="material-icons">whatshot</i>About</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        </ul>
 
 
 
