@@ -1,0 +1,33 @@
+{
+    "24": {
+        "name": "Last Stand Brewing Company",
+        "location": {
+            "lat": 30.23566,
+            "lng": -98.010739
+            },
+        "amountOfBeers": 15,
+        "typeofBeers":[1, 3, 5, 7, 8, 11],
+        "hours":[
+            "Saturday: 2:00 PM - 8:00 PM"
+        ],
+        "placeId": "ChIJ31D7EcTNWBQR8o8bUPOClnw",
+        "breweryId": "lDiXyX"
+    },
+
+    "25": {
+        "name": "Strange Land Brewery",
+        "location": {
+            "lat": 30.2962549,
+            "lng": 97.82682
+            },
+        "amountOfBeers": 4,
+        "typeofBeers":[3, 4, 7],
+        "hours":[
+            "Friday: 5:00 PM - 9:00 PM",
+            "Saturday: 5:00 PM - 9:00 PM"
+        ],
+        "placeId": "ChIJPVM6pH81W4YRz3mnLaZ2Q8E",
+        "breweryId": "ERkLkd"
+    }
+}
+  
