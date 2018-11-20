@@ -1,0 +1,225 @@
+{
+    "12": {
+        "name": "Adelbert's Brewery",
+        "location": {
+            "lat": 30.382611,
+            "lng": -97.72003
+        },
+        "amountOfBeers": 24,
+        "typesOfBeer": [3, 5, 11],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 5:00 – 10:00 PM",
+            "Thursday: 5:00 – 10:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 1:00 – 10:00 PM",
+            "Sunday: 12:00 – 7:00 PM"
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "7Tjp4C"
+    },
+
+    "13": {
+        //NOT IN AUSTIN
+    },
+    "14": {
+        "name": "Kamala Brewing at the Whip In",
+        "location": {
+            "lat": 30.237973,
+            "lng": -97.7394546
+        },
+        "amountOfBeers": 12,
+        "typesOfBeer": [],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 5:00 – 10:00 PM",
+            "Thursday: 5:00 – 10:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 1:00 – 10:00 PM",
+            "Sunday: 12:00 – 7:00 PM"
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "7Tjp4C"
+    },
+    "15": {
+        "name": "Adelberts",
+        "location": {
+            "lat": 30.382611,
+            "lng": -97.72003
+        },
+        "amountOfBeers": ,
+        "typesOfBeer": [],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 5:00 – 10:00 PM",
+            "Thursday: 5:00 – 10:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 1:00 – 10:00 PM",
+            "Sunday: 12:00 – 7:00 PM"
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "7Tjp4C"
+    },
+    "16": {
+        "name": "Adelberts",
+        "location": {
+            "lat": 30.382611,
+            "lng": -97.72003
+        },
+        "amountOfBeers": ,
+        "typesOfBeer": [],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 5:00 – 10:00 PM",
+            "Thursday: 5:00 – 10:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 1:00 – 10:00 PM",
+            "Sunday: 12:00 – 7:00 PM"
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "7Tjp4C"
+    },
+    "17": {
+        "name": "Adelberts",
+        "location": {
+            "lat": 30.382611,
+            "lng": -97.72003
+        },
+        "amountOfBeers": ,
+        "typesOfBeer": [],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 5:00 – 10:00 PM",
+            "Thursday: 5:00 – 10:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 1:00 – 10:00 PM",
+            "Sunday: 12:00 – 7:00 PM"
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "7Tjp4C"
+    },
+    "18": {
+        "name": "Adelberts",
+        "location": {
+            "lat": 30.382611,
+            "lng": -97.72003
+        },
+        "amountOfBeers": ,
+        "typesOfBeer": [],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 5:00 – 10:00 PM",
+            "Thursday: 5:00 – 10:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 1:00 – 10:00 PM",
+            "Sunday: 12:00 – 7:00 PM"
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "7Tjp4C"
+    },
+    "19": {
+        "name": "Adelberts",
+        "location": {
+            "lat": 30.382611,
+            "lng": -97.72003
+        },
+        "amountOfBeers": ,
+        "typesOfBeer": [],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 5:00 – 10:00 PM",
+            "Thursday: 5:00 – 10:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 1:00 – 10:00 PM",
+            "Sunday: 12:00 – 7:00 PM"
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "7Tjp4C"
+    },
+    "20": {
+        "name": "Adelberts",
+        "location": {
+            "lat": 30.382611,
+            "lng": -97.72003
+        },
+        "amountOfBeers": ,
+        "typesOfBeer": [],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 5:00 – 10:00 PM",
+            "Thursday: 5:00 – 10:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 1:00 – 10:00 PM",
+            "Sunday: 12:00 – 7:00 PM"
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "7Tjp4C"
+    },
+    "21": {
+        "name": "Adelberts",
+        "location": {
+            "lat": 30.382611,
+            "lng": -97.72003
+        },
+        "amountOfBeers": ,
+        "typesOfBeer": [],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 5:00 – 10:00 PM",
+            "Thursday: 5:00 – 10:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 1:00 – 10:00 PM",
+            "Sunday: 12:00 – 7:00 PM"
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "7Tjp4C"
+    },
+    "22": {
+        "name": "Adelberts",
+        "location": {
+            "lat": 30.382611,
+            "lng": -97.72003
+        },
+        "amountOfBeers": ,
+        "typesOfBeer": [],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 5:00 – 10:00 PM",
+            "Thursday: 5:00 – 10:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 1:00 – 10:00 PM",
+            "Sunday: 12:00 – 7:00 PM"
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "7Tjp4C"
+    },
+    "23": {
+        "name": "Adelberts",
+        "location": {
+            "lat": 30.382611,
+            "lng": -97.72003
+        },
+        "amountOfBeers": ,
+        "typesOfBeer": [],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 5:00 – 10:00 PM",
+            "Thursday: 5:00 – 10:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 1:00 – 10:00 PM",
+            "Sunday: 12:00 – 7:00 PM"
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "7Tjp4C"
+    },
