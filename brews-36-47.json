@@ -1,10 +1,48 @@
 {
     "36": {
-        "name": "Celis",
-        "count": "56"
+        "name": "NXNW Restaurant & Brewery Stonelake",
+        "location": {
+            "lat": 30.39111089999999,
+            "lng": -97.7383919
+            },
+        "amountOfBeers": 15,
+        "typesOfBeer": [2,3,4,5,7,8,11],
+        "hours": [
+            "Monday: 11:00 AM – 11:00 PM",
+            "Tuesday: 11:00 AM – 11:00 PM",
+            "Wednesday: 11:00 AM – 11:00 PM",
+            "Thursday: 11:00 AM – 11:00 PM",
+            "Friday: 11:00 AM – 12:00 AM",
+            "Saturday: 10:00 AM – 12:00 AM",
+            "Sunday: 10:00 AM – 11:00 PM"
+            ],
+        "placeID" : "ChIJ-R1FeX_MRIYRemSoFgDSYlc",
+        "breweryID" : "zVwJPQ"
+
     },
+
     "37": {
-        "name": "Hola",
-        "count": "2"
+        "name": "Guns & Oil Brewing Co."
+    },
+
+    "38": {
+        "name": "",
+        "location": {
+            "lat": 30.3850138,
+            "lng": -97.7122327
+        },
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: Closed",
+            "Thursday: 4:00 – 9:00 PM",
+            "Friday: 3:00 – 11:00 PM",
+            "Saturday: 2:00 – 11:00 PM",
+            "Sunday: 1:00 – 7:00 PM"
+            ],
+        "placeID": "ChIJnfUVGfHLRIYRpbGNqg8-9js",
+        "breweryID": "2YNf0W",
+        "amountOfBeers": "Cider",
+        "typesOfBeer": []
     }
 }
