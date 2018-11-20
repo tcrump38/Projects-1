@@ -1,0 +1,42 @@
+{
+    "0": {
+        "name": "Argus Cidery",
+        "location": {
+            "lat": 30.23650419999999,
+            "lng": -98.0104243
+            },
+        "amountOfBeers": 2,
+        "typesOfBeer": [12],
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: Closed",
+            "Thursday: Closed",
+            "Friday: Closed",
+            "Saturday: 12:00 – 7:00 PM",
+            "Sunday: 12:00 – 6:00 PM"
+            ],
+        "placeID" : "ChIJ-R1FeX_MRIYRemSoFgDSYlc",
+        "breweryID" : "7OxFDi"
+    },
+    "1": {
+        "name": "Twin Peaks",
+        "location": {
+            "lat": 30.1989063,
+            "lng": -97.7662544
+            },
+        "amountOfBeers": 5,
+        "typesOfBeer": [12],
+        "hours": [
+            "Monday: 10:30 AM – 12:00 AM",
+            "Tuesday: 11:00 AM – 12:00 AM",
+            "Wednesday: 11:00 AM – 12:00 AM",
+            "Thursday: 11:00 AM – 12:00 AM",
+            "Friday: 10:30 AM – 2:00 AM",
+            "Saturday: 11:00 AM – 2:00 AM",
+            "Sunday: 11:00 AM – 12:00 AM"
+            ],
+        "placeID" : "ChIJWRLOz12zRIYR9W91cTeM36I",
+        "breweryID" : "QOgVc9"
+    }
+}
