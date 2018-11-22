@@ -78,57 +78,7 @@
             7
         ]
     },
-    "3": {
-        "name": "Celis Brewery",
-        "breweryID": "1FHyB2",
-        "placeID": "ChIJF5K82rvJRIYR5Hm2udd-Wjc",
-        "location": {
-            "lat": 30.3797278,
-            "lng": -97.7159854
-        },
-        "hours": [
-            "Monday: 5:00 – 10:00 PM",
-            "Tuesday: 3:00 – 10:00 PM",
-            "Wednesday: 3:00 – 10:00 PM",
-            "Thursday: 3:00 – 10:00 PM",
-            "Friday: 12:00 – 10:00 PM",
-            "Saturday: 12:00 – 10:00 PM",
-            "Sunday: 12:00 – 10:00 PM"
-        ],
-        "amountOfBeers": 7,
-        "typesOfBeer": [
-            5,
-            3,
-            11
-        ]
-    },
-    "4": {
-        "name": "Uncle Billy's Brewery",
-        "breweryID": "H6Lwrl",
-        "placeID": "ChIJD7SfNxi1RIYRw7BjtC9NvNY",
-        "location": {
-            "lat": 30.262114,
-            "lng": -97.761237
-        },
-        "hours": [
-            "Monday: 8:00 AM – 12:00 AM",
-            "Tuesday: 8:00 AM – 12:00 AM",
-            "Wednesday: 8:00 AM – 12:00 AM",
-            "Thursday: 8:00 AM – 12:00 AM",
-            "Friday: 8:00 AM – 1:00 AM",
-            "Saturday: 8:00 AM – 1:00 AM",
-            "Sunday: 8:00 AM – 12:00 AM"
-        ],
-        "amountOfBeers": 15,
-        "typesOfBeer": [
-            3,
-            1,
-            8,
-            11,
-            7,
-            2
-        ]
-    },
+    
     "5": {
         "name": "Lakes Austin Ales",
         "breweryID": "58gT1s",
@@ -521,13 +471,6 @@
         "amountOfBeers": 4,
         "typesOfBeer": [3, 4, 7],
         "hours": [
-            "Monday: CLOSED",
-            "Tuesday: 4:00 – 10:00 PM",
-            "Wednesday: 4:00 – 10:00 PM",
-            "Thursday: 4:00 PM – 10:00 AM",
-            "Friday: 12:00 PM – 12:00 AM",
-            "Saturday: 12:00 PM – 12:00 AM",
-            "Sunday: 12:00 – 8:00 PM"
 
         ],
         "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
@@ -1190,29 +1133,5 @@
         ],
         "placeId": "ChIJayB1n5tIW4YR7q_YExbO_QY",
         "breweryId": "Szwt8v"
-    },
-    "54": {
-        "name": "Friends & Allies Brewing",
-        "location": {
-            "lat": 30.2634656,
-            "lng": -97.6959036
-        },
-        "amountOfBeers": 11,
-        "typesOfBeer": [
-            3,
-            5,
-            11
-        ],
-        "hours": [
-            "Monday: 4:00 PM - 10:00 PM",
-            "Tuesday: 4:00 PM - 10:00 PM",
-            "Wednesday: 3:00 PM - 10:00 PM",
-            "Thursday: 3:00 PM - 10:00 PM",
-            "Friday: 2:00 PM - 12:00 AM",
-            "Saturday: 12:00 PM - 12:00 AM",
-            "Sunday: 12:00 PM - 8:00 PM"
-        ],
-        "placeId": "ChIJMduD23i2RIYRKvQE7KJ_Lqo",
-        "breweryId": "LghDtt"
     }
 }
