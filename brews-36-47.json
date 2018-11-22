@@ -20,11 +20,9 @@
         "breweryID" : "zVwJPQ"
 
     },
-
     "37": {
         "name": "Guns & Oil Brewing Co."
     },
-
     "38": {
         "name": "fairweather cider co",
         "location": {
@@ -44,5 +42,163 @@
         "breweryID": "2YNf0W",
         "amountOfBeers": "Cider",
         "typesOfBeer": []
-    }
+    },
+    "39": {
+        "name": "Jester King Brewery",
+        "location": {
+            "lat": 30.2306807,
+            "lng": -97.99924689999999
+            },
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: Closed",
+            "Thursday: Closed",
+            "Friday: 4:00 – 10:00 PM",
+            "Saturday: 12:00 – 10:00 PM",
+            "Sunday: 12:00 – 9:00 PM"
+            ],
+        "placeID": "ChIJkexlLlRGW4YRCXbXqNo7G_8",
+        "breweryID": "7kCNmJ",
+        "amountOfBeer": 66,
+        "typesOfBeer": [1,3,4,5,11]
+    },
+    "40": {
+        "name": "Circle Brewing Company",
+        "location": {
+            "lat": 30.3911269,
+            "lng": -97.71537359999999
+            },
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: Closed",
+            "Thursday: 5:00 – 9:00 PM",
+            "Friday: 5:00 – 10:00 PM",
+            "Saturday: 12:00 – 10:00 PM",
+            "Sunday: 12:00 – 6:00 PM"
+            ],
+        "placeID": "ChIJFVvN7fXLRIYRWKp0pMq_dPY",
+        "breweryID": "wnlFAt",
+        "amountOfBeer": 18,
+        "typesOfBeer": [1,2,3,4,5,7,11]
+    },
+    "41": {
+        "name": "LoveJoy's Taproom & Brewery",
+        "location" : {},
+        "hours": "CLOSED",
+        "placeID": "",
+        "breweryID": "PTCJja",
+        "amountOfBeer": ,
+        "typesOfBeer": []
+    },
+    "42": {
+        "name": "Austin Eastciders Collaboratory",
+        "location": {
+            "lat": 30.2627334,
+            "lng": -97.69617129999999
+        },
+        "hours": [
+            "Monday: 3:00 – 10:00 PM",
+            "Tuesday: 3:00 – 10:00 PM",
+            "Wednesday: 3:00 – 10:00 PM",
+            "Thursday: 3:00 – 10:00 PM",
+            "Friday: 3:00 – 10:00 PM",
+            "Saturday: 12:00 – 10:00 PM",
+            "Sunday: 12:00 – 6:00 PM"
+            ],
+        "placeID": "ChIJlSmQ5Hi2RIYR3EDKqAwv_8s",
+        "breweryID": "AX8kAi",
+        "amountOfBeer": 13,
+        "typesOfBeer": [12]
+    },
+    "43": {
+        "name": "Destination Brewing Company",
+        "location" : {},
+        "hours": "CLOSED",
+        "placeID": "",
+        "breweryID": "I6bQuC",
+        "amountOfBeer": ,
+        "typesOfBeer": []
+    },
+    "44": {
+        "name": "St Elmo Brewing Company",
+        "location": {
+            "lat": 30.2174931,
+            "lng": -97.7612044
+            },
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: 12:00 – 11:00 PM",
+            "Wednesday: 12:00 – 11:00 PM",
+            "Thursday: 12:00 – 11:00 PM",
+            "Friday: 12:00 PM – 12:00 AM",
+            "Saturday: 11:00 AM – 12:00 AM",
+            "Sunday: 12:00 – 10:00 PM"
+            ],
+        "placeID": "ChIJjyP9KZi0RIYRSFzNczBDLXM",
+        "breweryID": "hZ5iM1",
+        "amountOfBeer": 4,
+        "typesOfBeer": [1,2,3]
+    },
+    "45": {
+        "name": "Hi Sign Brewing",
+        "location": {
+            "lat": 30.226702,
+            "lng": -97.6801655
+        },
+        "hours": [
+            "Monday: Closed",
+            "Tuesday: Closed",
+            "Wednesday: 2:00 – 10:00 PM",
+            "Thursday: 2:00 – 10:00 PM",
+            "Friday: 12:00 – 10:00 PM",
+            "Saturday: 12:00 – 10:00 PM",
+            "Sunday: 12:00 – 8:00 PM"
+            ],
+        "placeID": "ChIJb7FfI7m2RIYRqg0AmEZlAc8",
+        "breweryID": "D8dNEX",
+        "amountOfBeer": 4,
+        "typesOfBeer": [3]
+    },
+    "46": {
+        "name": "Austin Beerworks",
+        "location": {
+            "lat": 30.379575,
+            "lng": -97.72984799999999
+            },
+        "hours": [
+            "Monday: 11:00 AM – 10:00 PM",
+            "Tuesday: 11:00 AM – 10:00 PM",
+            "Wednesday: 11:00 AM – 10:00 PM",
+            "Thursday: 11:00 AM – 10:00 PM",
+            "Friday: 11:00 AM – 10:00 PM",
+            "Saturday: 12:00 – 8:00 PM",
+            "Sunday: 1:00 – 7:00 PM"
+            ],
+        "placeID": "ChIJnVSeApDLRIYR2xlVAQPxhlQ",
+        "breweryID": "LIbwCG",
+        "amountOfBeer": 21,
+        "typesOfBeer": [1,3,4,5,7,11]
+    },
+    "47": {
+        "name": ["Resignation Brewery", "theCHIVE HQ"],
+        "location": {
+            "lat": 30.261979,
+            "lng": -97.743229
+            },
+        "hours": [
+            "Monday: 9:00 AM – 5:30 PM",
+            "Tuesday: 9:00 AM – 5:30 PM",
+            "Wednesday: 9:00 AM – 5:30 PM",
+            "Thursday: 9:00 AM – 5:30 PM",
+            "Friday: 9:00 AM – 5:30 PM",
+            "Saturday: Closed",
+            "Sunday: Closed"
+            ],
+        "placeID": "ChIJV-JNlge1RIYRw9MnHCKknbQ",
+        "breweryID": "CBxMJV",
+        "amountOfBeer": 3,
+        "typesOfBeer": [3,4,8]
+    },
 }
