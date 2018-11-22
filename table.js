@@ -24,11 +24,11 @@ $(document).ready(function () {
     for (var i = 0; i < results.length; i++) {
       var showBeers = $("<tr>")
       var beerName = $("<td>").text(results[i].name)
-      var beerLoc = $("<td>").text(results[i].location)
+    //   var beerLoc = $("<td>").text(results[i].location)
       var beerHours = $("<td>").text(results[i].hours)
       var beerCount = $("<td>").text(results[i].amountOfBeers)
       var beerTypes = $("<td>").text(results[i].typesOfBeer)
-      showBeers.append(beerName).append(beerLoc).append(beerHours).append(beerCount).append(beerTypes)
+      showBeers.append(beerName).append(beerHours).append(beerCount).append(beerTypes)
       $("#table-body").append(showBeers)
   }
     // Log everything that's coming out of snapshot

@@ -504,7 +504,9 @@
         },
         "amountOfBeers": 0,
         "typesOfBeer": [],
-        "hours": [],
+        "hours": [
+
+        ],
         "placeId": "ChIJb-p6Gi00W4YRElwv5rUKtVY",
         "breweryId": "cfAuYT"
     },
@@ -514,49 +516,39 @@
             "lat": 30.254434,
             "lng": -97.7661188
         },
-        "22": {
-            "name": "Frontyard Brewing",
-            "location": {
-                "lat": 30.33938109999999,
-                "lng": -97.86335419999999
-            },
-            "amountOfBeers": 0,
-            "typesOfBeer": [],
-            "hours": ["not currently open"],
-            "placeId": "ChIJb-p6Gi00W4YRElwv5rUKtVY",
-            "breweryId": "cfAuYT"
-        },
-        "23": {
-            "name": "Zilker Brewing Co.",
-            "location": {
-                "lat": 30.254434,
-                "lng": -97.7661188
-            },
-            "amountOfBeers": 4,
-            "typesOfBeer": [
-                3,
-                4,
-                7
-            ],
-            "hours": [
-                "Monday: Closed",
-                "Tuesday: 4:00 PM - 10:00 PM",
-                "Wednesday: 4:00 PM - 10:00 PM",
-                "Thursday: 4:00 PM - 10:00 PM",
-                "Friday: 12:00 PM – 12:00 AM",
-                "Saturday: 12:00 – 12:00 AM",
-                "Sunday: 12:00 PM - 8:00 PM"
-            ],
-            "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
-            "breweryId": "njy67m"
-        },
         "amountOfBeers": 4,
-        "typeofBeers": [
-            3,
-            4,
-            7
-        ],
+        "typesOfBeer": [3, 4, 7],
         "hours": [
+
+        ],
+        "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
+        "breweryId": "njy67m"
+    },
+
+    "24": {
+        "name": "Last Stand Brewing Company",
+        "location": {
+            "lat": 30.23566,
+            "lng": -98.010739
+            },
+        "amountOfBeers": 15,
+        "typeofBeers":[1, 3, 5, 7, 8, 11],
+        "hours":[
+            "Saturday: 2:00 PM - 8:00 PM"
+        ],
+        "placeId": "ChIJ31D7EcTNWBQR8o8bUPOClnw",
+        "breweryId": "lDiXyX"
+    },
+
+    "25": {
+        "name": "Strange Land Brewery",
+        "location": {
+            "lat": 30.2962549,
+            "lng": 97.82682
+            },
+        "amountOfBeers": 4,
+        "typeofBeers":[3, 4, 7],
+        "hours":[
             "Friday: 5:00 PM - 9:00 PM",
             "Saturday: 5:00 PM - 9:00 PM"
         ],
