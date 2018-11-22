@@ -505,7 +505,7 @@
             },
             "amountOfBeers": 0,
             "typesOfBeer": [],
-            "hours": [],
+            "hours": ["not currently open"],
             "placeId": "ChIJb-p6Gi00W4YRElwv5rUKtVY",
             "breweryId": "cfAuYT"
         },
@@ -521,7 +521,15 @@
                 4,
                 7
             ],
-            "hours": [],
+            "hours": [
+                "Monday: Closed",
+                "Tuesday: 4:00 PM - 10:00 PM",
+                "Wednesday: 4:00 PM - 10:00 PM",
+                "Thursday: 4:00 PM - 10:00 PM",
+                "Friday: 12:00 PM – 12:00 AM",
+                "Saturday: 12:00 – 12:00 AM",
+                "Sunday: 12:00 PM - 8:00 PM"
+            ],
             "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
             "breweryId": "njy67m"
         },
