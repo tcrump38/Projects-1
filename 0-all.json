@@ -519,6 +519,13 @@
         "amountOfBeers": 4,
         "typesOfBeer": [3, 4, 7],
         "hours": [
+            "Monday: CLOSED",
+            "Tuesday: 4:00 – 10:00 PM",
+            "Wednesday: 4:00 – 10:00 PM",
+            "Thursday: 4:00 PM – 10:00 AM",
+            "Friday: 12:00 PM – 12:00 AM",
+            "Saturday: 12:00 PM – 12:00 AM",
+            "Sunday: 12:00 – 8:00 PM"
 
         ],
         "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
