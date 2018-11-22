@@ -63,7 +63,9 @@
             "Saturday: 11:00 AM – 1:00 AM",
             "Sunday: 11:00 AM – 12:00 AM"
         ],
-        "amountOfBeer": 27,
+        "amountOfBeers": 2,
+
+        "amountOfBeers": 27,
         "typesOfBeer": [
             5,
             4,
@@ -93,7 +95,7 @@
             "Saturday: 12:00 – 10:00 PM",
             "Sunday: 12:00 – 10:00 PM"
         ],
-        "amountOfBeer": 7,
+        "amountOfBeers": 7,
         "typesOfBeer": [
             5,
             3,
@@ -117,7 +119,7 @@
             "Saturday: 8:00 AM – 1:00 AM",
             "Sunday: 8:00 AM – 12:00 AM"
         ],
-        "amountOfBeer": 15,
+        "amountOfBeers": 15,
         "typesOfBeer": [
             3,
             1,
@@ -139,7 +141,7 @@
             "lng": -97.7159575
         },
         "hours": [],
-        "amountOfBeer": 1,
+        "amountOfBeers": 1,
         "typesOfBeer": [
             3
         ]
@@ -152,7 +154,7 @@
         "hours": [
             "POSSIBLY CLOSED"
         ],
-        "amountOfBeer": "null",
+        "amountOfBeers": "null",
         "typesOfBeer": []
     },
     "7": {
@@ -172,7 +174,7 @@
             "Saturday: 1:00 – 11:00 PM",
             "Sunday: 1:00 – 10:00 PM"
         ],
-        "amountOfBeer": "null",
+        "amountOfBeers": "null",
         "typesOfBeer": []
     },
     "8": {
@@ -192,7 +194,7 @@
             "Saturday: 12:00 – 4:00 PM",
             "Sunday: Closed"
         ],
-        "amountOfBeer": 26,
+        "amountOfBeers": 26,
         "typesOfBeer": [
             4,
             11,
@@ -219,7 +221,7 @@
             "Saturday: 12:00 – 10:00 PM",
             "Sunday: 12:00 – 8:00 PM"
         ],
-        "amountOfBeer": 9,
+        "amountOfBeers": 9,
         "typesOfBeer": [
             7,
             5,
@@ -246,7 +248,7 @@
             "Saturday: 12:00 – 11:00 PM",
             "Sunday: 12:00 – 8:00 PM"
         ],
-        "amountOfBeer": "null",
+        "amountOfBeers": "null",
         "typesOfBeer": []
     },
     "11": {
@@ -266,7 +268,7 @@
             "Saturday: 2:00 PM – 12:00 AM",
             "Sunday: 12:00 AM – 12:00 PM, 2:00 – 9:00 PM"
         ],
-        "amountOfBeer": "null",
+        "amountOfBeers": "null",
         "typesOfBeer": []
     },
     "12": {
@@ -532,7 +534,7 @@
             "lng": -98.010739
             },
         "amountOfBeers": 15,
-        "typeofBeers":[1, 3, 5, 7, 8, 11],
+        "typesOfBeer":[1, 3, 5, 7, 8, 11],
         "hours":[
             "Saturday: 2:00 PM - 8:00 PM"
         ],
@@ -547,7 +549,7 @@
             "lng": 97.82682
             },
         "amountOfBeers": 4,
-        "typeofBeers":[3, 4, 7],
+        "typesOfBeer":[3, 4, 7],
         "hours":[
             "Friday: 5:00 PM - 9:00 PM",
             "Saturday: 5:00 PM - 9:00 PM"
@@ -565,7 +567,7 @@
             "lng": -97.712765
         },
         "amountOfBeers": 23,
-        "typeofBeers": [
+        "typesOfBeer": [
             1,
             2,
             3,
@@ -595,7 +597,7 @@
             "lng": 0
         },
         "amountOfBeers": 0,
-        "typeofBeers": [],
+        "typesOfBeer": [],
         "hours": [
             ""
         ],
@@ -609,7 +611,7 @@
             "lng": -97.6694435
         },
         "amountOfBeers": 0,
-        "typeofBeers": [],
+        "typesOfBeer": [],
         "hours": [
             ""
         ],
@@ -626,7 +628,7 @@
             12,
             "No info in BreweryDB or brewery website. Got from UNTAPPD"
         ],
-        "typeofBeers": [
+        "typesOfBeer": [
             1,
             3,
             7
@@ -648,7 +650,7 @@
             "lng": -97.7358341
         },
         "amountOfBeers": 26,
-        "typeofBeers": [
+        "typesOfBeer": [
             1,
             3,
             4,
@@ -677,7 +679,7 @@
             74,
             "From their website. Only beers on tap, not brewed."
         ],
-        "typeofBeers": [
+        "typesOfBeer": [
             1,
             3,
             5,
@@ -705,7 +707,7 @@
             "lng": -97.6689378
         },
         "amountOfBeers": 7,
-        "typeofBeers": [
+        "typesOfBeer": [
             3,
             5,
             11
@@ -729,7 +731,7 @@
             "lng": 0
         },
         "amountOfBeers": 0,
-        "typeofBeers": [],
+        "typesOfBeer": [],
         "hours": [
             ""
         ],
@@ -746,7 +748,7 @@
             12,
             "From website."
         ],
-        "typeofBeers": [
+        "typesOfBeer": [
             3,
             5,
             7
@@ -771,7 +773,7 @@
             "lng": -97.9522058
         },
         "amountOfBeers": 7,
-        "typeofBeers": [
+        "typesOfBeer": [
             3,
             7,
             11
@@ -850,7 +852,7 @@
         ],
         "placeID": "ChIJkexlLlRGW4YRCXbXqNo7G_8",
         "breweryID": "7kCNmJ",
-        "amountOfBeer": 66,
+        "amountOfBeers": 66,
         "typesOfBeer": [
             1,
             3,
@@ -876,7 +878,7 @@
         ],
         "placeID": "ChIJFVvN7fXLRIYRWKp0pMq_dPY",
         "breweryID": "wnlFAt",
-        "amountOfBeer": 18,
+        "amountOfBeers": 18,
         "typesOfBeer": [
             1,
             2,
@@ -893,7 +895,7 @@
         "hours": "CLOSED",
         "placeID": "",
         "breweryID": "PTCJja",
-        "amountOfBeer": 0,
+        "amountOfBeers": 0,
         "typesOfBeer": []
     },
     "42": {
@@ -913,7 +915,7 @@
         ],
         "placeID": "ChIJlSmQ5Hi2RIYR3EDKqAwv_8s",
         "breweryID": "AX8kAi",
-        "amountOfBeer": 13,
+        "amountOfBeers": 13,
         "typesOfBeer": [
             12
         ]
@@ -924,7 +926,7 @@
         "hours": "CLOSED",
         "placeID": "",
         "breweryID": "I6bQuC",
-        "amountOfBeer": 0,
+        "amountOfBeers": 0,
         "typesOfBeer": []
     },
     "44": {
@@ -944,7 +946,7 @@
         ],
         "placeID": "ChIJjyP9KZi0RIYRSFzNczBDLXM",
         "breweryID": "hZ5iM1",
-        "amountOfBeer": 4,
+        "amountOfBeers": 4,
         "typesOfBeer": [
             1,
             2,
@@ -968,7 +970,7 @@
         ],
         "placeID": "ChIJb7FfI7m2RIYRqg0AmEZlAc8",
         "breweryID": "D8dNEX",
-        "amountOfBeer": 4,
+        "amountOfBeers": 4,
         "typesOfBeer": [
             3
         ]
@@ -990,7 +992,7 @@
         ],
         "placeID": "ChIJnVSeApDLRIYR2xlVAQPxhlQ",
         "breweryID": "LIbwCG",
-        "amountOfBeer": 21,
+        "amountOfBeers": 21,
         "typesOfBeer": [
             1,
             3,
@@ -1020,7 +1022,7 @@
         ],
         "placeID": "ChIJV-JNlge1RIYRw9MnHCKknbQ",
         "breweryID": "CBxMJV",
-        "amountOfBeer": 3,
+        "amountOfBeers": 3,
         "typesOfBeer": [
             3,
             4,
@@ -1034,7 +1036,7 @@
             "lng": -97.671725
         },
         "amountOfBeers": 10,
-        "typeofBeers": [
+        "typesOfBeer": [
             12
         ],
         "hours": [
@@ -1051,7 +1053,7 @@
             "lng": -97.8739516
         },
         "amountOfBeers": 17,
-        "typeofBeers": [
+        "typesOfBeer": [
             1,
             3,
             4,
@@ -1081,7 +1083,7 @@
             2,
             "(2 in taproom, 12 current beers) This is Austin branch of Osker Blues, info from website"
         ],
-        "typeofBeers": [
+        "typesOfBeer": [
             3
         ],
         "hours": [
@@ -1109,7 +1111,7 @@
             "lng": -97.7392307
         },
         "amountOfBeers": 16,
-        "typeofBeers": [
+        "typesOfBeer": [
             1,
             2,
             3,
@@ -1141,7 +1143,7 @@
             "lng": -97.7958819
         },
         "amountOfBeers": 16,
-        "typeofBeers": [
+        "typesOfBeer": [
             1,
             2,
             3,
@@ -1170,7 +1172,7 @@
             "lng": 0
         },
         "amountOfBeers": 6,
-        "typeofBeers": [
+        "typesOfBeer": [
             3,
             4,
             5,
@@ -1189,7 +1191,7 @@
             "lng": -97.6959036
         },
         "amountOfBeers": 11,
-        "typeofBeers": [
+        "typesOfBeer": [
             3,
             5,
             11
