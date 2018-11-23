@@ -227,7 +227,7 @@
         "typesOfBeer": [],
         "abv":[4.9, 5, 4.7, 5.2, 6.6],
         "ibu": [16, 15, 9, 31, 50],
-        "IBU/ABV": "no beer information on breweryDP, the abv and ibu came directly from their website (contant beers only and no styleIds)"
+        "IBU-ABV": "no beer information on breweryDP, the abv and ibu came directly from their website (contant beers only and no styleIds)"
     },
     "11": {
         "name": "Oddwood Ales",
@@ -249,7 +249,7 @@
         "amountOfBeers": "null",
         "typesOfBeer": [],
         "abv": [4.2, 5.7, 6.6, 4.8, 6.2, 5.6],
-        "IBU/ABV": "no beer information on breweryDP, the abv and ibu came directly from their website (contant beers only and no styleIds)"
+        "IBU-ABV": "no beer information on breweryDP, the abv and ibu came directly from their website (contant beers only and no styleIds)"
     },
     "12": {
         "name": "Adelbert's Brewery",
