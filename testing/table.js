@@ -35,10 +35,54 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             // $("#brewery-table-body").append(showBeers)
 
             //second version
-            var collHeader = $("<div>").addClass("collapsible-header").attr('id', results[i].breweryID).text(results[i].name).attr('href', 'table2.html')
-            var colHeaderIcon = $("<i>").addClass("material-icons").html('place')
-            collHeader.prepend(colHeaderIcon)
-            var collBody = $("<div>").addClass("collapsible-body").text(results[i].hours)
+            var beerLink = $("<a>").attr('id', results[i].breweryID).text(results[i].name).attr('href', 'table2.html')
+            beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
+            var collHeader = $("<div>").addClass("collapsible-header")
+            var collHeaderIcon = $("<i>").addClass("material-icons").html('place')
+            collHeader.prepend(collHeaderIcon).append(beerLink)
+
+
+
+            var collBody = $("<div>").addClass("collapsible-body")
+
+
+
+
+
+
+            // get hours in collapsible
+
+            if (results[i].hours.length > 1) {
+
+
+                var collHours = $("<ul>").addClass("collapsible")
+                var collHoursHeader = $("<div>").addClass("collapsible-header").html("HOURS")
+
+                var collHoursBody = $("<div>").addClass("collapsible-body")
+                var hoursList = $("<ul>").addClass("collection")
+                for (j = 0; j < results[i].hours.length; j++) {
+                    var collDay = $("<li>").addClass("collection-item").text(results[i].hours[j])
+                    hoursList.append(collDay)
+                }
+                collHoursBody.append(hoursList)
+
+                var hoursListItem = $("<li>").append(collHoursHeader).append(collHoursBody)
+
+                collHours.append(hoursListItem)
+
+            }
+            else {
+
+                var collHours = $("<div>").text("Hours: " + results[i].hours)
+
+            }
+
+            collHours.collapsible();
+
+            collBody.append(collHours)
+
+
+
             var listItem = $("<li>").append(collHeader).append(collBody)
 
             $("#breweries-coll").append(listItem)
@@ -51,6 +95,6 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
     console.log("Errors handled: " + errorObject.code);
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('.collapsible').collapsible();
 });
