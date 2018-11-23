@@ -23,19 +23,34 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             console.log('skipped')
         }
         else {
-            var beerLink = $("<a>").attr('id', results[i].breweryID).text(results[i].name).attr('href', 'table2.html')
-            var beerName = $("<td>").append(beerLink)
-            beerLink.on("click", function (event) {
-                localStorage.setItem("brewery",event.target.id)
-            })
-            var beerHours = $("<td>").text(results[i].hours)
-            var beerCount = $("<td>").text(results[i].amountOfBeers)
-            var beerTypes = $("<td>").text(results[i].typesOfBeer)
-            showBeers.append(beerName).append(beerHours).append(beerCount).append(beerTypes)
-            $("#brewery-table-body").append(showBeers)
+            // var beerLink = $("<a>").attr('id', results[i].breweryID).text(results[i].name).attr('href', 'table2.html')
+            // var beerName = $("<td>").append(beerLink)
+            // beerLink.on("click", function (event) {
+            //     localStorage.setItem("brewery",event.target.id)
+            // })
+            // var beerHours = $("<td>").text(results[i].hours)
+            // var beerCount = $("<td>").text(results[i].amountOfBeers)
+            // var beerTypes = $("<td>").text(results[i].typesOfBeer)
+            // showBeers.append(beerName).append(beerHours).append(beerCount).append(beerTypes)
+            // $("#brewery-table-body").append(showBeers)
+
+            //second version
+            var collHeader = $("<div>").addClass("collapsible-header").attr('id', results[i].breweryID).text(results[i].name).attr('href', 'table2.html')
+            var colHeaderIcon = $("<i>").addClass("material-icons").html('place')
+            collHeader.prepend(colHeaderIcon)
+            var collBody = $("<div>").addClass("collapsible-body").text(results[i].hours)
+            var listItem = $("<li>").append(collHeader).append(collBody)
+
+            $("#breweries-coll").append(listItem)
+
+
         }
     }
     console.log(snapshot.val());
 }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
+});
+
+$(document).ready(function(){
+    $('.collapsible').collapsible();
 });
