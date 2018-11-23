@@ -1024,7 +1024,8 @@
             4,
             5,
             11
-        ]
+        ],
+        "styleIds": [57, 136, 72, 43, 46, 132, 112, 30, 69, 14, 42, 36, 119, 170, 129, 40, 55, 63]
     },
     "40": {
         "name": "Circle Brewing Company",
@@ -1052,16 +1053,8 @@
             5,
             7,
             11
-        ]
-    },
-    "41": {
-        "name": "LoveJoy's Taproom & Brewery",
-        "location": {},
-        "hours": "CLOSED",
-        "placeID": "",
-        "breweryID": "PTCJja",
-        "amountOfBeers": 0,
-        "typesOfBeer": []
+        ],
+        "styleIds": [36, 48, 23, 72, 32, 125, 65, 45, 22, 25, 30, 2, 85, 41]
     },
     "42": {
         "name": "Austin Eastciders Collaboratory",
@@ -1083,16 +1076,8 @@
         "amountOfBeers": 13,
         "typesOfBeer": [
             12
-        ]
-    },
-    "43": {
-        "name": "Destination Brewing Company",
-        "location": {},
-        "hours": "CLOSED",
-        "placeID": "",
-        "breweryID": "I6bQuC",
-        "amountOfBeers": 0,
-        "typesOfBeer": []
+        ],
+        "styleIds": [155, 154, 157, 150]
     },
     "44": {
         "name": "St Elmo Brewing Company",
@@ -1116,7 +1101,8 @@
             1,
             2,
             3
-        ]
+        ],
+        "styleIds": [25, 2, 31, 24]
     },
     "45": {
         "name": "Hi Sign Brewing",
@@ -1138,7 +1124,8 @@
         "amountOfBeers": 4,
         "typesOfBeer": [
             3
-        ]
+        ],
+        "styleIds": [36, 30]
     },
     "46": {
         "name": "Austin Beerworks",
@@ -1165,7 +1152,8 @@
             5,
             7,
             11
-        ]
+        ],
+        "styleIds": [33, 84, 30, 46, 70, 125, 41, 31, 92, 36, 75, 72, 21, 78, 25]
     },
     "47": {
         "name": [
@@ -1192,7 +1180,8 @@
             3,
             4,
             8
-        ]
+        ],
+        "styleIds": [41, 93, 48]
     },
     "48": {
         "name": "Meridian Hive Meadery",
@@ -1209,7 +1198,8 @@
             "Saturday: 2:00 PM - 7:00 PM"
         ],
         "placeId": "ChIJNXs4J7nJRIYRNIBnYsPMJpI",
-        "breweryId": "Xq2gbP"
+        "breweryId": "Xq2gbP",
+        "styleIds": [157, 148, 141, 142, 140]
     },
     "49": {
         "name": "Oasis Texas Brewing Company",
@@ -1236,7 +1226,8 @@
             "Info taken from website, different hours on breweryDB."
         ],
         "placeId": "ChIJMbXMdmAxW4YRcBYizYsMcAw",
-        "breweryId": "1Lis85"
+        "breweryId": "1Lis85",
+        "styleIds": [25, 62, 20, 52, 30, 104, 4, 93, 92, 31, 164, 102, 18, 170]
     },
     "50": {
         "name": "Oskar Blues Brewery",
@@ -1264,7 +1255,8 @@
             "ChIJz6DlgfHLRIYRic4rMKhYdF4",
             "local branch found on google places api"
         ],
-        "breweryId": "q6vJUK"
+        "breweryId": "q6vJUK",
+        "styleIds": [114, 25, 55, 65, 33, 61, 98, 43, 30, 80, 41, 53, 18, 123, 72, 24, 117, 62, 124, 93, 158, 37, 90, 32, 101, 31, 138, 8, 60, 119, 27, 109, 164, 75, 81, 45, 15, 34, 125, 82, 12, 3, 121, 23, 17, 20, 129, 136, 5, 48, 44, 42, 35]
     },
     "51": {
         "name": [
@@ -1296,7 +1288,8 @@
             "ChIJV7paB2HKRIYR5I0plWFqp18",
             "Burnett address."
         ],
-        "breweryId": "CrwYzN"
+        "breweryId": "CrwYzN",
+        "styleIds": [25, 23, 30, 135, 93, 108, 31, 43, 5]
     },
     "52": {
         "name": [
@@ -1328,25 +1321,7 @@
             "ChIJRdNEeDBLW4YR9P1mzVWCyOw",
             "google API."
         ],
-        "breweryId": "CrwYzN"
-    },
-    "53": {
-        "name": "CLOSED.",
-        "location": {
-            "lat": 0,
-            "lng": 0
-        },
-        "amountOfBeers": 6,
-        "typesOfBeer": [
-            3,
-            4,
-            5,
-            7
-        ],
-        "hours": [
-            ""
-        ],
-        "placeId": "ChIJayB1n5tIW4YR7q_YExbO_QY",
-        "breweryId": "Szwt8v"
+        "breweryId": "CrwYzN",
+        "styleIds": [25, 23, 30, 135, 93, 108, 31, 43, 5]
     }
 }
