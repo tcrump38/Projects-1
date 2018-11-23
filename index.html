@@ -1,67 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Cool Story, Brew</title>
 
-    <title>Project1</title>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-    <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Brewing</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="">Beers</a></li>
-            <li><a href="">Map</a></li>
-            <li><a href="">Events</a></li>
-            <li><a href="">More</a></li>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Beers</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Map</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center black-text text-lighten-2">A cold beer is waiting</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Find the closest brewery, search for events and learn all there is to know about your favorite brew.</h5>
+        </div>
+        <div class="row center">
+          <a href="#" id="download-button" class="btn-large black">Beer Me</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="assets/css/beer.jpg"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center black-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Breweries</h5>
+
+            <p class="light">Locate breweries in your area and see what they have on tap.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center black-text"><i class="material-icons">event</i></h2>
+            <h5 class="center">Socialize</h5>
+
+            <p class="light">Events.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center black-text"><i class="material-icons">grade</i></h2>
+            <h5 class="center">Trivia</h5>
+
+            <p class="light">Blah Blah Blah.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">To Beer or Not to Beer</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="assets/css/beer.jpg"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Why Beer?
+          </h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Wish you were beer!</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="assets/css/beer.jpg"></div>
+  </div>
+
+  <footer class="page-footer white">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="black-text">UT Austin Coding Bootcamp</h5>
+          <p class="grey-text">We are a group of students working on our first project for UT Austin's coding bootcamp.</p>
+           </div>
+
+        <div class="col l3 s12">
+          <h5 class="black-text">Connect</h5>
+          <ul>
+            <li><a class="gray-text" href="#!">Sheyla Ortiz</a></li>
+            <li><a class="gray-text" href="#!">Tyler Crump</a></li>
+            <li><a class="gray-text" href="#!">Hector Morales</a></li>
+            <li><a class="gray-text" href="#!">Jessica Kypke</a></li>
           </ul>
         </div>
-      </nav>
-    
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="">Beers</a></li>
-        <li><a href="">Map</a></li>
-        <li><a href="">Events</a></li>
-        <li><a href="">More</a></li>
-      </ul>
-        <div class="container">
-          <!-- Page Content goes here -->
-
-
-        <ul class="collapsible">
-        <li>
-        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Beers</div>
-        <div class="collapsible-body"><span id="Beer-info"></span></div>
-        </li>
-        <li>
-        <div class="collapsible-header"><i class="material-icons">place</i>Events</div>
-        <div class="collapsible-body"><span id="Brewery-info"></span></div>
-        </li>
-        <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>About</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        </ul>
-
-       
+      </div>
+    </div>
 
 
 
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="assets/javascript/materialize.js"></script>
+  <script src="assets/javascript/init.js"></script>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="assets/javascript/app.js"></script>
 
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/javascript/app.js"></script>
-</body>
+  </body>
 </html>
