@@ -7,44 +7,59 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/style.css"> -->
-
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/images/beer.png">
     <title>Project1</title>
-
     <style>
-
+        .chip>img {
+            height: 24px;
+            margin: 4px 2px 0 -12px;
+        }
+        .addy>p {
+            padding-left: 8px;
+        }
+        .open-close>img {
+            height: 24px;
+            margin: 4px 4px 0 0;
+        }
     </style>
-
 </head>
-
 <body>
-
     <!-- This will be removed -->
     <div class="container">
         <nav>
-            <div class="nav-wrapper center-align">
+            <div class="nav-wrapper center-align amber">
                 <div class="col s12">
                     <a href="#!" class="breadcrumb">Index</a>
                     <a href="#!" class="breadcrumb">Beer Me</a>
+                    <a href="#!" class="breadcrumb">Breweries in Austin</a>
+
                 </div>
             </div>
         </nav>
     </div>
-    
     <!-- Container for the breweries -->
     <div class="container">
         <ul id="breweries-coll" class="collapsible">
             <!-- All of the list items for the breweries will show up here -->
         </ul>
     </div>
+    <!-- Credit for icons -->
+    <div class="container">
+        <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </div>
 
+    <div class="container" id="article">
+    </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="table.js"></script>
+    <script src="../assets/javascript/wiki_api.js"></script>
+
 </body>
 
 </html>

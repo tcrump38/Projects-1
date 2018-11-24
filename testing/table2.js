@@ -14,13 +14,46 @@ function callAPI(currentBrew) {
     // getCORS(queryURL, handleResponse(response))
     $.ajax({
         url: queryURL,
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        dataType: "json",
         method: "GET",
-        }).then(function (response) {
-        console.log(response);
-        handleResponse(response.data)
-        console.log(response.data)
+        success: function (data, textStatus, jqXHR) {
+            // handleResponse(response.data)
+            console.log(response.data)
+            console.log(data);
+        },
+        error: function (errorMessage) {
+        }
     })
+    // }).then(function (response) {
+    // console.log(response);
+    // handleResponse(response.data)
+    // console.log(response.data)
+    // })
+
+    // $.ajax({
+    //     url: queryURL,
+    //     type: "GET",
+    //     // This is the important part
+    //     xhrFields: {
+    //         withCredentials: true
+    //     },
+    //     // This is the important part
+    //     success: function (response) {
+    //         console.log(response);
+    //         handleResponse(response.data)
+    //         console.log(response.data)
+    //         // handle the response
+    //     },
+    //     error: function (xhr, status) {
+    //         // handle errors
+    //     }
+    // });
+
 }
+
+
 
 function handleResponse(results) {
     beers = results
