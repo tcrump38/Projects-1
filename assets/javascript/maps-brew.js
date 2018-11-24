@@ -36,7 +36,12 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
 
             //// add to indicate if locale is open or not -- will load from google; using placeholder for now
-            var collOpenNow = $("<div>").addClass("open-close").html('<img src="../assets/icons/open.svg"></img>')
+            if (i % 2 ==0) {
+                var collOpenNow = $("<div>").addClass("open-close").html('<img src="../assets/icons/closed.svg"></img>')
+            }
+            else {
+                var collOpenNow = $("<div>").addClass("open-close").html('<img src="../assets/icons/open.svg"></img>')
+            }
 
             // append the icon, btn, and chip to header
             // collHeader.prepend(collHeaderIcon).append(beerLink).append(collOpenNow)
