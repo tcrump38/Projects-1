@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $.ajax({
         type: "GET",
-        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Oskar_Blues_Brewery&callback=?",
+        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Altbier&callback=?",
         contentType: "application/json; charset=utf-8",
         async: false,
         dataType: "json",
