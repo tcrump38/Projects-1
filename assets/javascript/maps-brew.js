@@ -73,7 +73,7 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
 
             // if styleIds is returned, populate inside a chip -- may have to recheck error catching
             if (typeof results[i].styleId != "undefined") {
-                var stylesBeers = $("<div>").addClass("chip").html(results[i].styleId.length + '<img src="../assets/icons/beer.svg"></img>')
+                var stylesBeers = $("<div>").addClass("chip").html(results[i].styleId.length + '<img src="../assets/icons/beerTypes.svg"></img>')
                 collBody.append(stylesBeers)
             }
 
