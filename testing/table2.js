@@ -26,31 +26,6 @@ function callAPI(currentBrew) {
         error: function (errorMessage) {
         }
     })
-    // }).then(function (response) {
-    // console.log(response);
-    // handleResponse(response.data)
-    // console.log(response.data)
-    // })
-
-    // $.ajax({
-    //     url: queryURL,
-    //     type: "GET",
-    //     // This is the important part
-    //     xhrFields: {
-    //         withCredentials: true
-    //     },
-    //     // This is the important part
-    //     success: function (response) {
-    //         console.log(response);
-    //         handleResponse(response.data)
-    //         console.log(response.data)
-    //         // handle the response
-    //     },
-    //     error: function (xhr, status) {
-    //         // handle errors
-    //     }
-    // });
-
 }
 
 
