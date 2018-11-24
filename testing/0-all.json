@@ -9,6 +9,8 @@
         "typesOfBeer": [
             12
         ],
+        "styleID": [155, 157],
+        "abv": [6.2, 6.8],
         "hours": [
             "Monday: Closed",
             "Tuesday: Closed",
@@ -31,6 +33,8 @@
         "typesOfBeer": [
             12
         ],
+        "styleId": [43, 31, 25],
+        "abv": [5.7, 9, 11.6, 8, 5],
         "hours": [
             "Monday: 10:30 AM – 12:00 AM",
             "Tuesday: 11:00 AM – 12:00 AM",
@@ -75,7 +79,30 @@
             3,
             12,
             7
-        ]
+        ],
+        "styleID": [58, 63, 45, 22, 94, 119, 57, 19, 44, 155, 31, 30, 43, 48, 65, 37, 32, 81, 25, 75, 121, 108, 116, 30, 42],
+        "abv": [6.5,
+        10,
+        4.7,
+        7.3,
+        3.5,
+        5.2,
+        8,
+        6.4,
+        8.5,
+        3.6,
+        8.6,
+        6.5,
+        9,
+        4.9,
+        7.2,
+        5.9,
+        4.5,
+        5.6,
+        5,7,
+        5.3,
+        8.5,
+        7.7]
     },
     
     "5": {
@@ -89,22 +116,19 @@
             "lat": 30.3798084,
             "lng": -97.7159575
         },
+<<<<<<< HEAD:0-all.json
         "hours": [],
         "amountOfBeers": 2,
+=======
+        "hours": ["does not have their own tasting room"],
+        "amountOfBeers": 1,
+>>>>>>> b78d30d305069002641b3fc3e7aad684f6559a68:testing/0-all.json
         "typesOfBeer": [
             3
-        ]
-    },
-    "6": {
-        "name": "Brewery DADA",
-        "breweryID": "GQMkBt",
-        "placeID": 0,
-        "location": {},
-        "hours": [
-            "POSSIBLY CLOSED"
         ],
-        "amountOfBeers": "null",
-        "typesOfBeer": []
+        "styleId": [172],
+        "abv":[6.5],
+        "ibu": [55]
     },
     "7": {
         "name": "Skull Mechanix",
@@ -124,7 +148,8 @@
             "Sunday: 1:00 – 10:00 PM"
         ],
         "amountOfBeers": "null",
-        "typesOfBeer": []
+        "typesOfBeer": [],
+        "Notes":"No brewery DP information but brewery is open to public "
     },
     "8": {
         "name": "(512) Brewing Company",
@@ -151,7 +176,10 @@
             5,
             1,
             7
-        ]
+        ],
+        "styleId": [55, 125, 37, 59, 20, 79, 43, 14, 30, 63, 25, 136, 58, 13, 59, 31, 135, 30, 125, 65, 72, 18],
+        "abv": [6, 7.5, 7.6, 9.5, 6, 5.3, 10.1, 7, 8, 6.2, 9, 8.5, 5.1, 6.8],
+        "ibu": [36, 70, 30, 20, 45, 35, 65, 22, 8, 99, 55, 9, 10, 50]
     },
     "9": {
         "name": "Blue Owl Brewing",
@@ -175,7 +203,10 @@
             7,
             5,
             3
-        ]
+        ],
+        "styleId": [76, 64, 30, 40, 44, 72, 25, 32],
+        "abv":[4.9, 8.5, 6.7, 3.8, 6.2, 5.8, 5.1, 5.4, 8],
+        "ibu": [36, 30, 60, 7, 25, 35]
     },
     "10": {
         "name": "The Brewtorium",
@@ -198,7 +229,10 @@
             "Sunday: 12:00 – 8:00 PM"
         ],
         "amountOfBeers": "null",
-        "typesOfBeer": []
+        "typesOfBeer": [],
+        "abv":[4.9, 5, 4.7, 5.2, 6.6],
+        "ibu": [16, 15, 9, 31, 50],
+        "IBU-ABV": "no beer information on breweryDP, the abv and ibu came directly from their website (contant beers only and no styleIds)"
     },
     "11": {
         "name": "Oddwood Ales",
@@ -218,7 +252,9 @@
             "Sunday: 12:00 AM – 12:00 PM, 2:00 – 9:00 PM"
         ],
         "amountOfBeers": "null",
-        "typesOfBeer": []
+        "typesOfBeer": [],
+        "abv": [4.2, 5.7, 6.6, 4.8, 6.2, 5.6],
+        "IBU-ABV": "no beer information on breweryDP, the abv and ibu came directly from their website (contant beers only and no styleIds)"
     },
     "12": {
         "name": "Adelbert's Brewery",
@@ -232,6 +268,10 @@
             5,
             11
         ],
+        "styleId": [65, 72, 42, 28, 36, 58, 59, 39, 61, 71, 70, 30, 132, 62],
+        "abv": [5.8, 8, 5.6, 5.5, 7.2, 9.1, 9, 9.3, 8.4, 6.9, 12, 6.2, 9.3, 11.7],
+        "ibu": [35, 17, 41, 22, 40, 15, 51, 36, 25, 30, 55, 28, 22],
+
         "hours": [
             "Monday: Closed",
             "Tuesday: Closed",
@@ -243,9 +283,7 @@
         ],
         "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
         "breweryId": "7Tjp4C"
-    },
-    "13": {
-        "name": "NOT IN AUSTIN"
+
     },
     "14": {
         "name": "Kamala Brewing at the Whip In",
@@ -260,6 +298,9 @@
             3,
             1
         ],
+        "styleId": [47, 46, 5, 31, 60, 30, 34, 25, 43, 72, 59],
+        "abv": [3.3, 4, 6.3, 9.5, 11, 7.3, 7.4, 10, 8.3, 5, 10.5],
+        "ibu": [49, 79, 36, 1.5],
         "hours": [
             "Monday: 11:00 AM – 11:00 PM",
             "Tuesday: 11:00 AM – 11:00 PM",
@@ -285,6 +326,9 @@
             7,
             8
         ],
+        "styleId": [32, 62, 81, 78, 75, 93, 98, 30],
+        "abv": [7.9, 5.5, 5.4, 4.6, 5, 4, 5.2, 6.8],
+        "ibu": [80, 39, 20, 18, 40, 12, 25, 60],
         "hours": [
             "Monday: Closed",
             "Tuesday: 11:30 AM – 11:00 PM",
@@ -310,6 +354,9 @@
             4,
             11
         ],
+        "styleId": [125, 113, 15, 36, 37, 25, 117, 46],
+        "abv": [5.7, 6, 4.4, 4.2, 9, 5.4, 5, 7, 6.6, 3.5, 3],
+        "ibu": [34, 15.8, 17, 30, 34.1, 64.7, 28],
         "hours": [
             "Monday: 4:00 – 11:00 PM",
             "Tuesday: 11:00 AM – 11:00 PM",
@@ -334,6 +381,9 @@
             3,
             11
         ],
+        "styleId": [126, 163, 124, 36],
+        "abv": [6.2, 6.5, 5.4, 5.6],
+        "ibu": [28, 32, 62, 16],
         "hours": [
             "Monday: Closed",
             "Tuesday: Closed",
@@ -361,6 +411,9 @@
             8,
             11
         ],
+        "styleId": [25, 12, 164, 93, 32, 125, 78, 80, 102, 75, 30, 5, 24],
+        "abv": [5.7, 6.6, 6, 5, 7.1, 6.3, 7, 4.6, 5.5, 4.8, 5.1, 6.5],
+        "ibu": [45, 25, 50, 30, 20],
         "hours": [
             "Monday: 8:00 AM – 12:00 AM",
             "Tuesday: 8:00 AM – 12:00 AM",
@@ -385,6 +438,9 @@
             5,
             11
         ],
+        "styleId": [25, 30, 119, 72, 123, 164, 61, 65],
+        "abv": [6.2, 7.5, 6.8, 6, 5.6, 6.5, 4.7, 5.3, 4.9],
+        "ibu": [100],
         "hours": [
             "Monday: 4:00 – 10:00 PM",
             "Tuesday: 4:00 – 10:00 PM",
@@ -397,6 +453,7 @@
         "placeId": "ChIJMduD23i2RIYRKvQE7KJ_Lqo",
         "breweryId": "LghDtt"
     },
+    
     "20": {
         "name": "Infamous Brewing Company",
         "location": {
@@ -419,8 +476,19 @@
             "Sunday: 1:00 – 7:00 PM"
         ],
         "placeId": "ChIJ2TtsF-YwW4YRaQ1zqGi8O0o",
-        "breweryId": "uLYwtl"
+        "breweryId": "uLYwtl",
+        "styleIds": [
+            30,
+            31,
+            32,
+            42,
+            44,
+            48,
+            109,
+            121
+        ]
     },
+
     "21": {
         "name": "4th Tap Brewing Cooperative",
         "location": {
@@ -445,22 +513,19 @@
             "Sunday: 4:00 – 8:00 PM"
         ],
         "placeId": "ChIJdzAwIPHLRIYRTgrYTAjVVCM",
-        "breweryId": "a9svue"
+        "breweryId": "a9svue",
+        "styleIds": [
+            15,
+            19,
+            25,
+            30,
+            46,
+            72,
+            112,
+            124
+        ]
     },
-    "22": {
-        "name": "CLOSED",
-        "location": {
-            "lat": 30.33938109999999,
-            "lng": -97.86335419999999
-        },
-        "amountOfBeers": 0,
-        "typesOfBeer": [],
-        "hours": [
 
-        ],
-        "placeId": "ChIJb-p6Gi00W4YRElwv5rUKtVY",
-        "breweryId": "cfAuYT"
-    },
     "23": {
         "name": "Zilker Brewing Co.",
         "location": {
@@ -470,16 +535,21 @@
         "amountOfBeers": 4,
         "typesOfBeer": [3, 4, 7],
         "hours": [
-            "Monday: Closed",
-            "Tuesday: 4:00 – 10:00 PM",
-            "Wednesday: 4:00 – 10:00 PM",
-            "Thursday: 4:00 – 10:00 PM",
-            "Friday: 12:00 PM – 12:00 AM",
-            "Saturday: 12:00 PM – 12:00 AM",
-            "Sunday: 12:00 – 8:00 PM"
+            "Tuesday: 4:00 PM - 10:00 PM",
+            "Wednesday: 4:00 PM - 10:00 PM",
+            "Thursday: 4:00 PM - 10:00 PM",
+            "Friday: 12:00 PM - 12:00 AM",
+            "Saturday: 12:00 PM - 12:00 AM",
+            "Sunday: 12:00 PM - 8:00 PM"
         ],
         "placeId": "ChIJZeyxLY3LRIYRKseIgfEgTRc",
-        "breweryId": "njy67m"
+        "breweryId": "njy67m",
+        "styleIds": [
+            25,
+            30,
+            45,
+            82
+        ]
     },
 
     "24": {
@@ -494,7 +564,20 @@
             "Saturday: 2:00 PM - 8:00 PM"
         ],
         "placeId": "ChIJ31D7EcTNWBQR8o8bUPOClnw",
-        "breweryId": "lDiXyX"
+        "breweryId": "lDiXyX",
+        "styleIds": [
+            19,
+            25,
+            30,
+            36,
+            63,
+            76,
+            79,
+            89,
+            93,
+            131,
+            164
+        ]
     },
 
     "25": {
@@ -510,8 +593,27 @@
             "Saturday: 5:00 PM - 9:00 PM"
         ],
         "placeId": "ChIJPVM6pH81W4YRz3mnLaZ2Q8E",
-        "breweryId": "ERkLkd"
+        "breweryId": "ERkLkd",
+        "styleIds": [
+            14,
+            15,
+            17,
+            23,
+            30,
+            55,
+            58,
+            59,
+            72,
+            98,
+            104,
+            124,
+            132,
+            147,
+            158
+
+        ]
     },
+
     "26": {
         "name": [
             "Hops and Grain Brewery",
@@ -543,36 +645,29 @@
             "Sunday: 10:00 AM - 10:00 PM"
         ],
         "placeId": "ChIJTzFOTcy1RIYRPd-9rbG7uH4",
-        "breweryId": "ArQJDt"
+        "breweryId": "ArQJDt",
+        "styleIds": [
+            10,
+            18,
+            22,
+            25,
+            30,
+            32,
+            34,
+            43,
+            45,
+            55,
+            62,
+            80,
+            84,
+            97,
+            98,
+            104,
+            125,
+            130
+        ]
     },
-    "27": {
-        "name": "NOT IN TX. In Austin, MN",
-        "location": {
-            "lat": 0,
-            "lng": 0
-        },
-        "amountOfBeers": 0,
-        "typesOfBeer": [],
-        "hours": [
-            ""
-        ],
-        "placeId": "ChIJLZfiVILR8IcRpXstykH_Uag",
-        "breweryId": "jann9y"
-    },
-    "28": {
-        "name": "NOT IN TX. In Austin, MN",
-        "location": {
-            "lat": 30.276865,
-            "lng": -97.6694435
-        },
-        "amountOfBeers": 0,
-        "typesOfBeer": [],
-        "hours": [
-            ""
-        ],
-        "placeId": "",
-        "breweryId": "7H4z0X"
-    },
+
     "29": {
         "name": "Southern Heights Brewing Company",
         "location": {
@@ -596,8 +691,18 @@
             "No info in BrweryDB or brewery website. Got from UNTAPPD."
         ],
         "placeId": "ChIJuYDC5ka2RIYR-mOquqgvIKM",
-        "breweryId": "0nqBCR"
+        "breweryId": "0nqBCR",
+        "styleIds": [
+            6,
+            10,
+            30,
+            33,
+            38,
+            82,
+            91
+        ]
     },
+
     "30": {
         "name": "Independence Brewing Company",
         "location": {
@@ -622,8 +727,30 @@
             "Sundays: 12:00 PM - 7:00 PM"
         ],
         "placeId": "ChIJzYUDbJ_BwjsRCHsOmZ6UGY4",
-        "breweryId": "mCJhuP"
+        "breweryId": "mCJhuP",
+        "styleIds": [
+            13,
+            21,
+            25,
+            30,
+            32,
+            34,
+            37,
+            40,
+            41,
+            46,
+            59,
+            65,
+            71,
+            72,
+            75,
+            78,
+            93,
+            112,
+            164
+        ]
     },
+
     "31": {
         "name": "Draught House Pub & Brewery",
         "location": {
@@ -653,8 +780,45 @@
             "From their website. Only beers on tap, not brewed."
         ],
         "placeId": "ChIJqb-OEYjKRIYRdSfTUB2cwQI",
-        "breweryId": "3TPLoz"
+        "breweryId": "3TPLoz",
+        "styleIds": [
+            10,
+            14,
+            15,
+            17,
+            21,
+            26,
+            29,
+            31,
+            36,
+            38,
+            44,
+            58,
+            59,
+            61,
+            65,
+            68,
+            69,
+            72,
+            75,
+            77,
+            78,
+            81,
+            98,
+            101,
+            110,
+            111,
+            114,
+            115,
+            129,
+            130,
+            135,
+            139,
+            140
+
+        ]
     },
+
     "32": {
         "name": "Celis Brewery",
         "location": {
@@ -677,22 +841,19 @@
             "Sunday: 12:00 PM - 10:00 PM"
         ],
         "placeId": "ChIJF5K82rvJRIYR5Hm2udd-Wjc",
-        "breweryId": "1FHyB2"
+        "breweryId": "1FHyB2",
+        "styleIds": [
+            25,
+            30,
+            63,
+            65,
+            70,
+            125,
+            167
+        ]
+
     },
-    "33": {
-        "name": "CLOSED",
-        "location": {
-            "lat": 0,
-            "lng": 0
-        },
-        "amountOfBeers": 0,
-        "typesOfBeer": [],
-        "hours": [
-            ""
-        ],
-        "placeId": "ChIJNzIkSLiqYlQR5bjG5CQbNjE",
-        "breweryId": "F8DLBD"
-    },
+
     "34": {
         "name": "Lazarus Brewing",
         "location": {
@@ -719,8 +880,19 @@
             "From website"
         ],
         "placeId": "ChIJlZhRW7a1RIYR5xxRXpc_6tM",
-        "breweryId": "ZxTd4e"
+        "breweryId": "ZxTd4e",
+        "styleIds": [
+            25,
+            27,
+            29,
+            30,
+            31,
+            62,
+            65,
+            76
+        ]
     },
+
     "35": {
         "name": "Thirsty Planet Brewing Company",
         "location": {
@@ -737,8 +909,17 @@
             "Saturday: 11:00 AM - 3:00 PM"
         ],
         "placeId": "ChIJayB1n5tIW4YR7q_YExbO_QY",
-        "breweryId": "kl6De5"
+        "breweryId": "kl6De5",
+        "styleIds": [
+            25,
+            30,
+            32,
+            81,
+            112,
+            125
+        ]
     },
+
     "36": {
         "name": "NXNW Restaurant & Brewery Stonelake",
         "location": {
@@ -765,11 +946,45 @@
             "Sunday: 10:00 AM – 11:00 PM"
         ],
         "placeID": "ChIJ-R1FeX_MRIYRemSoFgDSYlc",
-        "breweryID": "zVwJPQ"
+        "breweryID": "zVwJPQ",
+        "styleIds": [
+            23,
+            25,
+            30,
+            32,
+            41,
+            46,
+            48,
+            52,
+            68,
+            72,
+            75,
+            76,
+            95,
+            125
+        ]
     },
+
     "37": {
-        "name": "Guns & Oil Brewing Co."
+        "name": "Guns & Oil Brewing Co.",
+        "location": {
+            "lat": 30.2635311,
+            "lng": -97.7345558
+        },
+        "hours": [
+            "N/A"
+        ],
+        "placeID": "Place ID ChIJPakKFa-1RIYR7w2VhcYmtec",
+        "breweryID": "xeEbfv",
+        "amountOfBeers": 4,
+        "typesOfBeer": [8],
+        "styleIds": [
+           93,
+           97,
+           103
+        ]
     },
+
     "38": {
         "name": "fairweather cider co",
         "location": {
@@ -814,7 +1029,8 @@
             4,
             5,
             11
-        ]
+        ],
+        "styleIds": [57, 136, 72, 43, 46, 132, 112, 30, 69, 14, 42, 36, 119, 170, 129, 40, 55, 63]
     },
     "40": {
         "name": "Circle Brewing Company",
@@ -842,16 +1058,8 @@
             5,
             7,
             11
-        ]
-    },
-    "41": {
-        "name": "LoveJoy's Taproom & Brewery",
-        "location": {},
-        "hours": "CLOSED",
-        "placeID": "",
-        "breweryID": "PTCJja",
-        "amountOfBeers": 0,
-        "typesOfBeer": []
+        ],
+        "styleIds": [36, 48, 23, 72, 32, 125, 65, 45, 22, 25, 30, 2, 85, 41]
     },
     "42": {
         "name": "Austin Eastciders Collaboratory",
@@ -873,16 +1081,8 @@
         "amountOfBeers": 13,
         "typesOfBeer": [
             12
-        ]
-    },
-    "43": {
-        "name": "Destination Brewing Company",
-        "location": {},
-        "hours": "CLOSED",
-        "placeID": "",
-        "breweryID": "I6bQuC",
-        "amountOfBeers": 0,
-        "typesOfBeer": []
+        ],
+        "styleIds": [155, 154, 157, 150]
     },
     "44": {
         "name": "St Elmo Brewing Company",
@@ -906,7 +1106,8 @@
             1,
             2,
             3
-        ]
+        ],
+        "styleIds": [25, 2, 31, 24]
     },
     "45": {
         "name": "Hi Sign Brewing",
@@ -928,7 +1129,8 @@
         "amountOfBeers": 4,
         "typesOfBeer": [
             3
-        ]
+        ],
+        "styleIds": [36, 30]
     },
     "46": {
         "name": "Austin Beerworks",
@@ -955,7 +1157,8 @@
             5,
             7,
             11
-        ]
+        ],
+        "styleIds": [33, 84, 30, 46, 70, 125, 41, 31, 92, 36, 75, 72, 21, 78, 25]
     },
     "47": {
         "name": [
@@ -982,7 +1185,8 @@
             3,
             4,
             8
-        ]
+        ],
+        "styleIds": [41, 93, 48]
     },
     "48": {
         "name": "Meridian Hive Meadery",
@@ -999,7 +1203,8 @@
             "Saturday: 2:00 PM - 7:00 PM"
         ],
         "placeId": "ChIJNXs4J7nJRIYRNIBnYsPMJpI",
-        "breweryId": "Xq2gbP"
+        "breweryId": "Xq2gbP",
+        "styleIds": [157, 148, 141, 142, 140]
     },
     "49": {
         "name": "Oasis Texas Brewing Company",
@@ -1026,7 +1231,8 @@
             "Info taken from website, different hours on breweryDB."
         ],
         "placeId": "ChIJMbXMdmAxW4YRcBYizYsMcAw",
-        "breweryId": "1Lis85"
+        "breweryId": "1Lis85",
+        "styleIds": [25, 62, 20, 52, 30, 104, 4, 93, 92, 31, 164, 102, 18, 170]
     },
     "50": {
         "name": "Oskar Blues Brewery",
@@ -1054,7 +1260,8 @@
             "ChIJz6DlgfHLRIYRic4rMKhYdF4",
             "local branch found on google places api"
         ],
-        "breweryId": "q6vJUK"
+        "breweryId": "q6vJUK",
+        "styleIds": [114, 25, 55, 65, 33, 61, 98, 43, 30, 80, 41, 53, 18, 123, 72, 24, 117, 62, 124, 93, 158, 37, 90, 32, 101, 31, 138, 8, 60, 119, 27, 109, 164, 75, 81, 45, 15, 34, 125, 82, 12, 3, 121, 23, 17, 20, 129, 136, 5, 48, 44, 42, 35]
     },
     "51": {
         "name": [
@@ -1086,7 +1293,8 @@
             "ChIJV7paB2HKRIYR5I0plWFqp18",
             "Burnett address."
         ],
-        "breweryId": "CrwYzN"
+        "breweryId": "CrwYzN",
+        "styleIds": [25, 23, 30, 135, 93, 108, 31, 43, 5]
     },
     "52": {
         "name": [
@@ -1118,25 +1326,7 @@
             "ChIJRdNEeDBLW4YR9P1mzVWCyOw",
             "google API."
         ],
-        "breweryId": "CrwYzN"
-    },
-    "53": {
-        "name": "CLOSED.",
-        "location": {
-            "lat": 0,
-            "lng": 0
-        },
-        "amountOfBeers": 6,
-        "typesOfBeer": [
-            3,
-            4,
-            5,
-            7
-        ],
-        "hours": [
-            ""
-        ],
-        "placeId": "ChIJayB1n5tIW4YR7q_YExbO_QY",
-        "breweryId": "Szwt8v"
+        "breweryId": "CrwYzN",
+        "styleIds": [25, 23, 30, 135, 93, 108, 31, 43, 5]
     }
 }
