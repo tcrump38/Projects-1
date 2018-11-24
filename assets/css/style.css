@@ -1,0 +1,133 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+
+
+
+/* table3.js */
+#beer-header {
+  text-align: center;
+}
+
+body {
+  background: url("../images/craft-beer-logo.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+nav .nav-wrapper {
+  background-color: rgb(254,181,0);
+  height: 10%;
+}
+
+nav {
+  height: 10%;
+}
+
+.sidenav-trigger {
+  color: black;
+}
+
+#beer-table {
+  border-radius: 5%;
+  font-family: 'Nunito', sans-serif;
+  background: rgba(0, 0, 0, 0.715);
+  
+}
+
+.collapsible-header {
+  font-size: 1.3rem;
+  font-family: 'Nunito', sans-serif;
+  border: none;
+  border-radius: 5%;
+  border-style: none;
+  background-color: rgba(255, 255, 255, 0.623);
+}
+
+.collapsible-header:hover {
+  color: rgb(242, 235, 241);
+  background-color: rgb(254,181,0);
+}
+
+.beer-info-body {
+  font-size: 1.3rem;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  border-radius: 5%;
+  background-color: rgb(254,181,0);
+}
+
+.collection-item {
+  text-align: center;
+}
+.collapsible {
+  border: none;
+}
+
+.collapsible-body {
+  padding: 0rem;
+}
+
+.beerinfo {
+ text-align: center;
+ color: rgb(255, 236, 199);
+ 
+}

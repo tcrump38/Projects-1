@@ -37,17 +37,17 @@ database.ref('/beersBlueOwl').on("value", function (snapshot) {
   console.log("Errors handled: " + errorObject.code);
 });
 
-database.ref('/breweriesATX').on("value", function (snapshotBreweries) {
+database.ref('/breweriesAustin').on("value", function (snapshotBreweries) {
   breweriesATX = snapshotBreweries.val()
-  // for (var i = 0; i < results.length; i++) {
-  //   var showBeers = $("<div>");
-  //   //gets the rating from giphy data and puts it in a p tag
-  //   var beerName = results[i].name;
-  //   var p = $("<p>").text("Name " + beerName);
-  //   showBeers.append(beerName)
-  //   $("#Beer-info").append(showBeers)
-  // }
-  // Log everything that's coming out of snapshot
+  for (var i = 0; i < breweriesATX.length; i++) {
+    var showBrewery = $("<div>");
+    var breweryname = breweriesATX[i].brewery.name;
+    var p = $("<ul>").html(breweryname);
+    showBrewery.append(p);
+    $("#Brewery-info").append(showBrewery)
+  };
+
+
   console.log(snapshotBreweries.val());
   // Handle the errors
 }, function (errorObject) {
