@@ -142,9 +142,10 @@
             "Saturday: 1:00 – 11:00 PM",
             "Sunday: 1:00 – 10:00 PM"
         ],
-        "amountOfBeers": "null",
-        "typesOfBeer": [],
-        "Notes":"No brewery DP information but brewery is open to public "
+        "amountOfBeers": 13,
+        "typesOfBeer": [], 
+        "abv": [4.5, 6.6, 6.4, 5.5, 4.6, 4.2, 6.0, 4.5, 6.5, 4.8, 4.5, 4.7, 9],
+        "ibu": [38, 66, 32, 38, 22, 15, 35, 20, 42, 40, 25, 28, 72]
     },
     "8": {
         "name": "(512) Brewing Company",
@@ -223,7 +224,7 @@
             "Saturday: 12:00 – 11:00 PM",
             "Sunday: 12:00 – 8:00 PM"
         ],
-        "amountOfBeers": "null",
+        "amountOfBeers": 5,
         "typesOfBeer": [],
         "abv":[4.9, 5, 4.7, 5.2, 6.6],
         "ibu": [16, 15, 9, 31, 50],
