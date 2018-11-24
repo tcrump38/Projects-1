@@ -671,7 +671,7 @@
             "lng": -97.6694435
         },
         "amountOfBeers": [
-            12,
+            15,
             "No info in BreweryDB or brewery website. Got from UNTAPPD"
         ],
         "typesOfBeer": [
@@ -679,6 +679,8 @@
             3,
             7
         ],
+        "abv": [6.5, 4.9, 5.4, 7.0, 7.0, 5.2, 5.5, 5.0, 6.7, 5.5, 5.5, 6.7, 6.4, 6.3, 4.9],
+        //info from: https://www.ratebeer.com/brewers/southern-heights-brewing-company/35335/
         "hours": [
             "Thursday: 4:00 PM - 10:00 PM",
             "Friday: 4:00 PM - 10:00 PM",
@@ -857,8 +859,8 @@
             "lng": -97.722008
         },
         "amountOfBeers": [
-            12,
-            "From website."
+            34,
+          //from ratebeer.com
         ],
         "typesOfBeer": [
             3,
