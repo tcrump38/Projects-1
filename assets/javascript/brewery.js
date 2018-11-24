@@ -55,10 +55,10 @@ database.ref('/beersBlueOwl').on("value", function (snapshot) {
         var collHeader = $("<div>").addClass("collapsible-header").attr('id', results[i].breweryID).text(results[i].name).attr('href', 'table3.html')
         var colHeaderIcon = $("<i>").addClass("material-icons").html('expand_more')
         collHeader.prepend(colHeaderIcon)
-                    //("[ABV]: " + results[i].style.abvMin + '-' + results[i].style.abvMax + '% ' + " [IBU Scale]: " + results[i].style.ibuMin + '-' + results[i].style.ibuMax + " [SRM]: " + results[i].style.srmMin + '-' + results[i].style.srmMax)
-        var beerAbv = $("<span class='beerinfo'>").text("ABV: " + results[i].style.abvMin + '-' + results[i].style.abvMax + '%')
-        var beerIbu = $("<span class='beerinfo'>").text("IBU Scale: " + results[i].style.ibuMin + '-' + results[i].style.ibuMax) 
-        var beerSrm = $("<span class='beerinfo'>").text("SRM: " + results[i].style.srmMin + '-' + results[i].style.srmMax)
+        
+        var beerAbv = $("<span class='row beerinfo'>").text("ABV: " + results[i].style.abvMin + '-' + results[i].style.abvMax + '%')
+        var beerIbu = $("<span class='row beerinfo'>").text("IBU Scale: " + results[i].style.ibuMin + '-' + results[i].style.ibuMax) 
+        var beerSrm = $("<span class='row beerinfo'>").text("SRM: " + results[i].style.srmMin + '-' + results[i].style.srmMax)
         var collBody = $("<div class='beer-info-body'>").addClass("collapsible-body").append(beerAbv).append(beerIbu).append(beerSrm)  
         var listItem = $("<li>").append(collHeader).append(collBody)
 
