@@ -55,3 +55,66 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+
+
+
+/* table3.js */
+#beer-header {
+  text-align: center;
+}
+
+body {
+  background: url("../images/craft-beer-logo.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+nav .nav-wrapper {
+  background-color: rgb(254,181,0);
+  height: 10%;
+}
+
+nav {
+  height: 10%;
+}
+
+.sidenav-trigger {
+  color: black;
+}
+
+.card {
+  border-radius: 5%;
+  font-family: 'Nunito', sans-serif;
+  background: rgba(0, 0, 0, 0.715);
+  
+}
+
+.collapsible-header {
+  font-size: 1.3rem;
+  font-family: 'Nunito', sans-serif;
+  border: none;
+  border-radius: 3%;
+  background-color: rgba(255, 255, 255, 0.623);
+}
+
+.collapsible-header:hover {
+  color: rgb(242, 235, 241);
+  background-color: rgb(254,181,0);
+}
+
+.collapsible-body {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  border-radius: 3%;
+  background-color: rgb(254,181,0);
+}
+
+.beerinfo {
+  padding: 4rem;
+}
