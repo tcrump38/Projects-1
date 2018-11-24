@@ -116,6 +116,9 @@ nav {
   background-color: rgb(254,181,0);
 }
 
+.collection-item {
+  text-align: center;
+}
 .collapsible {
   border: none;
 }
