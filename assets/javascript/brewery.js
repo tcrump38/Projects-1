@@ -32,7 +32,7 @@ database.ref('/beersBlueOwl').on("value", function (snapshot) {
     beers = results
 
     for (var i = 0; i < results.length; i++) {
-        var showBeers = $("<tr>")
+        // var showBeers = $("<tr>")
 
         // var beerName = $("<li>").text(results[i].name)
         // var beerNameDisplay = $("<td>").text(results[i].nameDisplay)
@@ -106,3 +106,4 @@ database.ref('/beersBlueOwl').on("value", function (snapshot) {
 // }, function (errorObject) {
 //     console.log("Errors handled: " + errorObject.code);
 // });
+
