@@ -1,0 +1,141 @@
+[
+    {
+        "name": "Solomon's Fancy",
+        "nameDisplay": "Solomon's Fancy",
+        "abv": "8.0",
+        "availableId": 2,
+        "available": {
+          "id": 2,
+          "name": "Limited",
+          "description": "Limited availability."
+        },
+        "manualStyle": {
+            "styleId" : 71,
+            "name": "Bière de Garde",
+            "description": "Solomon had a thing for pomegranates. So do we. As a style, Bière de Garde originates in Northern France, a rustic farmhouse ale for thirsty workers during Fall harvest. We brew ours with Texas malt, French hops, and a bold infusion of fresh pomegranate juice for a rich, passionate, romp in the hay. Just like Solomon's Song."
+        }
+    },
+    {   
+        "name": "Double Predestination",
+        "nameDisplay": "Double Predestination",
+        "abv": "9.0",
+        "manualStyle": {
+            "styleId": 999,
+            "name": "Double IPA",
+            "description": "You'll love this beer (whether you like it or not!). Loaded with Centnnial, Simcoe, and Citra hops, this beer simply oozes grapefruit and citrus, with a touch of pine and nice graininess."
+        }
+    },
+    {
+        "name": "40 Days and 40 Nights",
+        "nameDisplay": "40 Days and 40 Nights",
+        "abv": "7.5",
+        "manualStyle": {
+            "styleId": 999,
+            "name": "American IPA",
+            "description": "This is our “desert island” beer. If we were lost in the wilderness, with only one beer to drink for the rest of our life, this would be it. Gigantic, thirst quenching hoppy goodness. This one will have you going to the well again and again."
+        }
+    },
+    {
+        "name": "Signs & Wonders",
+        "nameDisplay": "Signs & Wonders",
+        "abv": "7.3",
+        "manualStyle": {
+            "styleId": 999,
+            "name": "Robust Porter",
+            "description": "Rich layers of molasses and cacao combined with a biscuity roastiness and just the right amount of alcohol for chilly winter days. Think of it as 310 gallons of “manna from heaven”, just waiting to fill your glass with hope and cheer!"
+        }
+    },
+    {
+        "name": "20 Pound Brown",
+        "nameDisplay": "20 Pound Brown",
+        "abv": "6.5",
+        "manualStyle": {
+            "styleId": 999,
+            "name": "India Brown Ale",
+            "description": "In Montana, the big browns spawn in November. To catch them, you need to be waist deep in the river by 4 AM, even if it’s snowing. You just might land the fish of your life. Or get skunked. Either way, you’ll never forget it – just like this beer!"
+        }
+    },
+    {
+        "name": "Despereaux",
+        "nameDisplay": "Despereaux",
+        "abv": "6.3",
+        "manualStyle" : {
+            "styleId": 999,
+            "name": "French Saison",
+            "description": "Saisons were first brewed for thirsty farmhands toiling in the rural French countryside. Pale and crisp, with spicy undertones - we hop ours with Melon & Blanc for layers of honeydew, peaches, and mango. Here’s to unlikely heroes in unexpected places (and a really great book about a mouse that mattered). Brilliantly refreshing!"
+        }
+    },
+    {
+        "name": "Dragon's Hoard",
+        "nameDisplay": "Dragon's Hoard",
+        "abv": "6.0",
+        "manualStyle": {
+            "styleId": 999,
+            "name": "Slovenian IPA",
+            "description": "A monster of an IPA, loaded with new experimental Slovenian hops – Styrian Wolf and Styrian Dragon combine to create heavy hop aromas of mango and melon, with flavors of pineapple and resin. Grab a pint and slay your dragons!"
+        }
+    },
+    {
+        "name": "Batch 200",
+        "nameDisplay": "Batch 200",
+        "abv": "5.6",
+        "manualStyle": {
+            "styleId": 999,
+            "name": "Prickly Pear Sour Ale",
+            "description": "We wanted something special for our 200th batch. So we combined Blacklands malt and local fresh hops with Texas prickly pear cactus and an experimental yeast strain that produces naturally sour beer. The result is crisp, dry and utterly unique; pours rich brown in color, with flavors of sour apple, intense cranberry and tart grape."
+        }
+    },
+    {
+        "name": "Prodigal Pils",
+        "nameDisplay": "Prodigal Pils",
+        "abv": "5.2",
+        "manualStyle": {
+            "styleId": 999,
+            "name": "German Pilsner",
+            "description": "Here’s to the prodigal in all of us - a lavish, extravagant German Pilsner hopped with Tettnanger, Hallertauer, Spalt, & Saphir: for a beer that’s crisp, dry, immensely refreshing."
+        }
+    },
+    {
+        "name": "Kovenant Kolsch",
+        "nameDisplay": "Kovenant Kolsch",
+        "abv": "5.0",
+        "manualStyle": {
+            "styleId": 999,
+            "name": "German Kolsch",
+            "description": "Tilting in a more traditional direction, this version pairs rich German malts with classic German hops. Light and refreshing, pours like gold and tastes like heaven - with toasty grains, and just a hint of cracked pepper."
+        }
+    },
+    {
+        "name": "King Frank",
+        "nameDisplay": "King Frank",
+        "abv": "4.7",
+        "manualStyle": {
+            "styleId": 999,
+            "name": "Franconian Lager",
+            "description": "Meet Frank – a smooth, rich Franconian Lager that will remind you of fresh grain, toasted crackers, and just the right amount of spiciness. Regal, yet down to earth. Perfect beer for a fine fall (or spring) afternoon on the patio!"
+        }
+    },
+    {
+        "name": "Jolted Phoenix",
+        "nameDisplay": "Jolted Phoenix",
+        "abv": "4.6",
+        "manualStyle": {
+            "styleId": 999,
+            "name": "Coffee Infused Golden Ale",
+            "description": "Jolted is back! We infuse 18 pounds of house roasted Costa Rican into an elegant golden ale hopped with Phoenix. The results are as epic as the legendary bird: dark chocolate, creamy vanilla, toasted almonds, with rich coffee flavors throughout."
+        }
+    },
+    {
+        "name": "Achilles Heel",
+        "nameDisplay": "Achilles Heel",
+        "abv": "3.6",
+        "manualStyle": {
+            "styleId": 999,
+            "name": "Dry Stout",
+            "description": "Meet Achilles, the legendary armored elk who roamed the Beartooth Mountains in Montana until we recruited him to keep watch over our taproom. If every warrior has a weakness, this one could be his – a drinkable dry stout, served on Nitro!"
+        }
+    }
+]
+
+
+
