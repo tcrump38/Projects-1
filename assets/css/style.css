@@ -6,6 +6,8 @@
  * Made By MaterializeCSS.com
  */
 
+
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -127,5 +129,4 @@ nav {
 .beerinfo {
  text-align: center;
  color: rgb(255, 236, 199);
- 
 }

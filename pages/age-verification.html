@@ -13,6 +13,47 @@
     <title>Age Verification</title>
 </head>
 <body>
+        <div class="age" id="verify"> 
+                <div id="noman">ARE YOU OVER 21?</div>
+                <div> 
+                  <p> If not, leave now and we wont tell your mom.
+                    </br>  By continuing you agree you are 21 or older.
+                  </p>
+                </div>
+                <div id="YN">
+                  <a href="index.html" id="old">Yes</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://www.youtube.com/watch?v=z-m9WgAdflY" rel="nofollow" id="young">No</a>
+                </div>
+            </div>
+            
+            <script>
+            $(document).ready(function(){
+            if ( document.referrer == null || document.referrer.indexOf(window.location.hostname) < 0 ) {
+            $("#verify").modal({opacity:85, position: ["20%",""], onOpen: function (dialog) {
+                dialog.overlay.fadeIn('slow', function () {
+                    dialog.container.slideDown('slow', function () {
+                        dialog.data.fadeIn('slow');
+                        return false;
+                    });
+                });
+            }});
+            }
+            });
+            </script>
+            
+            <script type="text/javascript" >            
+            function redirect(url) {
+                if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
+                    var referLink = document.createElement('a');
+                    referLink.href = url;
+                    document.body.appendChild(referLink);
+                    referLink.click();
+                } else {
+                    location.href = url;
+                }
+            }
+            </script>
     
 </body>
 </html>
