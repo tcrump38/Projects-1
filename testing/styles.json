@@ -1,182 +1,101 @@
-{
-    "0": {
-        "wiki": "Altbier",
-        "title": "Altbier"
-    },
-    "1": {
-        "wiki": "Amber_ale",
-        "title": "Amber ale"
-    },
-    "2": {
-        "wiki": "Barley_wine",
-        "title": "Barley wine"
-    },
-    "3": {
-        "wiki": "Berliner_Weisse",
-        "title": "Berliner Weisse"
-    },
-    "4": {
-        "wiki": "Bi%C3%A8re_de_Garde",
-        "title": "Bière de Garde"
-    },
-    "5": {
-        "wiki": "Bitter_(beer)",
-        "title": "Bitter (beer)"
-    },
-    "6": {
-        "wiki": "Blonde_Ale",
-        "title": "Blonde Ale"
-    },
-    "7": {
-        "wiki": "Bock",
-        "title": "Bock"
-    },
-    "8": {
-        "wiki": "Brown_ale",
-        "title": "Brown ale"
-    },
-    "9": {
-        "wiki": "Steam_beer",
-        "title": "Steam beer"
-    },
-    "10": {
-        "wiki": "Cream_Ale",
-        "title": "Cream Ale"
-    },
-    "11": {
-        "wiki": "Dortmunder_Export",
-        "title": "Dortmunder Export"
-    },
-    "12": {
-        "wiki": "Doppelbock",
-        "title": "Doppelbock"
-    },
-    "13": {
-        "wiki": "Dunkel",
-        "title": "Dunkel"
-    },
-    "14": {
-        "wiki": "Dunkelweizen",
-        "title": "Dunkelweizen"
-    },
-    "15": {
-        "wiki": "Eisbock",
-        "title": "Eisbock"
-    },
-    "16": {
-        "wiki": "Flanders_red_ale",
-        "title": "Flanders red ale"
-    },
-    "17": {
-        "wiki": "Golden_ale_(UK)",
-        "title": "Golden ale (UK)"
-    },
-    "18": {
-        "wiki": "Gose",
-        "title": "Gose"
-    },
-    "19": {
-        "wiki": "Gueuze",
-        "title": "Gueuze"
-    },
-    "20": {
-        "wiki": "Hefeweizen",
-        "title": "Hefeweizen"
-    },
-    "21": {
-        "wiki": "Helles",
-        "title": "Helles"
-    },
-    "22": {
-        "wiki": "India_pale_ale",
-        "title": "India pale ale"
-    },
-    "23": {
-        "wiki": "K%C3%B6lsch_(beer)",
-        "title": "Kölsch (beer)"
-    },
-    "24": {
-        "wiki": "Lambic",
-        "title": "Lambic"
-    },
-    "25": {
-        "wiki": "Bitter_(beer)#Light_ale",
-        "title": "Bitter (beer)"
-    },
-    "26": {
-        "wiki": "Maibock",
-        "title": "Maibock"
-    },
-    "27": {
-        "wiki": "Malt_liquor",
-        "title": "Malt liquor"
-    },
-    "28": {
-        "wiki": "Mild_ale",
-        "title": "Mild ale"
-    },
-    "29": {
-        "wiki": "Oktoberfestbier",
-        "title": "Oktoberfestbier"
-    },
-    "30": {
-        "wiki": "Old_ale",
-        "title": "Old ale"
-    },
-    "31": {
-        "wiki": "Oud_bruin",
-        "title": "Oud bruin"
-    },
-    "32": {
-        "wiki": "Pale_ale",
-        "title": "Pale ale"
-    },
-    "33": {
-        "wiki": "Pilsener",
-        "title": "Pilsener"
-    },
-    "34": {
-        "wiki": "Porter_(beer)",
-        "title": "Porter (beer)"
-    },
-    "35": {
-        "wiki": "Pale_ale#Irish_Red_ale",
-        "title": "Pale ale"
-    },
-    "36": {
-        "wiki": "Roggenbier",
-        "title": "Roggenbier"
-    },
-    "37": {
-        "wiki": "Saison",
-        "title": "Saison"
-    },
-    "38": {
-        "wiki": "Scotch_ale",
-        "title": "Scotch ale"
-    },
-    "39": {
-        "wiki": "Stout",
-        "title": "Stout"
-    },
-    "40": {
-        "wiki": "Schwarzbier",
-        "title": "Schwarzbier"
-    },
-    "41": {
-        "wiki": "Vienna_lager",
-        "title": "Vienna lager"
-    },
-    "42": {
-        "wiki": "Witbier",
-        "title": "Witbier"
-    },
-    "43": {
-        "wiki": "Weissbier",
-        "title": "Weissbier"
-    },
-    "44": {
-        "wiki": "Weizenbock",
-        "title": "Weizenbock"
-    }
-}
+[ {
+    "title" : "Altbier",
+    "wiki" : "Altbier"
+  }, {
+    "title" : "Barley wine",
+    "wiki" : "Barley_wine"
+  }, {
+    "title" : "Berliner Weisse",
+    "wiki" : "Berliner_Weisse"
+  }, {
+    "title" : "Bière de Garde",
+    "wiki" : "Bi%C3%A8re_de_Garde"
+  }, {
+    "sub" : [ "Light ale" ],
+    "title" : "Bitter",
+    "wiki" : "Bitter_(beer)"
+  }, {
+    "sub" : [ "Doppelbock", "Eisbock", "Maibock/Helles bock" ],
+    "title" : "Bock",
+    "wiki" : "Bock"
+  }, {
+    "title" : "Brown ale",
+    "wiki" : "Brown_ale"
+  }, {
+    "title" : "California Common/Steam beer",
+    "wiki" : "Steam_beer"
+  }, {
+    "title" : "Cream Ale",
+    "wiki" : "Cream_ale"
+  }, {
+    "title" : "Dortmunder Export",
+    "wiki" : "Dortmunder_Export"
+  }, {
+    "title" : "Dunkel",
+    "wiki" : "Dunkel"
+  }, {
+    "title" : "Flanders red ale",
+    "wiki" : "Flanders_red_ale"
+  }, {
+    "title" : "Gose",
+    "wiki" : "Gose"
+  }, {
+    "title" : "Gueuze",
+    "wiki" : "Gueuze"
+  }, {
+    "title" : "Helles",
+    "wiki" : "Helles"
+  }, {
+    "title" : "India pale ale",
+    "wiki" : "India_pale_ale"
+  }, {
+    "title" : "Kölsch",
+    "wiki" : "K%C3%B6lsch_(beer)"
+  }, {
+    "title" : "Lambic",
+    "wiki" : "Lambic"
+  }, {
+    "title" : "Malt liquor",
+    "wiki" : "Malt_liquor"
+  }, {
+    "title" : "Mild ale",
+    "wiki" : "Mild_ale"
+  }, {
+    "title" : "Oktoberfestbier/Märzenbier",
+    "wiki" : "Märzen"
+  }, {
+    "title" : "Old ale",
+    "wiki" : "Old_ale"
+  }, {
+    "title" : "Oud bruin",
+    "wiki" : "Oud_bruin"
+  }, {
+    "sub" : [ "Blonde ale", "Amber ale", "Golden/Summer ale", "Red ale", "Scotch ale" ],
+    "title" : "Pale ale",
+    "wiki" : "Pale_ale"
+  }, {
+    "title" : "Pilsener/Pilsner/Pils",
+    "wiki" : "Pilsner"
+  }, {
+    "title" : "Porter",
+    "wiki" : "Porter_(beer)"
+  }, {
+    "title" : "Roggenbier",
+    "wiki" : "Rye_beer"
+  }, {
+    "title" : "Saison",
+    "wiki" : "Saison"
+  }, {
+    "title" : "Stout",
+    "wiki" : "Stout"
+  }, {
+    "title" : "Schwarzbier",
+    "wiki" : "Schwarzbier"
+  }, {
+    "title" : "Vienna lager",
+    "wiki" : "Lager"
+  }, {
+    "sub" : [ "Dunkelweizen", "Hefeweizen", "Weissbier", "Weizenbock" ],
+    "title" : "Witbier",
+    "wiki" : "Wheat_beer"
+  } ]  

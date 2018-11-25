@@ -29,10 +29,18 @@ database.ref('/stylesWiki').on("value", function (snapshot) {
 
             //// main btn for brewery - links to next page
             var beerLink = $("<a>").text(results[i].title)
-
             beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
-
             collHeader.append(beerLink)
+
+
+            if (typeof results[i].sub != "undefined") {
+                for (j=0; j < results[i].sub.length; j++ ) {
+                    var subBeers = $("<a>").text(results[i].sub[j]).addClass("btn yellow accent-5 black-text waves-effect waves-orange")
+                    collHeader.append(subBeers)
+                }
+            }
+
+
 
             // create collapsible body for list item
             var collBody = $("<div>").addClass("collapsible-body")
@@ -40,6 +48,8 @@ database.ref('/stylesWiki').on("value", function (snapshot) {
             var wikiContent = $("<div>")
 
             callWikiApi(wikiContent, results[i].wiki) 
+
+            console.log(results[i].title)
 
 
             
@@ -76,20 +86,11 @@ function callWikiApi(element, wiki) {
         async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
-    
             var markup = data.parse.text["*"];
-
             var blurb = $('<div></div>').html(markup);
-
-
             blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
-
-
             blurb.find('sup').remove();
-
-
             blurb.find('.mw-ext-cite-error').remove();
-
             element.html( $(blurb).find('p').text())
         },
         error: function (errorMessage) {
