@@ -1,3 +1,12 @@
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+    //event listener for beer dropdown.
+    $('.collapsible').collapsible();
+  });
+
+
+
+
 var config = {
     apiKey: "AIzaSyCACl0dIADoUYtr0cU0l6WsUMGbcHhC3Vo",
     authDomain: "project1-388e6.firebaseapp.com",
@@ -29,13 +38,13 @@ database.ref('/stylesWiki').on("value", function (snapshot) {
 
             //// main btn for brewery - links to next page
             var beerLink = $("<a>").text(results[i].title)
-            beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
+            beerLink.addClass("btn styles-button")
             collHeader.append(beerLink)
 
 
             if (typeof results[i].sub != "undefined") {
                 for (j=0; j < results[i].sub.length; j++ ) {
-                    var subBeers = $("<a>").text(results[i].sub[j]).addClass("btn yellow accent-5 black-text waves-effect waves-orange")
+                    var subBeers = $("<a>").text(results[i].sub[j]).addClass("btn undefined-styles-button")
                     collHeader.append(subBeers)
                 }
             }
@@ -43,7 +52,7 @@ database.ref('/stylesWiki').on("value", function (snapshot) {
 
 
             // create collapsible body for list item
-            var collBody = $("<div>").addClass("collapsible-body")
+            var collBody = $("<div>").addClass("wiki-info collapsible-body")
 
             var wikiContent = $("<div>")
 

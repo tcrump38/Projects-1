@@ -59,7 +59,7 @@ footer.page-footer {
 }
 
 
-/* table3.js */
+/* table3.html */
 #beer-header {
   text-align: center;
 }
@@ -85,16 +85,17 @@ nav {
   color: black;
 }
 
-#beer-table {
+.beers-list-box {
   border-radius: 5%;
   font-family: 'Nunito', sans-serif;
-  background: rgba(0, 0, 0, 0.715);
+  background: rgba(39, 77, 32, 0.715);
   
 }
 
 .collapsible-header {
   font-size: 1.3rem;
   font-family: 'Nunito', sans-serif;
+  font-weight: bold;
   border: none;
   border-radius: 5%;
   border-style: none;
@@ -129,4 +130,58 @@ nav {
 .beerinfo {
  text-align: center;
  color: rgb(255, 236, 199);
+ 
+}
+
+/* styles.html */
+
+.styles-button {
+  color: black;
+  background-color: rgba(254, 207, 21, 0.877);
+  font-weight: bold;
+}
+
+.styles-button:hover {
+  color: black;
+  background-color: rgba(254, 210, 32, 0.592);
+  font-weight: bold;
+}
+
+.undefined-styles-button {
+  color: black;
+  background-color: rgba(248, 233, 64, 0.66);
+  font-weight: normal;
+  font-style: italic;
+}
+
+.undefined-styles-button:hover {
+  color: black;
+  background-color: rgba(255, 253, 234, 0.55);
+  
+}
+
+.wiki-info {
+  color: rgb(0, 0, 0);
+  background-color: rgb(254,181,0);
+  font-family: 'Nunito', sans-serif;
+  padding: 1rem;
+}
+
+/* maps-brew.html */
+
+.brewery-button {
+  color: black;
+  background-color: rgba(254, 207, 21, 0.877);
+  font-weight: bold;
+}
+
+.brewery-button:hover {
+  color: black;
+  background-color: rgba(250, 217, 84, 0.592);
+}
+
+.address-info {
+  color: rgb(0, 0, 0);
+  background-color: rgb(254,181,0);
+  padding: 1rem;
 }
