@@ -53,7 +53,7 @@ function setTable() {
         var beerAbv = $("<span class='row beerinfo'>")
         // if beer has abv, show
         if (typeof beers[i].abv != 'undefined') {
-            beerAbv.text("ABV: " + beers[i].abv)
+            beerAbv.text("ABV: " + beers[i].abv + '%')
         }
         // if not, show abv-scale for style of beer
         else {
