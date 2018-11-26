@@ -30,8 +30,10 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             // create collapsible header for list item
             var collHeader = $("<div>").addClass("collapsible-header")
 
+            console.log('name: ' + results[i].name + ', id: ' + results[i].breweryId)
+
             //// main btn for brewery - links to next page
-            var beerLink = $("<a>").attr('id', results[i].breweryID).text(results[i].name).attr('href', 'brewery.html')
+            var beerLink = $("<a>").attr('id', results[i].breweryId).text(results[i].name).attr('href', 'brewery.html')
             beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
             beerLink.on("click", function(event){
                 localStorage.setItem("brewery", event.target.attributes.id.value)
