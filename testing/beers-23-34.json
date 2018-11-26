@@ -1232,7 +1232,7 @@
           "ibu": "19",
           "manualStyle": {
               "styleId": 555,
-              "name": "Blonde",
+              "name": "Blonde"
           }
       },
       {
@@ -1249,7 +1249,7 @@
           "ibu": "32",
           "manualStyle": {
               "styleId": 555,
-              "name": "Porter",
+              "name": "Porter"
           }
       },
       {
@@ -1267,7 +1267,7 @@
           "ibu": "50",
           "manualStyle": {
               "styleId": 555,
-              "name": "American ipa",
+              "name": "American ipa"
           }
       },
       {
@@ -1275,7 +1275,7 @@
           "abv": "5.4",
           "manualStyle": {
               "styleId": 555,
-              "name": "Wheat Ale",
+              "name": "Wheat Ale"
           }
       },
       {
@@ -1285,8 +1285,7 @@
           "manualStyle": {
               "styleId": 555,
               "name": "Hefeweizen",
-              "description": "This is our most popular weiss beer and is crisp, light and quenching. 
-              Slightly fruity, with hints of citrus and banana, this effervescent ale is lovely with a slice of lemon."
+              "description": "This is our most popular weiss beer and is crisp, light and quenching. Slightly fruity, with hints of citrus and banana, this effervescent ale is lovely with a slice of lemon."
           }
       },
       {

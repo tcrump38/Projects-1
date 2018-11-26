@@ -10817,124 +10817,123 @@
     {
         "brewery": "3TPLoz",
         "beers": [
-            {
-                "name": "Draught House Bombay IPA",
-                "abv": "7",
-                "ibu": "50",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "ipa",
-                    "description": "Bright and hoppy with a clean malt backbone"
-                }
-            },
-            {
-                "name": "Draught HouseHop Gold",
-                "abv": "5.4",
-                "ibu": "28",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "Golden Ale",
-                    "description": "German malts and American hops. Tangy and malty with noble hop flavor."
-                }
-            },
-            {
-                "name": "Draught House Blackpool",
-                "abv": "5.2",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "English Ale"
-                }
-            },
-            {
-                "name": "Draught House Ultra Helles",
-                "abv": "5.2",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "Helles"
-                }
-            },
-            {
-                "name": "Draught House Moto Rally",
-                "abv": "5.2",
-                "ibu": "19",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "Blonde",
-                }
-            },
-            {
-                "name": "Draught House Direct Action Lager",
-                "abv": "5.2",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "Lager"
-                }
-            },
-            {
-                "name": "Draught House Standard Porter",
-                "abv": "6.5",
-                "ibu": "32",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "Porter",
-                }
-            },
-            {
-                "name": "Draught House Malt House",
-                "abv": "6",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "Stout",
-                    "description": "Malty chocolate stout with vanilla and toasted biscuit. Made with Horizon hops."
-                }
-            },
-            {
-                "name": "Draught House Jim Dandy",
-                "abv": "7",
-                "ibu": "50",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "American ipa",
-                }
-            },
-            {
-                "name": "Draught House Red Weisse",
-                "abv": "5.4",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "Wheat Ale",
-                }
-            },
-            {
-                "name": "Draught House Weizenheimer",
-                "abv": "5.1",
-                "ibu": "18",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "Hefeweizen",
-                    "description": "This is our most popular weiss beer and is crisp, light and quenching. 
-                  Slightly fruity, with hints of citrus and banana, this effervescent ale is lovely with a slice of lemon."
-                }
-            },
-            {
-                "name": "Draught House If you don't eat your meat",
-                "abv": "5.8",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "Weissbier"
-                }
-            },
-            {
-                "name": "Draught House Red Planet",
-                "abv": "5.2",
-                "ibu": "25",
-                "manualStyle": {
-                    "styleId": 555,
-                    "name": "Amber Ale",
-                    "description": "Red Ale Lightly sweet and fruity with American citrus hop flavors."
-                }
-            }
-        ]
+          {
+              "name": "Draught House Bombay IPA",
+              "abv": "7",
+              "ibu": "50",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "ipa",
+                  "description": "Bright and hoppy with a clean malt backbone"
+              }
+          },
+          {
+              "name": "Draught HouseHop Gold",
+              "abv": "5.4",
+              "ibu": "28",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "Golden Ale",
+                  "description": "German malts and American hops. Tangy and malty with noble hop flavor."
+              }
+          },
+          {
+              "name": "Draught House Blackpool",
+              "abv": "5.2",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "English Ale"
+              }
+          },
+          {
+              "name": "Draught House Ultra Helles",
+              "abv": "5.2",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "Helles"
+              }
+          },
+          {
+              "name": "Draught House Moto Rally",
+              "abv": "5.2",
+              "ibu": "19",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "Blonde"
+              }
+          },
+          {
+              "name": "Draught House Direct Action Lager",
+              "abv": "5.2",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "Lager"
+              }
+          },
+          {
+              "name": "Draught House Standard Porter",
+              "abv": "6.5",
+              "ibu": "32",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "Porter"
+              }
+          },
+          {
+              "name": "Draught House Malt House",
+              "abv": "6",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "Stout",
+                  "description": "Malty chocolate stout with vanilla and toasted biscuit. Made with Horizon hops."
+              }
+          },
+          {
+              "name": "Draught House Jim Dandy",
+              "abv": "7",
+              "ibu": "50",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "American ipa"
+              }
+          },
+          {
+              "name": "Draught House Red Weisse",
+              "abv": "5.4",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "Wheat Ale"
+              }
+          },
+          {
+              "name": "Draught House Weizenheimer",
+              "abv": "5.1",
+              "ibu": "18",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "Hefeweizen",
+                  "description": "This is our most popular weiss beer and is crisp, light and quenching. Slightly fruity, with hints of citrus and banana, this effervescent ale is lovely with a slice of lemon."
+              }
+          },
+          {
+              "name": "Draught House If you don't eat your meat",
+              "abv": "5.8",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "Weissbier"
+              }
+          },
+          {
+              "name": "Draught House Red Planet",
+              "abv": "5.2",
+              "ibu": "25",
+              "manualStyle": {
+                  "styleId": 555,
+                  "name": "Amber Ale",
+                  "description": "Red Ale Lightly sweet and fruity with American citrus hop flavors."
+              }
+          }
+      ]
     },
     {
         "brewery": "1FHyB2",
