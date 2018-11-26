@@ -66,6 +66,8 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             if (results[i].hours.length > 1) {
                 var collHours = $("<ul>").addClass("collapsible yellow lighten-3")
                 var collHoursHeader = $("<div>").addClass("collapsible-header waves-effect waves-yellow").html("HOURS")
+                var colHeaderIcon = $("<i>").addClass("material-icons").html('expand_more')
+                collHoursHeader.prepend(colHeaderIcon)
                 var collHoursBody = $("<div>").addClass("collapsible-body")
                 var hoursList = $("<ul>").addClass("collection")
                 for (j = 0; j < results[i].hours.length; j++) {
@@ -95,11 +97,12 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
 
             // add address if present (populate off google api) -- using placeholder for now
             var addy = $("<div>").addClass("col s12 m6 addy")
-            var addyInfo = $("<p>").html("<em>Address:<em> 12345 Pauls Valley Rd #2, Austin, TX 78737")
+            var addyInfo = $("<p>").html("<em>Address:<em> 12345 Pauls Valley Rd #2, Austin, TX 78737").addClass("address-info")
             addy.append(addyInfo)
 
             // append hours and address to collapsible body
             collBody.append(collHours).append(addy)
+
 
             // create list item, and append header and body
             var listItem = $("<li>").append(collHeader).append(collBody)
