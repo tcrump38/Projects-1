@@ -25,34 +25,6 @@
                   <a class="btn btn-primary" href="https://www.youtube.com/watch?v=z-m9WgAdflY" role="button">NO</a>
                 </div>
             </div>
-            
-            <script>
-            $(document).ready(function(){
-            if ( document.referrer == null || document.referrer.indexOf(window.location.hostname) < 0 ) {
-            $("#verify").modal({opacity:85, position: ["20%",""], onOpen: function (dialog) {
-                dialog.overlay.fadeIn('slow', function () {
-                    dialog.container.slideDown('slow', function () {
-                        dialog.data.fadeIn('slow');
-                        return false;
-                    });
-                });
-            }});
-            }
-            });
-            </script>
-            
-            <script type="text/javascript" >            
-            function redirect(url) {
-                if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
-                    var referLink = document.createElement('a');
-                    referLink.href = url;
-                    document.body.appendChild(referLink);
-                    referLink.click();
-                } else {
-                    location.href = url;
-                }
-            }
-            </script>
     
 </body>
 </html>
