@@ -5,7 +5,7 @@ $(document).ready(function(){
   });
 
 
-
+  var currentBrew = ''
 
 var geoBrews = []
 var map

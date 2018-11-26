@@ -5,7 +5,6 @@ $(document).ready(function () {
 });
 
 var config = {
-
   apiKey: "AIzaSyCACl0dIADoUYtr0cU0l6WsUMGbcHhC3Vo",
   authDomain: "project1-388e6.firebaseapp.com",
   databaseURL: "https://project1-388e6.firebaseio.com",

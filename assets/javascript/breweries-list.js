@@ -31,7 +31,11 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             var collHeader = $("<div>").addClass("collapsible-header")
 
             //// main btn for brewery - links to next page
-            var beerLink = $("<a>").attr('id', results[i].breweryID).text(results[i].name).attr('href', 'table2.html')
+            var beerLink = $("<a>").attr('id', results[i].breweryID).text(results[i].name).attr('href', 'brewery.html')
+            beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
+            beerLink.on("click", function(event){
+                localStorage.setItem("brewery", event.target.attributes.id.value)
+            })
 
             // geoBrews[i] = {
             //     breweryID: results[i].breweryID,
@@ -44,8 +48,8 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             //// add icon for marker -- replace with markers for each location based on map
             var collHeaderIcon = $("<div>").html('<img src="'+ stringForIcon + '"></img>')
 
-            beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
 
+            
             //// add to indicate if locale is open or not -- will load from google; using placeholder for now
             if (i % 2 == 0) {
                 var collOpenNow = $("<div>").addClass("open-close").html('<img src="../assets/icons/closed.svg"></img>')
