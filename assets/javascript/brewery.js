@@ -3,7 +3,6 @@ $(document).ready(function(){
     $('.sidenav').sidenav();
     //event listener for beer dropdown.
     $('.collapsible').collapsible();
-    setTable()
 });
 
 currentBrew = localStorage.getItem("brewery")
@@ -20,7 +19,6 @@ console.log(currentBrew)
 // firebase.initializeApp(config);
 // var database = firebase.database();
 
-
 var config = {
     apiKey: "AIzaSyA1UcJOcionpMViUfunJvvGOevSoQzTYZg",
     authDomain: "all-beers.firebaseapp.com",
@@ -32,32 +30,29 @@ var config = {
 
 firebase.initializeApp(config);
 var database = firebase.database();
-var beers;
+var results;
 
-// database.ref('/allBeers/' + localStorage.getItem("brewery")).on("value", function (snapshot) {
 database.ref(currentBrew).on("value", function (snapshot) {
-    console.log(currentBrew)
-    
-    var results = snapshot.val()
-    beers = results
-    // Log everything that's coming out of snapshot
-    console.log(snapshot.val());
-    // Handle the errors
+    results = snapshot.val()
+    setTable()
 }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
 });
 
+
+
 function setTable() {
-    var results = beers
-    for (var i = 0; i < results.length; i++) {
-        var collHeader = $("<div>").addClass("collapsible-header").attr('id', results[i].breweryID).text(results[i].name).attr('href', 'table3.html')
+    var beers = results.beers
+    for (var i = 0; i < beers.length; i++) {
+        var collHeader = $("<div>").addClass("collapsible-header").attr('id', beers[i].breweryID).text(beers[i].name).attr('href', 'table3.html')
         var colHeaderIcon = $("<i>").addClass("material-icons").html('expand_more')
         collHeader.prepend(colHeaderIcon)
-        var beerAbv = $("<span class='row beerinfo'>").text("ABV: " + results[i].style.abvMin + '-' + results[i].style.abvMax + '%')
-        var beerIbu = $("<span class='row beerinfo'>").text("IBU Scale: " + results[i].style.ibuMin + '-' + results[i].style.ibuMax) 
-        var beerSrm = $("<span class='row beerinfo'>").text("SRM: " + results[i].style.srmMin + '-' + results[i].style.srmMax)
+        var beerAbv = $("<span class='row beerinfo'>").text("ABV: " + beers[i].style.abvMin + '-' + beers[i].style.abvMax + '%')
+        var beerIbu = $("<span class='row beerinfo'>").text("IBU Scale: " + beers[i].style.ibuMin + '-' + beers[i].style.ibuMax) 
+        var beerSrm = $("<span class='row beerinfo'>").text("SRM: " + beers[i].style.srmMin + '-' + beers[i].style.srmMax)
         var collBody = $("<div class='beer-info-body'>").addClass("collapsible-body").append(beerAbv).append(beerIbu).append(beerSrm)  
         var listItem = $("<li>").append(collHeader).append(collBody)
         $("#beers-coll").append(listItem)
     }
 }
+
