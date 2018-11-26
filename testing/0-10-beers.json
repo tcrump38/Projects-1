@@ -240,8 +240,7 @@
 }
 {
     "brewery": "CJ7aEv",
-    "beers": {[
-        {
+    "beers": {
           "id": "XkY4TA",
           "name": "BJ's Abbey Normal",
           "nameDisplay": "BJ's Abbey Normal",
@@ -1461,8 +1460,7 @@
 }
 {
     "brewery": "58gT1s",
-    "beers": {[
-        {
+    "beers": {
           "id": "lZJlAA",
           "name": "Juicy IPA",
           "nameDisplay": "Juicy IPA",
@@ -1505,8 +1503,7 @@
 }
 {
     "brewery": "cJio9R",
-    "beers": {[
-        {
+    "beers": {
           "id": "tciJOF",
           "name": "(512) ALT",
           "nameDisplay": "(512) ALT",
@@ -2689,8 +2686,7 @@
 }
 {
     "brewery": "P203ye",
-    "beers": {[
-        {
+    "beers": {
           "id": "4gEXAd",
           "name": "Czech Czech - Sour Czech Pilsner",
           "nameDisplay": "Czech Czech - Sour Czech Pilsner",
@@ -3007,8 +3003,7 @@
 }
 {
     "brewery": "7Tjp4C",
-    "beers": {[
-        {
+    "beers": {
           "id": "YpI1lC",
           "name": "Barrel Aged Naked Nun",
           "nameDisplay": "Barrel Aged Naked Nun (2013)",
