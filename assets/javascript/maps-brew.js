@@ -33,7 +33,7 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             //// add icon for marker -- replace with markers for each location based on map
             var collHeaderIcon = $("<i>").addClass("material-icons").html('place')
 
-            beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
+            beerLink.addClass("btn brewery-button")
 
             //// add to indicate if locale is open or not -- will load from google; using placeholder for now
             if (i % 2 ==0) {
@@ -84,7 +84,7 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
 
             // add address if present (populate off google api) -- using placeholder for now
             var addy = $("<div>").addClass("col s12 m6 addy")
-            var addyInfo = $("<p>").html("<em>Address:<em> 12345 Pauls Valley Rd #2, Austin, TX 78737")
+            var addyInfo = $("<p>").html("<em>Address:<em> 12345 Pauls Valley Rd #2, Austin, TX 78737").addClass("address-info")
             addy.append(addyInfo)
 
             // append hours and address to collapsible body
