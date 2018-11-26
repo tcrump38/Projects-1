@@ -66,11 +66,27 @@ function setTable() {
             beerIbu.text("IBU: " + beers[i].ibu)
         }
         // if not, show ibu-scale for style of beer
-        else {
+        else if ((typeof beers[i].style != 'undefined') && (typeof beers[i].style.ibuMin != 'undefined')) {
             beerIbu.text("IBU Scale: " + beers[i].style.ibuMin + '-' + beers[i].style.ibuMax) 
         }
+        else {
+            beerIbu.text("IBU:  - ")
+        }
 
-        var beerSrm = $("<span class='row beerinfo'>").text("SRM: " + beers[i].style.srmMin + '-' + beers[i].style.srmMax)
+        var beerSrm = $("<span class='row beerinfo'>")
+
+         // if beer has srm, show
+        if (typeof beers[i].srm != 'undefined') {
+            beerSrm.text("SRM: " + beers[i].srm)
+        }
+        // if not, show srm-scale for style of beer
+        else if ((typeof beers[i].style != 'undefined') && (typeof beers[i].style.srmMin != 'undefined')) {
+            beerSrm.text("SRM: " + beers[i].style.srmMin + '-' + beers[i].style.srmMax)
+        }
+        else {
+            beerSrm.text("SRM:  - ")
+        }
+
         var collBody = $("<div class='beer-info-body'>").addClass("collapsible-body").append(beerAbv).append(beerIbu).append(beerSrm)  
         var listItem = $("<li>").append(collHeader).append(collBody)
         $("#beers-coll").append(listItem)
