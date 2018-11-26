@@ -8,31 +8,33 @@ $(document).ready(function(){
 currentBrew = localStorage.getItem("brewery")
 console.log(currentBrew)
 
-// var config = {
-//     apiKey: "AIzaSyCACl0dIADoUYtr0cU0l6WsUMGbcHhC3Vo",
-//     authDomain: "project1-388e6.firebaseapp.com",
-//     databaseURL: "https://project1-388e6.firebaseio.com",
-//     projectId: "project1-388e6",
-//     storageBucket: "project1-388e6.appspot.com",
-//     messagingSenderId: "62443097997"
-// };
-// firebase.initializeApp(config);
-// var database = firebase.database();
-
 var config = {
-    apiKey: "AIzaSyA1UcJOcionpMViUfunJvvGOevSoQzTYZg",
-    authDomain: "all-beers.firebaseapp.com",
-    databaseURL: "https://all-beers.firebaseio.com",
-    projectId: "all-beers",
-    storageBucket: "all-beers.appspot.com",
-    messagingSenderId: "60314540344"
-  };
-
+    apiKey: "AIzaSyCACl0dIADoUYtr0cU0l6WsUMGbcHhC3Vo",
+    authDomain: "project1-388e6.firebaseapp.com",
+    databaseURL: "https://project1-388e6.firebaseio.com",
+    projectId: "project1-388e6",
+    storageBucket: "project1-388e6.appspot.com",
+    messagingSenderId: "62443097997"
+};
 firebase.initializeApp(config);
 var database = firebase.database();
+
+// var config = {
+//     apiKey: "AIzaSyA1UcJOcionpMViUfunJvvGOevSoQzTYZg",
+//     authDomain: "all-beers.firebaseapp.com",
+//     databaseURL: "https://all-beers.firebaseio.com",
+//     projectId: "all-beers",
+//     storageBucket: "all-beers.appspot.com",
+//     messagingSenderId: "60314540344"
+//   };
+
+// firebase.initializeApp(config);
+// var database = firebase.database();
 var results;
 
-database.ref(currentBrew).on("value", function (snapshot) {
+// database.ref(currentBrew).on("value", function (snapshot) {
+
+database.ref('/allBeers/'+ currentBrew).on("value", function (snapshot) {
     results = snapshot.val()
     setTable()
 }, function (errorObject) {
