@@ -1,3 +1,12 @@
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+    //event listener for beer dropdown.
+    $('.collapsible').collapsible();
+  });
+
+
+
+
 var geoBrews = []
 var map
 var markers = []
