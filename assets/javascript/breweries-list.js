@@ -69,11 +69,11 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             //// create collapsible for hours if it has more than one entry (in case it just has one day or a note)
             if (results[i].hours.length > 1) {
                 var collHours = $("<ul>").addClass("collapsible hoursStyle")
-                var collHoursHeader = $("<div>").addClass("collapsible-header waves-effect waves-yellow").html("HOURS")
+                var collHoursHeader = $("<div>").addClass("collapsible-header waves-effect waves-yellow").html("Hours")
                 var colHeaderIcon = $("<i>").addClass("material-icons").html('expand_more')
                 collHoursHeader.prepend(colHeaderIcon)
                 var collHoursBody = $("<div>").addClass("collapsible-body")
-                var hoursList = $("<ul>").addClass("collection")
+                var hoursList = $("<ul>").addClass("collection listHours")
                 for (j = 0; j < results[i].hours.length; j++) {
                     var collDay = $("<li>").addClass("collection-item").text(results[i].hours[j])
                     hoursList.append(collDay)

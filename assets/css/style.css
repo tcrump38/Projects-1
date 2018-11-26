@@ -114,9 +114,6 @@ nav {
   background-color: rgb(254,181,0);
 }
 
-.collection-item {
-  text-align: center;
-}
 .collapsible {
   border: none;
 }
@@ -196,7 +193,18 @@ nav {
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     border: none;
-    border-radius: 5%;
+    /* border-radius: 5%; */
     border-style: none;
     background-color: transparent;
+}
+
+.listHours {
+  font-size: 1.3rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 5%;
+  border-style: none;
+  background-color: transparent;
+  text-align: center
 }
