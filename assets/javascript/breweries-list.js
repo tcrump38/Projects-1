@@ -1,18 +1,19 @@
-var config = {
-    apiKey: "AIzaSyCACl0dIADoUYtr0cU0l6WsUMGbcHhC3Vo",
-    authDomain: "project1-388e6.firebaseapp.com",
-    databaseURL: "https://project1-388e6.firebaseio.com",
-    projectId: "project1-388e6",
-    storageBucket: "project1-388e6.appspot.com",
-    messagingSenderId: "62443097997"
-};
+// var config = {
+//     apiKey: "AIzaSyCACl0dIADoUYtr0cU0l6WsUMGbcHhC3Vo",
+//     authDomain: "project1-388e6.firebaseapp.com",
+//     databaseURL: "https://project1-388e6.firebaseio.com",
+//     projectId: "project1-388e6",
+//     storageBucket: "project1-388e6.appspot.com",
+//     messagingSenderId: "62443097997"
+// };
 
-localStorage.clear();
+// localStorage.clear();
 
-firebase.initializeApp(config);
-var database = firebase.database();
+// firebase.initializeApp(config);
+// var database = firebase.database();
 var breweriesATX;
 var currentBrew = ''
+var geoBrews = [] // used in other js file
 
 database.ref('/breweriesJSON').on("value", function (snapshot) {
     var results = snapshot.val()
@@ -23,6 +24,8 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             console.log('skipped')
         }
         else {
+
+            
             // each result is entered into a list item  (created further down)
             // create collapsible header for list item
             var collHeader = $("<div>").addClass("collapsible-header")
@@ -30,13 +33,21 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             //// main btn for brewery - links to next page
             var beerLink = $("<a>").attr('id', results[i].breweryID).text(results[i].name).attr('href', 'table2.html')
 
-            //// add icon for marker -- replace with markers for each location based on map
-            var collHeaderIcon = $("<i>").addClass("material-icons").html('place')
+            // geoBrews[i] = {
+            //     breweryID: results[i].breweryID,
+            //     name: results[i].name,
+            //     location: results[i].location
+            // }
+            var stringForIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue" + (i+1) + ".png"
 
-            beerLink.addClass("btn brewery-button")
+
+            //// add icon for marker -- replace with markers for each location based on map
+            var collHeaderIcon = $("<div>").html('<img src="'+ stringForIcon + '"></img>')
+
+            beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
 
             //// add to indicate if locale is open or not -- will load from google; using placeholder for now
-            if (i % 2 ==0) {
+            if (i % 2 == 0) {
                 var collOpenNow = $("<div>").addClass("open-close").html('<img src="../assets/icons/closed.svg"></img>')
             }
             else {
@@ -84,7 +95,7 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
 
             // add address if present (populate off google api) -- using placeholder for now
             var addy = $("<div>").addClass("col s12 m6 addy")
-            var addyInfo = $("<p>").html("<em>Address:<em> 12345 Pauls Valley Rd #2, Austin, TX 78737").addClass("address-info")
+            var addyInfo = $("<p>").html("<em>Address:<em> 12345 Pauls Valley Rd #2, Austin, TX 78737")
             addy.append(addyInfo)
 
             // append hours and address to collapsible body
@@ -105,3 +116,4 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
 $(document).ready(function () {
     $('.collapsible').collapsible();
 });
+
