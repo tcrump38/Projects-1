@@ -74,7 +74,6 @@ function setTable() {
         }
 
         var beerSrm = $("<span class='row beerinfo'>")
-
          // if beer has srm, show
         if (typeof beers[i].srm != 'undefined') {
             beerSrm.text("SRM: " + beers[i].srm)
@@ -88,6 +87,33 @@ function setTable() {
         }
 
         var collBody = $("<div class='beer-info-body'>").addClass("collapsible-body").append(beerAbv).append(beerIbu).append(beerSrm)  
+
+
+
+        // if beer has style info, show
+       if (typeof beers[i].style != 'undefined') {
+            var beerStyle = $("<span class='row beerinfo'>")
+            var stylesBeers = $("<div>").addClass("chip truncate").html(beers[i].style.name + '<img src="../assets/icons/beerTypes.svg"></img>')
+            beerStyle.append(stylesBeers)
+            collBody.append(beerStyle)
+
+
+
+            // beerStyle.text("Beer Style: " + beers[i].style.name)
+       }
+       // if not, show srm-scale for style of beer
+       else if ((typeof beers[i].manualStyle != 'undefined') && (typeof beers[i].manualStyle.name != 'undefined')) {
+
+            var beerStyle = $("<span class='row beerinfo'>")
+            var stylesBeers = $("<div>").addClass("chip truncate").html(beers[i].manualStyle.name + '<img src="../assets/icons/beerTypes.svg"></img>')
+            beerStyle.append(stylesBeers)
+            collBody.append(beerStyle)
+
+            // beerStyle.text("Beer Style: " + beers[i].manualStyle.name)
+       }
+    
+
+        // var collBody = $("<div class='beer-info-body'>").addClass("collapsible-body").append(beerAbv).append(beerIbu).append(beerSrm).append(beerStyle)    
         var listItem = $("<li>").append(collHeader).append(collBody)
         $("#beers-coll").append(listItem)
     }
