@@ -1,4 +1,3 @@
-// Changes DOM with Materialize
 $(document).ready(function () {
   $('.sidenav').sidenav();
   $('.collapsible').collapsible();
@@ -18,24 +17,6 @@ firebase.initializeApp(config);
 var database = firebase.database();
 var breweriesATX;
 
-// Firebase watcher + initial loader HINT: .on("value")
-database.ref('/beersBlueOwl').on("value", function (snapshot) {
-  var results = snapshot.val()
-  for (var i = 0; i < results.length; i++) {
-    var showBeers = $("<div>");
-    //gets the rating from giphy data and puts it in a p tag
-    var beerName = results[i].name;
-    var p = $("<ul>").html(beerName);
-    showBeers.append(p);
-    $("#Beer-info").append(showBeers)
-}
-  // Log everything that's coming out of snapshot
-  console.log(snapshot.val());
-  // Handle the errors
-}, function (errorObject) {
-  console.log("Errors handled: " + errorObject.code);
-});
-
 database.ref('/breweriesAustin').on("value", function (snapshotBreweries) {
   breweriesATX = snapshotBreweries.val()
   for (var i = 0; i < breweriesATX.length; i++) {
@@ -45,10 +26,6 @@ database.ref('/breweriesAustin').on("value", function (snapshotBreweries) {
     showBrewery.append(p);
     $("#Brewery-info").append(showBrewery)
   };
-
-
-  console.log(snapshotBreweries.val());
-  // Handle the errors
 }, function (errorObject) {
   console.log("Errors handled: " + errorObject.code);
 });

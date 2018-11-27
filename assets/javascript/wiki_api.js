@@ -19,7 +19,6 @@ $(document).ready(function(){
             // remove cite error
             blurb.find('.mw-ext-cite-error').remove();
             $('#article').html($(blurb).find('p'));
- 
         },
         error: function (errorMessage) {
         }
