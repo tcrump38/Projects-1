@@ -11,24 +11,6 @@ var config = {
 };
 firebase.initializeApp(config);
 var database = firebase.database();
-database.ref('/breweriesJSON').on("value", function (snapshot) {
-    var results = snapshot.val()
-    breweriesATX = results
-    for (var i = 0; i < results.length; i++) {
-        if (typeof results[i] == "undefined") {
-            console.log('skipped')
-        }
-        else {
-            geoBrews[i] = {
-                breweryID: results[i].breweryID,
-                name: results[i].name,
-                location: results[i].location
-            }
-        }
-    }
-}, function (errorObject) {
-    console.log("Errors handled: " + errorObject.code);
-});
 
 database.ref('/breweriesJSON').on("value", function (snapshot) {
     var results = snapshot.val()

@@ -2,7 +2,6 @@ $(document).ready(function () {
     $('.sidenav').sidenav();
     $('.collapsible').collapsible();
 });
-localStorage.clear();
 
 var map
 var markers = []
