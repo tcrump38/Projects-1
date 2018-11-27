@@ -1,5 +1,18 @@
 var breweriesATX;
 var geoBrews = [] // used in other js file
+var map
+var markers = []
+
+$(document).ready(function () {
+    $('.sidenav').sidenav();
+    $('.collapsible').collapsible();
+});
+
+jQuery(function ($) {
+    var script = document.createElement('script');
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAq8qjNnAwkr_fPwdDQGd7CR_qYMMTWYjY&callback=initialize";
+    document.body.appendChild(script);
+});
 
 var config = {
     apiKey: "AIzaSyCACl0dIADoUYtr0cU0l6WsUMGbcHhC3Vo",
@@ -9,9 +22,9 @@ var config = {
     storageBucket: "project1-388e6.appspot.com",
     messagingSenderId: "62443097997"
 };
+
 firebase.initializeApp(config);
 var database = firebase.database();
-
 database.ref('/breweriesJSON').on("value", function (snapshot) {
     var results = snapshot.val()
     breweriesATX = results
@@ -22,19 +35,16 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
         else {
             // header
             var collHeader = $("<div>").addClass("collapsible-header")
-                console.log('name: ' + results[i].name + ', id: ' + results[i].breweryId)
+            console.log('name: ' + results[i].name + ', id: ' + results[i].breweryId)
             var beerLink = $("<a>").attr('id', results[i].breweryId).text(results[i].name).attr('href', 'brewery.html')
             beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
-            beerLink.on("click", function(event){
+            beerLink.on("click", function (event) {
                 localStorage.setItem("brewery", event.target.attributes.id.value)
             })
-            geoBrews[i] = {
-                breweryID: results[i].breweryID,
-                name: results[i].name,
-                location: results[i].location
-            }
-            var stringForIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue" + (i+1) + ".png"
-            var collHeaderIcon = $("<div>").html('<img src="'+ stringForIcon + '"></img>')
+
+            addMarker(i + 1, results[i].location, map, results[i].name);
+            var stringForIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue" + (i + 1) + ".png"
+            var collHeaderIcon = $("<div>").html('<img src="' + stringForIcon + '"></img>')
             if (i % 2 == 0) {
                 var collOpenNow = $("<div>").addClass("open-close").html('<img src="../assets/icons/closed.svg"></img>')
             }
@@ -86,3 +96,58 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
 }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
 });
+// add Marker
+function addMarker(index, location, map, title) {
+    var stringForIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue" + index + ".png"
+    var breweryInfoWindow = new google.maps.InfoWindow({ content: title });
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: title,
+        icon: stringForIcon,
+        infowindow: breweryInfoWindow
+    });
+    markers.push(marker)
+    google.maps.event.addListener(marker, 'click', function () {
+        hideAllInfoWindows(map);
+        this.infowindow.open(map, this);
+    });
+}
+// hide all info windows when another is clicked
+function hideAllInfoWindows(map) {
+    markers.forEach(function (marker) {
+        marker.infowindow.close(map, marker);
+    });
+}
+// handle error loading geolocation
+function handleLocationError(browserHasGeolocation, youAreHereInfoWindow, pos) {
+    youAreHereInfoWindow.setPosition(pos);
+    youAreHereInfoWindow.setContent(browserHasGeolocation ?
+        'Error: The Geolocation service failed.' :
+        'Error: Your browser doesn\'t support geolocation.');
+    youAreHereInfoWindow.open(map);
+}
+// init map, asks user for location (everytime -- for now)
+function initialize() {
+    var coordn = { lat: 30.2603535, lng: -97.7145152 };
+    map = new google.maps.Map(document.getElementById('map-breweries'), { center: coordn, zoom: 10 });
+    youAreHereInfoWindow = new google.maps.InfoWindow();
+    // Try HTML5 geolocation. (User location)
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+            youAreHereInfoWindow.setPosition(pos);
+            youAreHereInfoWindow.setContent('You Are Here!');/////info little
+            youAreHereInfoWindow.open(map);
+            map.setCenter(pos);
+        }, function () {
+            handleLocationError(true, youAreHereInfoWindow, map.getCenter());
+        });
+    } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, youAreHereInfoWindow, map.getCenter());
+    }
+}
