@@ -110,7 +110,6 @@ nav {
 .beer-info-body {
   font-size: 1.3rem;
   font-family: 'Nunito', sans-serif;
-  font-family: 'Permanent Marker', cursive;
   text-align: center;
   border-radius: 5%;
   background-color: rgb(254,181,0);
@@ -187,6 +186,7 @@ nav {
       /*beer icon*/
 .chip {
   background-color: rgb(255, 232, 60);
+  margin: 10px; 
 }
 
 .address-info {
@@ -242,4 +242,11 @@ nav {
   
   margin-top: 0rem;
   border-radius: 15%;
+.pin {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.brew-button {
+  margin-left: 50px;
 }

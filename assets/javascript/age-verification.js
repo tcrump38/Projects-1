@@ -1,13 +1,19 @@
+$(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+
+
+
 $("#ageForm").submit(function (event) {
-    console.log (2)
+
     event.preventDefault();
 
     var day = $("#birthDay").val();
-    console.log (day)
+
     var month = $("#birthMonth").val();
-    console.log (month)
+   
     var year = $("#birthYear").val();
-    console.log (year)
+    
     var age = 21;
 
     var mydate = new Date();
