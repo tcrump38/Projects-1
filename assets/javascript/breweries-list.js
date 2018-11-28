@@ -33,62 +33,20 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             console.log('skipped')
         }
         else {
-            // header
-            var collHeader = $("<div>").addClass("collapsible-header")
-            console.log('name: ' + results[i].name + ', id: ' + results[i].breweryId)
-            var beerLink = $("<a>").attr('id', results[i].breweryId).text(results[i].name).attr('href', 'brewery.html')
-            beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
-            beerLink.on("click", function (event) {
-                localStorage.setItem("brewery", event.target.attributes.id.value)
-            })
-
+            // collapsible header
+            var collapsibleHeader = $("<div>").addClass("collapsible-header")
+            createCollapsibleHeader(i, results[i].breweryId, results[i].name, collapsibleHeader)
             addMarker(i + 1, results[i].location, map, results[i].name);
-            var stringForIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue" + (i + 1) + ".png"
-            var collHeaderIcon = $("<div>").html('<img src="' + stringForIcon + '"></img>')
-            if (i % 2 == 0) {
-                var collOpenNow = $("<div>").addClass("open-close").html('<img src="../assets/icons/closed.svg"></img>')
-            }
-            else {
-                var collOpenNow = $("<div>").addClass("open-close").html('<img src="../assets/icons/open.svg"></img>')
-            }
-            collHeader.prepend(collOpenNow).append(collHeaderIcon).append(beerLink)
-            // body
-            var collBody = $("<div>").addClass("collapsible-body")
-            if (results[i].hours.length > 1) {
-                var collHours = $("<ul>").addClass("collapsible hoursStyle")
-                var collHoursHeader = $("<div>").addClass("collapsible-header waves-effect waves-yellow").html("Hours")
-                var colHeaderIcon = $("<i>").addClass("material-icons").html('expand_more')
-                collHoursHeader.prepend(colHeaderIcon)
-                var collHoursBody = $("<div>").addClass("collapsible-body")
-                var hoursList = $("<ul>").addClass("collection listHours")
-                for (j = 0; j < results[i].hours.length; j++) {
-                    var collDay = $("<li>").addClass("collection-item").text(results[i].hours[j])
-                    hoursList.append(collDay)
-                }
-                collHoursBody.append(hoursList)
-                var hoursListItem = $("<li>").append(collHoursHeader).append(collHoursBody)
-                collHours.append(hoursListItem)
-                collHours.collapsible();
-            }
-            else {
-                var collHours = $("<div>").text("Hours: " + results[i].hours)
-            }
-            // if amount of beers is returned, populate inside a chip -- may have to recheck that this error catching is needed after we fix data
-            if (typeof results[i].amountOfBeers != "undefined") {
-                var allBeers = $("<div>").addClass("chip").html(results[i].amountOfBeers + '<img src="../assets/icons/pint.svg"></img>')
-                collBody.append(allBeers)
-            }
-            // if styleIds is returned, populate inside a chip -- may have to recheck error catching
-            if (typeof results[i].styleId != "undefined") {
-                var stylesBeers = $("<div>").addClass("chip").html(results[i].styleId.length + '<img src="../assets/icons/beerTypes.svg"></img>')
-                collBody.append(stylesBeers)
-            }
-            // add address if present (populate off google api) -- using placeholder for now
-            var addy = $("<div>").addClass("col s12 m6 addy")
-            var addyInfo = $("<p>").html("<em>Address:<em> 12345 Pauls Valley Rd #2, Austin, TX 78737").addClass("address-info")
-            addy.append(addyInfo)
-            collBody.append(collHours).append(addy)
-            var listItem = $("<li>").append(collHeader).append(collBody)
+
+            // collapsible body
+            var collapsibleBody = $("<div>").addClass("collapsible-body")
+            var collapsibleHours = $("<ul>").addClass("collapsible hoursStyle")
+            createHoursElement(results[i].hours, collapsibleHours)
+            collapsibleBody.append(collapsibleHours)
+            createCollapsibleBody(results[i].amountOfBeers, results[i].styleId, collapsibleBody)
+
+            // list-item to hold collapsible
+            var listItem = $("<li>").append(collapsibleHeader).append(collapsibleBody)
             $("#breweries-coll").append(listItem)
         }
     }
@@ -96,7 +54,67 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
 }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
 });
-// add Marker
+
+
+// create collapsible body
+function createCollapsibleBody(amountOfBeers, styleId, collapsibleBody) {
+    // if beer amount present, load
+    if (typeof amountOfBeers != "undefined") {
+        collapsibleBody.append($("<div>").addClass("chip").html(amountOfBeers + '<img src="../assets/icons/pint.svg"></img>'))
+    }
+    // if styleIds is returned, populate inside a chip -- may have to recheck error catching
+    if (typeof styleId != "undefined") {
+        collapsibleBody.append($("<div>").addClass("chip").html(styleId.length + '<img src="../assets/icons/beerTypes.svg"></img>'))
+    }
+    // add address if present (populate off google api) -- using placeholder for now
+    var addy = $("<div>").addClass("col s12 m6 addy")
+    addy.append($("<p>").html("<em>Address:<em> 12345 Pauls Valley Rd #2, Austin, TX 78737").addClass("address-info"))
+    collapsibleBody.append(addy)
+}
+
+
+// create a collapsible if hours attribute has an array
+function createHoursElement(hours, collapsibleHours) {
+    var collapsibleHoursHeader = $("<div>").addClass("collapsible-header waves-effect waves-yellow").html("Hours")
+    var hoursListItem = $("<li>")
+    if (hours.length > 1) {
+        var colHeaderIcon = $("<i>").addClass("material-icons").html('expand_more')
+        collapsibleHoursHeader.prepend(colHeaderIcon)
+        var collapsibleHoursBody = $("<div>").addClass("collapsible-body")
+        var hoursList = $("<ul>").addClass("collection listHours")
+        for (j = 0; j < hours.length; j++) {
+            var collDay = $("<li>").addClass("collection-item").text(hours[j])
+            hoursList.append(collDay)
+        }
+        collapsibleHoursBody.append(hoursList)
+        hoursListItem.append(collapsibleHoursHeader).append(collapsibleHoursBody)
+        collapsibleHours.append(hoursListItem)
+        collapsibleHours.collapsible();
+    }
+    else {
+        collapsibleHoursHeader.html("Hours: " + hours[0].capitalize())
+        collapsibleHours.append(collapsibleHoursHeader)
+    }
+}
+
+
+// create collapsible header --- NOTE:: will need to add extra parameter to find if location is open; currently flagging even indeces as open locations
+function createCollapsibleHeader(i, id, name, collapsibleHeader) {
+    console.log('name: ' + name + ', id: ' + id)
+    var beerLink = $("<a>").attr('id', id).text(name).attr('href', 'brewery.html')
+    beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
+    beerLink.on("click", function (event) {
+        localStorage.setItem("brewery", event.target.attributes.id.value)
+    })
+    var sourceForIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue" + (i + 1) + ".png"
+    var collapsibleHeaderIcon = $("<div>").html('<img src="' + sourceForIcon + '"></img>')
+    var openNowIcon = $("<div>").addClass("open-close").html('<img src="../assets/icons/closed.svg"></img>')
+    if (i % 2 == 0) { openNowIcon.html('<img src="../assets/icons/open.svg"></img>') }
+    collapsibleHeader.prepend(openNowIcon).append(collapsibleHeaderIcon).append(beerLink)
+}
+
+
+// add marker
 function addMarker(index, location, map, title) {
     var stringForIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue" + index + ".png"
     var breweryInfoWindow = new google.maps.InfoWindow({ content: title });
@@ -113,13 +131,17 @@ function addMarker(index, location, map, title) {
         this.infowindow.open(map, this);
     });
 }
+
+
 // hide all info windows when another is clicked
 function hideAllInfoWindows(map) {
     markers.forEach(function (marker) {
         marker.infowindow.close(map, marker);
     });
 }
-// handle error loading geolocation
+
+
+// handle error when loading geolocation
 function handleLocationError(browserHasGeolocation, youAreHereInfoWindow, pos) {
     youAreHereInfoWindow.setPosition(pos);
     youAreHereInfoWindow.setContent(browserHasGeolocation ?
@@ -127,6 +149,8 @@ function handleLocationError(browserHasGeolocation, youAreHereInfoWindow, pos) {
         'Error: Your browser doesn\'t support geolocation.');
     youAreHereInfoWindow.open(map);
 }
+
+
 // init map, asks user for location (everytime -- for now)
 function initialize() {
     var coordn = { lat: 30.2603535, lng: -97.7145152 };
@@ -150,4 +174,10 @@ function initialize() {
         // Browser doesn't support Geolocation
         handleLocationError(false, youAreHereInfoWindow, map.getCenter());
     }
+}
+
+
+// to capitlize first letter for non-Hours sentence
+String.prototype.capitalize = function () {
+    return this.charAt(0).toUpperCase() + this.slice(1);
 }
