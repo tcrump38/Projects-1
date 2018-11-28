@@ -57,7 +57,7 @@ footer.page-footer {
 }
 
 
-/* table3.html */
+/* brewery.html */
 #beer-header {
   text-align: center;
 }
@@ -130,7 +130,7 @@ nav {
  
 }
 
-/* styles.html */
+/* home.html */
 
 .home-body {
   background: white;
@@ -168,6 +168,7 @@ nav {
   padding: 1rem;
   text-align: center;
 }
+
 
 /* maps-brew.html */
 
@@ -219,4 +220,26 @@ nav {
   height: 40%;
   width: 40%;
   margin: 10%;
+}
+
+.infograph {
+  margin-top: 4rem;
+}
+
+#beer-graphic {
+  height: 20rem;
+  margin: auto;
+  border-radius: 25%;
+}
+
+#beer-graphic-subtext {
+ 
+  color: antiquewhite;
+  font-size: 1.1rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  padding-top: 0rem;
+  
+  margin-top: 0rem;
+  border-radius: 15%;
 }
