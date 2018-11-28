@@ -85,8 +85,10 @@ nav {
 
 .beers-list-box {
   border-radius: 5%;
+  font-size: 1.3rem;
   font-family: 'Nunito', sans-serif;
   background: rgba(39, 77, 32, 0.715);
+  color: antiquewhite;
   
 }
 
@@ -207,4 +209,9 @@ nav {
   border-style: none;
   background-color: transparent;
   text-align: center
+}
+.brand-logo1 {
+  height: 40%;
+  width: 40%;
+  margin: 10%;
 }
