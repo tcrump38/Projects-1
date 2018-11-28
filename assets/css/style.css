@@ -238,7 +238,6 @@ nav {
 }
 
 #beer-graphic-subtext {
- 
   color: antiquewhite;
   font-size: 1.1rem;
   font-family: 'Nunito', sans-serif;
@@ -246,6 +245,7 @@ nav {
   padding-top: 0rem;
   margin-top: 0rem;
   border-radius: 15%;
+}
 
 .pin {
   margin-left: 10px;
