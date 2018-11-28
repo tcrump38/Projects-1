@@ -132,6 +132,10 @@ nav {
 
 /* styles.html */
 
+.home-body {
+  background: white;
+}
+
 .styles-button {
   color: black;
   background-color: rgba(254, 207, 21, 0.877);
