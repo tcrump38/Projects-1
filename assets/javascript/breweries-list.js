@@ -102,12 +102,12 @@ function createHoursElement(hours, collapsibleHours) {
 function createCollapsibleHeader(i, id, name, collapsibleHeader) {
     console.log('name: ' + name + ', id: ' + id)
     var beerLink = $("<a>").attr('id', id).text(name).attr('href', 'brewery.html')
-    beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange")
+    beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange brew-button")
     beerLink.on("click", function (event) {
         localStorage.setItem("brewery", event.target.attributes.id.value)
     })
     var sourceForIcon = "https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue" + (i + 1) + ".png"
-    var collapsibleHeaderIcon = $("<div>").html('<img src="' + sourceForIcon + '"></img>')
+    var collapsibleHeaderIcon = $("<div>").addClass("pin").html('<img src="' + sourceForIcon + '"></img>')
     var openNowIcon = $("<div>").addClass("open-close").html('<img src="../assets/icons/closed.svg"></img>')
     if (i % 2 == 0) { openNowIcon.html('<img src="../assets/icons/open.svg"></img>') }
     collapsibleHeader.prepend(openNowIcon).append(collapsibleHeaderIcon).append(beerLink)

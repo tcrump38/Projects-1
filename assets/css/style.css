@@ -186,6 +186,7 @@ nav {
       /*beer icon*/
 .chip {
   background-color: rgb(255, 232, 60);
+  margin: 10px; 
 }
 
 .address-info {
@@ -219,4 +220,13 @@ nav {
   height: 40%;
   width: 40%;
   margin: 10%;
+}
+
+.pin {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.brew-button {
+  margin-left: 50px;
 }
