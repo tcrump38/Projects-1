@@ -60,7 +60,7 @@ function callWikiApi(element, wiki) {
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
             var markup = data.parse.text["*"];
-            var blurb = $('<div></div>').html(markup);
+            var blurb = $('<div></div>').html(markup).addClass("wiki-para");
             blurb.find('a').each(function () { $(this).replaceWith($(this).html()); });
             blurb.find('sup').remove();
             blurb.find('.mw-ext-cite-error').remove();

@@ -1,169 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Cool Story, Brew</title>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Permanent+Marker" rel="stylesheet">
 
-  <style>
-    nav ul a,
-    nav .brand-logo {
-     color: #444;
-}
+    <style>
 
-p {
-  line-height: 2rem;
-}
+        body {
+            background-image: url("assets/images/beer3.jpeg")
+        }
 
-.sidenav-trigger {
-  color: #26a69a;
-}
+        .card-body {
+            text-align: center;
+            background-color: white; opacity: .8;
+            padding: 5%;
+            margin-right: 30%;
+            margin-left: 30%;
+            margin-top: 10%;
+            margin-bottom: 10%
+        }
 
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
-}
-
-.container {
-  text-align: center;
-}
-  </style>
-
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    </style>
+    
+    <title>Age Verification</title>
 </head>
 <body>
-
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center black-text text-lighten-2" >A cold beer is waiting</h1>
-        <div class="row center">
-          <h5 class="header col s12 light"><strong>Find the closest brewery, search for your favorite beer and learn about different beer styles.</strong></h5>
+    <div class="card text-center">
         </div>
-        <div class="row center">
-          <a href="pages/maps-brew.html" id="download-button" class="btn-large black">Beer Me</a>
-          <a href="pages/styles.html" id="download-button" class="btn-large black">Beer Wiki</a>
-        </div>
-        <br><br>
-      </div>
-    </div>
-    <div class="parallax"><img src="assets/images/beer.jpeg"></div>
-  </div>
+            <div class="card-body">
+                <h4 class="card-title"><strong>ARE YOU OVER 21?</strong></h4>
+                  <p class="card-text"><strong>If not, leave now and we wont tell your mother.</strong></p>
+                    <form name="ageForm" id="ageForm" action="">
+                        <input type="hidden" name="requiredAge" id="requiredAge" value="18">
+                        <h4>Enter Birth Date</h4>
+                        <p>Month:   <input type="text" class="datepicker" name="birthDay" id="birthDay"></p>
+                        <p>Day: <input type="number" class="validate" name="birthMonth" placeholder="XX" id="birthMonth" value=""></p>
+                        <p>Year:  <input type="number" class="validate" name="birthYear" placeholder="XXXX" id="birthYear" value=""></p>
+                        <input type="submit" name="submit" value="Submit">
+                        </form>
+                      </div>
+                  </div>
+              </div>
 
-
-  <div class="container">
-    <div class="section">
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center black-text"><i class="material-icons">business</i></h2>
-            <h5 class="center"><strong>Breweries</strong></h5>
-
-            <p class="light"><strong>Get all your brewery infromation:
-              <br> - Hours 
-              <br> - What's on tap
-              <br> - Beer styles</strong>
-            </p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center black-text"><i class="material-icons">local_drink</i></h2>
-            <h5 class="center"><strong>Beers</strong></h5>
-
-            <p class="light"><strong>Get information on different beer styles.</strong></p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center black-text"><i class="material-icons">map</i></h2>
-            <h5 class="center"><strong>Map</strong></h5>
-            <p class="light"><strong>Locate breweries in your area.</strong></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h4 class="header col s12 light"><strong>To Beer Or Not To Beer</strong></h4>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="assets/images/beer.jpeg"></div>
-  </div>
-
-  <footer class="page-footer white">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="black-text">UT Austin Coding Bootcamp</h5>
-          <p class="grey-text">We are a group of students working on our first project for our full stack web development program.</p>
-           </div>
-
-        <div class="col l3 s12">
-          <h5 class="black-text">Connect</h5>
-          <ul>
-            <li><a class="gray-text" href="https://sheypr85.github.io/Bootstrap-Portfolio" target="_blank">Sheyla Ortiz</a></li>
-            <li><a class="gray-text" href="#!" target="_blank">Tyler Crump</a></li>
-            <li><a class="gray-text" href="#!" target="_blank">Hector Morales</a></li>
-            <li><a class="gray-text" href="#!" target="_blank">Jessica Kypke</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="assets/javascript/materialize.js"></script>
-  <script src="assets/javascript/init.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="assets/javascript/app.js"></script>
-
-  </body>
+              <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+              <script src="assets/javascript/materialize.js"></script>
+              <script src="assets/javascript/age-verification.js"></script>
+</body>
 </html>

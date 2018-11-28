@@ -57,7 +57,7 @@ footer.page-footer {
 }
 
 
-/* table3.html */
+/* brewery.html */
 #beer-header {
   text-align: center;
 }
@@ -85,8 +85,10 @@ nav {
 
 .beers-list-box {
   border-radius: 5%;
+  font-size: 1.3rem;
   font-family: 'Nunito', sans-serif;
   background: rgba(39, 77, 32, 0.715);
+  color: antiquewhite;
   
 }
 
@@ -108,7 +110,6 @@ nav {
 .beer-info-body {
   font-size: 1.3rem;
   font-family: 'Nunito', sans-serif;
-  font-family: 'Permanent Marker', cursive;
   text-align: center;
   border-radius: 5%;
   background-color: rgb(254,181,0);
@@ -128,7 +129,11 @@ nav {
  
 }
 
-/* styles.html */
+/* home.html */
+
+.home-body {
+  background: white;
+}
 
 .row {
   text-align: center;
@@ -166,7 +171,9 @@ nav {
   background-color: rgb(254,181,0);
   font-family: 'Nunito', sans-serif;
   padding: 1rem;
+  text-align: center;
 }
+
 
 /* maps-brew.html */
 
@@ -185,6 +192,7 @@ nav {
       /*beer icon*/
 .chip {
   background-color: rgb(255, 232, 60);
+  margin: 10px; 
 }
 
 .address-info {
@@ -213,4 +221,38 @@ nav {
   border-style: none;
   background-color: transparent;
   text-align: center
+}
+.brand-logo1 {
+  height: 40%;
+  width: 40%;
+  margin: 10%;
+}
+
+.infograph {
+  margin-top: 4rem;
+}
+
+#beer-graphic {
+  height: 20rem;
+  margin: auto;
+  border-radius: 25%;
+}
+
+#beer-graphic-subtext {
+ 
+  color: antiquewhite;
+  font-size: 1.1rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  padding-top: 0rem;
+  
+  margin-top: 0rem;
+  border-radius: 15%;
+.pin {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.brew-button {
+  margin-left: 50px;
 }
