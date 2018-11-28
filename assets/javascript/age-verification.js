@@ -24,7 +24,7 @@ $("#ageForm").submit(function (event) {
 
 
     } else {
-        window.location = "../index.html"
+        window.location = "pages/home.html"
     }
 
 });
