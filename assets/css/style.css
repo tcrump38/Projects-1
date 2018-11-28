@@ -130,6 +130,12 @@ nav {
 
 /* styles.html */
 
+.row {
+  text-align: center;
+  margin: auto;
+  padding-left: 25%;
+}
+
 .styles-button {
   color: black;
   background-color: rgba(254, 207, 21, 0.877);
