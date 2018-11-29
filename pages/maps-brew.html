@@ -29,6 +29,17 @@
             margin-top: 2%;
             box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+        #beer-icon-key {
+            width: 80%;
+            text-align: center;
+            color: antiquewhite;
+            margin-left: 10%;
+            background-color:rgba(39, 77, 32, 0.715);
+            margin-top: 1%;
+            font-family: 'Nunito', sans-serif;
+            border-radius: 5%;
+            font-size: 1.3rem;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
@@ -40,16 +51,16 @@
     <div class="row l12">
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo"><img src="../assets/icons/beer-02.svg" class="brand-logo1"></a>
+                <!-- <a href="#!" class="brand-logo"><img src="../assets/icons/beer-02.svg" class="brand-logo1"></a> -->
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="styles.html">BeerWiki</a></li>
-                </ul>
-                <ul class="sidenav" id="mobile-demo">
+                <!-- </ul>
+               <ul class="sidenav" id="mobile-demo">
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="styles.html">BeerWiki</a></li>
-                </ul>
+                        <li><a href="styles.html">BeerWiki</a></li> 
+                </ul> -->
             </div>
         </nav>
     </div>
@@ -57,11 +68,17 @@
 
     <div class="container">
         <div class="row">
-            <div id="map-breweries" class="col s12">
-
-            </div>
+            <div id="map-breweries" class="col s10">
+             </div>
         </div>
+    </div>
 
+    <div class="container">
+        <div class="row">
+            <div id="beer-icon-key" class="col s8">
+                <p><strong>This is the key for icons!</strong></p>
+             </div>
+        </div>
     </div>
 
     <!-- Container for the breweries -->
@@ -70,6 +87,7 @@
             <!-- All of the list items for the breweries will show up here -->
         </ul>
     </div>
+    
     <!-- Credit for icons -->
     <div class="container">
         <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"

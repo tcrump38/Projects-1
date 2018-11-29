@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>	<link rel="dns-prefetch" href="https://cdn.vectorstock.com">
+	<link rel="dns-prefetch" href="https://cdn1.vectorstock.com">
+	<link rel="dns-prefetch" href="https://cdn2.vectorstock.com">
+	<link rel="dns-prefetch" href="https://cdn3.vectorstock.com">
+	<link rel="dns-prefetch" href="https://cdn4.vectorstock.com">
+	<link rel="dns-prefetch" href="https://cdn5.vectorstock.com">
+
+	<title>Beer types a visual guide to types of beer Vector Image</title>
+	<meta name="description" content="Beer types. A visual guide to types of beer. Various types of beer in recommended glasses. Vector illustration. Download a Free Preview or High Quality Adobe Illustrator Ai, EPS, PDF and High Resolution JPEG versions. ID #21348858.">
+
+	<meta property="og:site_name" content="VectorStock">
+	<meta property="og:type" content="product">
+	<meta property="og:url" content="https://www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348858">
+	<meta property="og:title" content="Beer types a visual guide to types of beer vector image on VectorStock">
+	<meta property="og:description" content="Beer types. A visual guide to types of beer. Various types of beer in recommended glasses. Vector illustration. Download a Free Preview or High Quality Adobe Illustrator Ai, EPS, PDF and High Resolution JPEG versions.">
+	<meta property="og:image" content="https://cdn4.vectorstock.com/i/1000x1000/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg">
+	<meta property="og:image:url" content="https://cdn4.vectorstock.com/i/1000x1000/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg">
+	<meta property="og:image:secure_url" content="https://cdn4.vectorstock.com/i/1000x1000/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="700">
+	<meta property="og:image:height" content="1000">
+	<meta property="og:price:amount" content="0.69">
+	<meta property="og:price:currency" content="USD">
+	<meta property="product:price:amount" content="0.69">
+	<meta property="product:price:currency" content="USD">
+
+	<meta property="fb:app_id" content="241100862642313">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348858">
+	<meta name="twitter:title" content="Beer types a visual guide to types of beer vector image">
+	<meta name="twitter:description" content="Beer types. A visual guide to types of beer. Various types of beer in recommended glasses. Vector illustration">
+	<meta name="twitter:image" content="https://cdn4.vectorstock.com/i/thumb-large/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg">
+	<meta name="twitter:image:width" content="238">
+	<meta name="twitter:image:height" content="250">
+	<meta name="twitter:site" content="@VectorStock">
+
+	<link rel="canonical" href="https://www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348858">
+	<link rel="shortcut icon" href="https://cdn.vectorstock.com/img/icons/favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="//cdn.vectorstock.com/cache/common1543284850.min.css">
+	<link rel="stylesheet" href="//cdn.vectorstock.com/cache/vector1543284850.min.css">
+	<script src="//cdn.vectorstock.com/cache/common1543288469.min.js"></script>
+	<script src="//cdn.vectorstock.com/cache/vector1543288469.min.js"></script>
+<!-- Analytics --><script type="text/javascript">// Load GA script
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+// Setup
+ga('create', 'UA-2180430-2', 'none');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+<!-- Top header -->
+<header>
+	<nav class="top">
+		<figure>
+			<a href="/" title="VectorStock&reg;">VectorStock&reg;</a>
+		</figure>
+
+		<div class="grid">
+			<form id="searchbox"
+				 class="empty">
+				<div class="wrap">
+					<fieldset>
+						<div class="contents">
+							<div class="tags">
+								<ul></ul>
+							</div>
+							<div class="input">
+								<input type="text" name="input" autocomplete="off"
+									autocapitalize="none" spellcheck="false"
+									value="" placeholder="Search…">
+								<button type="button" data-action="clear">×</button>
+							</div>
+
+							<input type="hidden" name="category"
+								value=""> <input type="hidden"
+								name="artist" value=""> <input
+								type="hidden" name="similar" value="">
+						</div>
+					</fieldset>
+
+					<button type="submit">
+						<span class="icon">Search</span>
+					</button>
+				</div>
+			</form>
+			<ul>
+					<li><a href="/royalty-free-vectors">All Vectors</a></li>
+					<li><a href="/free-vectors">Free Vectors</a></li>
+				</ul>
+		</div>
+
+		<div class="aside">
+			<ul>
+				<li><a href="/popular-categories" title="Popular Categories">Popular
+						Categories</a></li>
+					<li><button type="button" data-action="signup">Sign Up</button></li>
+				</ul>
+		</div>
+
+		<div id="mobilenav-icon">
+			<span></span><span></span><span></span><span></span>
+		</div>
+	</nav>
+
+	<!-- Submenu -->
+		<nav id="searchrelated"></nav>	
+
+		<!-- Mobile menu -->
+	<div id="mobilenav-menu">
+		<div>
+			<div class="group">
+				<h4>Browse</h4>
+				<ul>
+					<li><a href="/royalty-free-vectors">All Vectors</a></li>
+					<li><a href="/free-vectors">Free Vectors</a></li>
+				</ul>
+			</div>
+			<div class="group">
+				<h4>Account</h4>
+				<ul>
+					<li class="account">
+							<ul>
+								<li><a href="/signup">Sign Up</a></li>
+								<li data-action="login"><a href="/?login=1">Login…</a></li>
+							</ul>
+						</li>
+				</ul>
+				<form method="get" action="/auth/logout" class="logout">
+					<input type="hidden" name="logout" value="1">
+				</form>
+			</div>
+			<div class="group">
+				<h4>Help</h4>
+				<ul>
+					<li><a href="/faq"><abbr title="Frequently Asked Questions">FAQs</abbr></a></li>
+					<li><a href="/contact">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<!-- Account Menu Tabs -->
+		<aside id="nav_sidebar" class="tabs tabsDark">
+
+			<nav>
+				<ul>
+					<li data-tab-id="signup" class=""><span role="tab"><span>Sign Up</span></span></li>
+					<li data-tab-id="login" class="selected"><span role="tab"><span>Log In</span></span></li>
+				</ul>
+			</nav>
+
+			<section id="sb_signup" data-tab-id="signup" class="">
+				<div class="primary">
+					<p>New to VectorStock?</p>
+					<p><em>We're the largest royalty-free, vector-only stock agency in the world.</em></p>
+					<p>Every week we add new premium graphics by the thousands.</p>
+				</div>
+				<div class="secondary">
+					<p>Whether you're a global ad&nbsp;agency or a freelance graphic designer, we have the vector graphics to make your project come to life.</p>
+					<p>Buy Vectors, sell Vectors or both. <a href="/signup">Sign up now, it’s free.</a></p>
+				</div>
+				<div class="footer">
+					<button class="master">
+						<span class="title">Sign Up...</span>
+						<span class="value">
+							<span class="symbol signup"></span>
+						</span>
+					</button>
+				</div>
+			</section>
+
+			<section id="sb_login" data-tab-id="login" class="selected">
+				<form action="/auth/login" method="post">
+
+
+					<fieldset class="">
+						<label for="vs_username">Email / Username</label>
+						<div class="textfield">
+							<input type="text" id="vs_username" name="vs_username" value="" autocomplete="on" tabindex="1">
+						</div>
+					</fieldset>
+					<fieldset class="">
+						<label for="vs_password">Password</label>
+						<button type="button" class="forgot">Forgot Password</button>
+						<div class="textfield">
+							<input type="password" id="vs_password" name="vs_password" value="" autocomplete="on" tabindex="2"  maxlength="20">
+						</div>
+					</fieldset>
+					<fieldset>
+						<div class="checkbox">
+							<label for="vs_remember">
+								<span class="title">Stay Logged In</span>
+								<span class="icon"></span>
+								<input type="checkbox" id="vs_remember" name="vs_remember" value="yes" tabindex="3">
+							</label>
+						</div>
+					</fieldset>
+
+
+					<button type="submit" tabindex="4">Log In</button>
+				</form>
+				<div class="alternatives">
+					<h6>Or Login With</h6>
+					<ul>
+						<li class="gp"><a href="/">
+							<span class="title">Google</span>
+							<span class="icon"></span>
+						</a></li>
+						<li class="fb"><a href="/">
+							<span class="title">Facebook</span>
+							<span class="icon"></span>
+						</a></li>
+					</ul>
+				</div>
+
+				
+			</section>
+		</aside>
+
+	<!-- Page -->
+	<article>
+		<section id="vs-asset">
+
+			<!-- Aside -->
+			<div class="aside" data-version="c">
+				<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="/royalty-free-vectors">
+							<span itemprop="name">Royalty Free Vectors</span>
+						</a>
+						<meta itemprop="position" content="1" />
+					</li>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="/royalty-free-vectors/beer-vectors">
+							<span itemprop="name">Beer Vectors</span>
+						</a>
+						<meta itemprop="position" content="2" />
+					</li>
+				</ol>
+
+				<h1>Beer types a visual guide to types of beer vector&nbsp;image</h1>
+
+				<figure style="padding-top: 140.66666666667%;" class="target">
+					<div class="highres" data-src="https://cdn4.vectorstock.com/i/1000x1000/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg">
+						<noscript><img src="https://cdn4.vectorstock.com/i/1000x1000/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg" title="Beer types a visual guide to types of beer vector image" alt="Beer types a visual guide to types of beer" itemprop="img"></noscript>
+					</div>
+					<div class="lowres">
+						<img src="https://cdn4.vectorstock.com/i/thumbs/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg" title="Beer types a visual guide to types of beer vector image" alt="Beer types a visual guide to types of beer">
+					</div>
+					<div class="overlay"></div>
+				</figure>
+
+				<form data-loggedin="0" data-licenses="2" data-license="standard" data-status="" data-payments="3">
+					<input type="hidden" id="vector_id" value="21348858">
+					<input type="hidden" id="vector_title" value="Beer types a visual guide to types of beer">
+					<input type="hidden" id="vector_description" value="Beer types. A visual guide to types of beer. Various types of beer in recommended glasses. Vector illustration. Download a Free Preview or High Quality Adobe Illustrator Ai, EPS, PDF and High Resolution JPEG versions.">
+					<input type="hidden" id="vector_url" value="https://www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348858">
+					<input type="hidden" id="vector_media" value="https://cdn4.vectorstock.com/i/1000x1000/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg">
+					<input type="hidden" id="vector_ratio" value="1.4166666666667">
+					<input type="hidden" id="vector_license_status" value="">
+					<input type="hidden" id="artist_name" value="vectorgoods">
+					<input type="hidden" id="account_user" value="0">
+
+					<div class="options">
+						<!--
+						-- OPTION: License type
+						-->
+						<div class="option" data-type="license" data-license="standard" data-licenses="2">
+							<h6><span class="type">License</span><a href="/faq/members/standard-license">Learn More</a></h6>
+							<div class="radgroup">
+								<fieldset>
+									<label for="f_license_standard" class="checked">
+										<input type="radio" id="f_license_standard" name="license" value="standard" checked="checked" tabindex="2">
+										<span class="label">Standard</span>
+										<span class="descr">For Print, Advertising, Design</span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_license_expanded">
+										<input type="radio" id="f_license_expanded" name="license" value="expanded" tabindex="4">
+										<span class="label">Expanded</span>
+										<span class="descr">For Resale &amp; Reproduction</span>
+									</label>
+								</fieldset>
+							</div>
+
+							<div class="help">
+								<p>The license type determines how you can use this image.</p>
+								<table>
+									<thead>
+										<tr>
+											<th></th>
+																						<th data-license="standard">Std.</th>																						<th data-license="expanded">Exp.</th>										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td>Print / Editorial</td>
+																						<td data-license="standard"><span class="yes"></span></td>
+											<td data-license="expanded"><span class="yes"></span></td>										</tr>
+										<tr>
+											<td>Graphic Design</td>
+																						<td data-license="standard"><span class="yes"></span></td>
+											<td data-license="expanded"><span class="yes"></span></td>										</tr>
+										<tr>
+											<td>Web Design</td>
+																						<td data-license="standard"><span class="yes"></span></td>
+											<td data-license="expanded"><span class="yes"></span></td>										</tr>
+										<tr>
+											<td>Social Media</td>
+																						<td data-license="standard"><span class="yes"></span></td>
+											<td data-license="expanded"><span class="yes"></span></td>										</tr>
+										<tr>
+											<td>Edit &amp; Modify</td>
+																						<td data-license="standard"><span class="yes"></span></td>
+											<td data-license="expanded"><span class="yes"></span></td>										</tr>
+										<tr>
+											<td>Multi-user</td>
+																						<td data-license="standard"><span class="no"></span></td>
+											<td data-license="expanded"><span class="yes"></span></td>										</tr>
+										<tr>
+											<td>Resale Items</td>
+																						<td data-license="standard"><span class="no"></span></td>
+											<td data-license="expanded"><span class="yes"></span></td>										</tr>
+										<tr>
+											<td>Unlimited Runs</td>
+																						<td data-license="standard"><span class="no"></span></td>
+											<td data-license="expanded"><span class="yes"></span></td>										</tr>
+									</tbody>
+								</table>
+
+								<span class="tail"></span>
+							</div>
+						</div>
+
+						<!--
+						-- OPTION: Payment options (Standard)
+						-->
+						<div class="option" data-type="payment" data-license="standard">
+							<h6><span class="type">Ways to Buy</span><a href="/faq/members/ways-to-buy">Compare</a></h6>
+							<div class="radgroup" data-license="standard">
+																<fieldset>
+									<label for="f_payment_standard_single-image" class="checked" >
+										<input type="radio" id="f_payment_standard_single-image" name="payment_standard" data-cost="14.99" value="single-image"  checked="checked"tabindex="5">
+										<span class="label">Single Image</span>
+										<span class="value"><small>$</small><var>14.99</var></span>
+									</label>
+								</fieldset>
+																<fieldset>
+									<label for="f_payment_standard_credits">
+										<input type="radio" id="f_payment_standard_credits" name="payment_standard" data-cost="1" value="credits" tabindex="6">
+										<span class="label">Credits</span>
+										<span class="value"><small>$</small><var>1.00</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_standard_subscription">
+										<input type="radio" id="f_payment_standard_subscription" name="payment_standard" data-cost="1" value="subscription" tabindex="7">
+										<span class="label">Subscription</span>
+										<span class="value"><small>$</small><var>0.69</var></span>
+									</label>
+								</fieldset>
+							</div>
+							<div class="help">
+								<p>There are three ways to pay for Standard licenses. Prices are $<abbr title="United States Dollars">US</abbr>.</p>
+
+								<table>
+									<thead>
+										<tr>
+											<th>Pay with</th>
+											<th>Image Price</th>
+										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Single Image</span>
+													<span class="dm"></span>
+													<span class="dd"><small>$</small>14.99</span>
+												</span>
+												<span class="byline">One-time payment</span>
+											</td>
+										</tr>
+																				<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pay-As-You-Go Credits</span>
+													<span class="dm"></span>
+													<span class="dd"><small>$</small>1</span>
+												</span>
+												<span class="byline">Download images on-demand (1 credit = $1). Minimum purchase of 30.</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Subscription Plan</span>
+													<span class="dm"></span>
+													<span class="dd"><em>From</em> 69c</span>
+												</span>
+												<span class="byline">Choose a monthly plan. Unused downloads automatically roll into following month.</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<span class="tail"></span>
+							</div>
+						</div>
+						<!--
+						-- OPTION: Payment options (Expanded)
+						-->
+						<div class="option" data-type="payment" data-license="expanded">
+							<h6><span class="type">Ways to Buy</span><a href="/faq/members/ways-to-buy">Compare</a></h6>
+							<div class="radgroup" data-license="expanded">
+																<fieldset>
+									<label for="f_payment_expanded_single-image" class="checked">
+										<input type="radio" id="f_payment_expanded_single-image" name="payment_expanded" data-cost="29.99" value="single-image" checked="checked" tabindex="8">
+										<span class="label">Single Image</span>
+										<span class="value"><small>$</small><var>29.99</var></span>
+									</label>
+								</fieldset>
+																<fieldset>
+									<label for="f_payment_expanded_credits">
+										<input type="radio" id="f_payment_expanded_credits" name="payment_expanded" data-cost="30" value="credits" tabindex="9">
+										<span class="label">Credits</span>
+										<span class="value"><small>$</small><var>30.00</var></span>
+									</label>
+								</fieldset>
+							</div>
+														<div class="help">
+								<p>There are two ways to pay for Expanded licenses. Prices are $<abbr title="United States Dollars">US</abbr>.</p>
+
+								<table>
+									<thead>
+										<tr>
+											<th>Pay with</th>
+											<th>Cost per Image</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Single Image</span>
+													<span class="dm"></span>
+													<span class="dd"><small>$</small>29.99</span>
+												</span>
+												<span class="byline">One-off payment, no signup needed.</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Credits</span>
+													<span class="dm"></span>
+													<span class="dd"><small>$</small>30</span>
+												</span>
+												<span class="byline">Download images on-demand (1 credit = $1).</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<span class="tail"></span>
+							</div>
+													</div>
+					</div>
+					<div class="download">
+						<button type="button" data-action="download">
+							<span class="label">Download Image</span>
+							<span class="sublabel"><abbr title="Adobe Illustrator file (v10+)">Ai</abbr>, <abbr title="Vector EPS file (v8+)">EPS</abbr>, <abbr title="Vector PDF file">PDF</abbr> &amp; <abbr title="High-res JPEG (300 DPI+)">JPG</abbr> files</span>
+							<span class="icon"></span>
+						</button>
+					</div>
+					<div class="download_options">
+						<div class="wrap">
+							<div class="optgroup" data-action="download">
+								<span class="header">Download File/s:</span>
+								<div class="dropdown" data-value="zip">
+									<div class="display">
+										<span class="label"><strong>ZIP Archive</strong></span>
+										<span class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M10.6,12.8 15,17.2 19.4,12.8"/></svg></span>
+									</div>
+									<div class="select">
+										<select>
+											<optgroup label="All Files">
+												<option value="zip" data-label="ZIP Archive" data-url="">ZIP Archive</option>
+											</optgroup>
+											<optgroup label="Image">
+												<option value="jpg" data-label="High-res JPEG" data-details="300 DPI+" data-url="">High-res JPEG (300 DPI+)</option>
+												<option value="png" data-label="High-res PNG" data-details="300 DPI+" data-url="">High-res PNG (300 DPI+)</option>
+											</optgroup>
+											<optgroup label="Vector">
+												<option value="ai" data-label="Adobe Illustrator" data-details="v10+" data-url="">Adobe Illustrator (v10+)</option>
+												<option value="eps" data-label="Vector EPS" data-details="v8+" data-url="">Vector EPS (v8+)</option>
+												<option value="pdf" data-label="Vector PDF" data-url="">Vector PDF</option>
+											</optgroup>
+										</select>
+									</div>
+								</div>
+								<button type="button" data-action="download_file">
+									<span class="label">Download ZIP</span>
+									<span class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M23.6,21.2 23.6,9.5 16.4,9.5 16.4,21.3 10.8,21.3 11,21.5 20,30.5 29.2,21.3"/></svg></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- Image -->
+			<div class="image">
+				<figure data-orientation="portrait" style="padding-top: 140.66666666667%;" class="target">
+					<div class="highres" data-src="https://cdn4.vectorstock.com/i/1000x1000/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg">
+						<noscript><img src="https://cdn4.vectorstock.com/i/1000x1000/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg" title="Beer types a visual guide to types of beer vector image" alt="Beer types a visual guide to types of beer" itemprop="img"></noscript>
+					</div>
+					<div class="lowres">
+						<img src="https://cdn4.vectorstock.com/i/thumbs/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg" title="Beer types a visual guide to types of beer vector image" alt="Beer types a visual guide to types of beer">
+					</div>
+					<div class="overlay"></div>
+					<div class="panels">
+						<div class="share">
+							<h4>Share on</h4>
+							<ul>
+								<li class="pinterest"><button type="button" data-action="pinterest"><span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M12.5,0C5.6,0,0,5.6,0,12.5c0,5.12,3.08,9.52,7.48,11.45c-0.03-0.87-0.01-1.92,0.22-2.87c0.24-1.01,1.61-6.81,1.61-6.81s-0.4-0.8-0.4-1.98c0-1.85,1.07-3.24,2.41-3.24c1.14,0,1.69,0.85,1.69,1.88c0,1.14-0.73,2.85-1.1,4.44c-0.31,1.33,0.67,2.41,1.97,2.41c2.37,0,3.96-3.04,3.96-6.65c0-2.74-1.85-4.79-5.2-4.79c-3.79,0-6.15,2.83-6.15,5.99c0,1.09,0.32,1.86,0.82,2.45c0.23,0.27,0.26,0.38,0.18,0.7c-0.06,0.23-0.2,0.78-0.25,1c-0.08,0.32-0.34,0.43-0.63,0.31c-1.75-0.71-2.56-2.62-2.56-4.77c0-3.55,3-7.81,8.93-7.81c4.77,0,7.91,3.45,7.91,7.16c0,4.9-2.73,8.57-6.75,8.57c-1.35,0-2.62-0.73-3.05-1.56c0,0-0.73,2.88-0.88,3.44c-0.27,0.96-0.78,1.93-1.26,2.68C10.08,24.82,11.27,25,12.5,25C19.4,25,25,19.4,25,12.5S19.4,0,12.5,0L12.5,0z"/></svg></span><span class="label">Pinterest</span></span></button></li>
+								<li class="facebook"><button type="button" data-action="facebook"><span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M22.44,1H2.56C1.7,1,1,1.7,1,2.56v19.88C1,23.3,1.7,24,2.56,24h10.41v-8.89H9.98v-3.46h2.99V9.1c0-2.96,1.81-4.58,4.45-4.58c1.27,0,2.35,0.09,2.67,0.14v3.1l-1.83,0c-1.44,0-1.72,0.68-1.72,1.69v2.21h3.43l-0.45,3.46h-2.98V24h5.89C23.3,24,24,23.3,24,22.44V2.56C24,1.7,23.3,1,22.44,1z"/></svg></span><span class="label">Facebook</span></span></button></li>
+								<li class="twitter"><button type="button" data-action="twitter"><span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M7.86,22.5c9.43,0,14.59-7.69,14.59-14.37c0-0.22,0-0.44-0.01-0.65c1-0.71,1.87-1.6,2.56-2.61c-0.92,0.4-1.91,0.67-2.95,0.79c1.06-0.62,1.87-1.61,2.26-2.79c-0.99,0.58-2.09,1-3.26,1.23c-0.94-0.98-2.27-1.6-3.74-1.6c-2.83,0-5.13,2.26-5.13,5.05c0,0.4,0.05,0.78,0.13,1.15C8.05,8.49,4.27,6.48,1.74,3.42C1.3,4.17,1.05,5.04,1.05,5.96c0,1.75,0.91,3.3,2.28,4.2C2.49,10.14,1.7,9.91,1,9.53C1,9.55,1,9.58,1,9.6c0,2.45,1.77,4.49,4.11,4.95c-0.43,0.12-0.88,0.18-1.35,0.18c-0.33,0-0.65-0.03-0.96-0.09c0.65,2.01,2.55,3.47,4.79,3.51C5.84,19.5,3.63,20.3,1.22,20.3c-0.41,0-0.82-0.02-1.22-0.07C2.27,21.66,4.97,22.5,7.86,22.5"/></svg></span><span class="label">Twitter</span></span></button></li>
+							</ul>
+						</div>
+						<div class="composite">
+							<button type="button" data-action="download"><span><span class="label">Download JPG Preview Image</span></span></button>
+						</div>
+					</div>
+				</figure>
+				<div class="details">
+					<div class="meta">
+						<ul>
+							<li class="meta-id">
+								<dl><dt>Image ID</dt><dd>21348858</dd></dl>
+							</li>
+							<li class="meta-artist">
+								<dl>
+									<dt>Artist</dt>
+									<dd><a href="/royalty-free-vectors/vectors-by_vectorgoods" rel="nofollow">vectorgoods</a><button type="button" data-action="follow" title="Follow Artists that you like to create a newsfeed of their recent images."><span class="label">Follow</span></button></dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div class="options">
+						<ul>
+							<li class="opt-cart">
+								<button type="button" data-action="cart"><span class="label">Add to Cart</span></button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Metadata -->
+			<div class="metadata">
+				<div itemscope itemtype="http://schema.org/Product">
+					<div itemprop="productID">21348858</div>
+					<div itemprop="url">https://www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348858</div>
+					<div itemprop="releaseDate">2018-07-18</div>
+					<div itemprop="name">Beer types a visual guide to types of beer Vector Image</div>
+					<div itemprop="description">Beer types. A visual guide to types of beer. Various types of beer in recommended glasses. Vector illustration. Download a Free Preview or High Quality Adobe Illustrator Ai, EPS, PDF and High Resolution JPEG versions.</div>
+					<div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+					<div itemprop="contentUrl">https://cdn4.vectorstock.com/i/1000x1000/88/58/beer-types-a-visual-guide-to-types-of-beer-vector-21348858.jpg</div>
+				</div>
+				<div itemscope itemprop="offers" itemtype="http://schema.org/Offer">
+						<div itemprop="price">0.69</div>
+						<div itemprop="priceCurrency">USD</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="vs-related">
+			<div id="group-similar" class="group">
+				<h6><span class="icon"></span><strong>Similar Images</strong></h6>
+
+				<div class="gallery large">
+					<ul>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/39/48/beer-bottle-craft-vintage-type-infographic-chart-vector-13483948.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-bottle-craft-vintage-type-infographic-chart-vector-13483948" title="beer bottle craft vintage type infographic chart vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/39/48/beer-bottle-craft-vintage-type-infographic-chart-vector-13483948.jpg" title="beer bottle craft vintage type infographic chart" alt="beer bottle craft vintage type infographic chart vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/32/69/beer-color-chart-vector-22683269.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-color-chart-vector-22683269" title="beer color chart vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/32/69/beer-color-chart-vector-22683269.jpg" title="beer color chart" alt="beer color chart vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/25/63/beer-glassware-types-poster-or-banner-with-vector-22382563.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-glassware-types-poster-or-banner-with-vector-22382563" title="beer glassware types poster or banner with vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/25/63/beer-glassware-types-poster-or-banner-with-vector-22382563.jpg" title="beer glassware types poster or banner with" alt="beer glassware types poster or banner with vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/83/15/different-types-of-beer-poster-vector-9858315.jpg"><a href="//www.vectorstock.com/royalty-free-vector/different-types-of-beer-poster-vector-9858315" title="Different types of beer poster vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/83/15/different-types-of-beer-poster-vector-9858315.jpg" title="Different types of beer poster" alt="Different types of beer poster vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/87/47/beer-line-icons-isolated-on-white-vector-22768747.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-line-icons-isolated-on-white-vector-22768747" title="beer line icons isolated on white vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/87/47/beer-line-icons-isolated-on-white-vector-22768747.jpg" title="beer line icons isolated on white" alt="beer line icons isolated on white vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/18/00/beer-infographic-vector-20721800.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-infographic-vector-20721800" title="beer infographic vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/18/00/beer-infographic-vector-20721800.jpg" title="beer infographic" alt="beer infographic vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/41/73/colorful-cartoon-different-beer-type-mug-vector-21574173.jpg"><a href="//www.vectorstock.com/royalty-free-vector/colorful-cartoon-different-beer-type-mug-vector-21574173" title="colorful cartoon different beer type mug vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/41/73/colorful-cartoon-different-beer-type-mug-vector-21574173.jpg" title="colorful cartoon different beer type mug" alt="colorful cartoon different beer type mug vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/95/22/banners-for-beer-festival-vector-21809522.jpg"><a href="//www.vectorstock.com/royalty-free-vector/banners-for-beer-festival-vector-21809522" title="banners for beer festival vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/95/22/banners-for-beer-festival-vector-21809522.jpg" title="banners for beer festival" alt="banners for beer festival vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/51/81/beer-poster-in-retro-style-beer-objects-on-grunge-vector-22325181.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-poster-in-retro-style-beer-objects-on-grunge-vector-22325181" title="beer poster in retro style beer objects on grunge vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/51/81/beer-poster-in-retro-style-beer-objects-on-grunge-vector-22325181.jpg" title="beer poster in retro style beer objects on grunge" alt="beer poster in retro style beer objects on grunge vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/48/25/glass-of-beer-weizen-on-background-ears-of-wheat-vector-21774825.jpg"><a href="//www.vectorstock.com/royalty-free-vector/glass-of-beer-weizen-on-background-ears-of-wheat-vector-21774825" title="glass of beer weizen on background ears of wheat vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/48/25/glass-of-beer-weizen-on-background-ears-of-wheat-vector-21774825.jpg" title="glass of beer weizen on background ears of wheat" alt="glass of beer weizen on background ears of wheat vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/03/36/octoberfest-beer-festival-colorful-poster-vector-21670336.jpg"><a href="//www.vectorstock.com/royalty-free-vector/octoberfest-beer-festival-colorful-poster-vector-21670336" title="octoberfest beer festival colorful poster vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/03/36/octoberfest-beer-festival-colorful-poster-vector-21670336.jpg" title="octoberfest beer festival colorful poster" alt="octoberfest beer festival colorful poster vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/45/91/beer-glasses-bottles-cup-and-vessels-for-vector-22274591.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-glasses-bottles-cup-and-vessels-for-vector-22274591" title="beer glasses bottles cup and vessels for vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/45/91/beer-glasses-bottles-cup-and-vessels-for-vector-22274591.jpg" title="beer glasses bottles cup and vessels for" alt="beer glasses bottles cup and vessels for vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/90/04/beer-festival-colorful-poster-vector-20949004.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-festival-colorful-poster-vector-20949004" title="beer festival colorful poster vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/90/04/beer-festival-colorful-poster-vector-20949004.jpg" title="beer festival colorful poster" alt="beer festival colorful poster vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/02/68/set-of-bottles-glasses-and-mugs-of-beer-vector-22530268.jpg"><a href="//www.vectorstock.com/royalty-free-vector/set-of-bottles-glasses-and-mugs-of-beer-vector-22530268" title="set of bottles glasses and mugs of beer vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/02/68/set-of-bottles-glasses-and-mugs-of-beer-vector-22530268.jpg" title="set of bottles glasses and mugs of beer" alt="set of bottles glasses and mugs of beer vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/14/41/beer-icon-design-vector-22261441.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-icon-design-vector-22261441" title="beer icon design vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/14/41/beer-icon-design-vector-22261441.jpg" title="beer icon design" alt="beer icon design vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/17/02/wooden-beer-mug-icon-isolated-on-white-background-vector-22571702.jpg"><a href="//www.vectorstock.com/royalty-free-vector/wooden-beer-mug-icon-isolated-on-white-background-vector-22571702" title="wooden beer mug icon isolated on white background vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/17/02/wooden-beer-mug-icon-isolated-on-white-background-vector-22571702.jpg" title="wooden beer mug icon isolated on white background" alt="wooden beer mug icon isolated on white background vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/34/95/draft-beer-with-foam-in-glass-mug-with-handle-vector-21693495.jpg"><a href="//www.vectorstock.com/royalty-free-vector/draft-beer-with-foam-in-glass-mug-with-handle-vector-21693495" title="draft beer with foam in glass mug with handle vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/34/95/draft-beer-with-foam-in-glass-mug-with-handle-vector-21693495.jpg" title="draft beer with foam in glass mug with handle" alt="draft beer with foam in glass mug with handle vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/95/34/beer-icon-sign-symbol-vector-21709534.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-icon-sign-symbol-vector-21709534" title="beer icon sign symbol vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/95/34/beer-icon-sign-symbol-vector-21709534.jpg" title="beer icon sign symbol" alt="beer icon sign symbol vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/87/76/craft-beer-logo-handwritten-lettering-for-vector-22778776.jpg"><a href="//www.vectorstock.com/royalty-free-vector/craft-beer-logo-handwritten-lettering-for-vector-22778776" title="craft beer logo handwritten lettering for vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/87/76/craft-beer-logo-handwritten-lettering-for-vector-22778776.jpg" title="craft beer logo handwritten lettering for" alt="craft beer logo handwritten lettering for vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/38/18/beer-house-emblem-vector-21483818.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-house-emblem-vector-21483818" title="beer house emblem vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/38/18/beer-house-emblem-vector-21483818.jpg" title="beer house emblem" alt="beer house emblem vector image"></noscript></a></li>
+					</ul>
+				</div>
+				<div class="gallery small more">
+					<ul>
+						<li data-id="21518435" data-title="drink beer mugs glass of beer barley background ve" data-src="https://cdn1.vectorstock.com/i/thumbs/84/35/drink-beer-mugs-glass-of-beer-barley-background-ve-vector-21518435.jpg"><a href="//www.vectorstock.com/royalty-free-vector/drink-beer-mugs-glass-of-beer-barley-background-ve-vector-21518435" title="drink beer mugs glass of beer barley background ve vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/84/35/drink-beer-mugs-glass-of-beer-barley-background-ve-vector-21518435.jpg" title="drink beer mugs glass of beer barley background ve" alt="drink beer mugs glass of beer barley background ve vector image"></noscript></a></li>
+						<li data-id="21448082" data-title="beer bottle and glass of beer" data-src="https://cdn3.vectorstock.com/i/thumbs/80/82/beer-bottle-and-glass-of-beer-vector-21448082.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-bottle-and-glass-of-beer-vector-21448082" title="beer bottle and glass of beer vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/80/82/beer-bottle-and-glass-of-beer-vector-21448082.jpg" title="beer bottle and glass of beer" alt="beer bottle and glass of beer vector image"></noscript></a></li>
+						<li data-id="13469663" data-title="types of beer" data-src="https://cdn4.vectorstock.com/i/thumbs/96/63/types-of-beer-vector-13469663.jpg"><a href="//www.vectorstock.com/royalty-free-vector/types-of-beer-vector-13469663" title="types of beer vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/96/63/types-of-beer-vector-13469663.jpg" title="types of beer" alt="types of beer vector image"></noscript></a></li>
+						<li data-id="22868475" data-title="beer mug icon" data-src="https://cdn1.vectorstock.com/i/thumbs/84/75/beer-mug-icon-vector-22868475.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-mug-icon-vector-22868475" title="beer mug icon vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/84/75/beer-mug-icon-vector-22868475.jpg" title="beer mug icon" alt="beer mug icon vector image"></noscript></a></li>
+						<li data-id="22506979" data-title="beer objects set beer glasses of different shape" data-src="https://cdn5.vectorstock.com/i/thumbs/69/79/beer-objects-set-beer-glasses-of-different-shape-vector-22506979.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-objects-set-beer-glasses-of-different-shape-vector-22506979" title="beer objects set beer glasses of different shape vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/69/79/beer-objects-set-beer-glasses-of-different-shape-vector-22506979.jpg" title="beer objects set beer glasses of different shape" alt="beer objects set beer glasses of different shape vector image"></noscript></a></li>
+						<li data-id="21982418" data-title="beer logo design inspiration" data-src="https://cdn4.vectorstock.com/i/thumbs/24/18/beer-logo-design-inspiration-vector-21982418.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-logo-design-inspiration-vector-21982418" title="beer logo design inspiration vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/24/18/beer-logo-design-inspiration-vector-21982418.jpg" title="beer logo design inspiration" alt="beer logo design inspiration vector image"></noscript></a></li>
+						<li data-id="21605037" data-title="beer glass mug beverage bar pub drink alcohol" data-src="https://cdn3.vectorstock.com/i/thumbs/50/37/beer-glass-mug-beverage-bar-pub-drink-alcohol-vector-21605037.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-glass-mug-beverage-bar-pub-drink-alcohol-vector-21605037" title="beer glass mug beverage bar pub drink alcohol vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/50/37/beer-glass-mug-beverage-bar-pub-drink-alcohol-vector-21605037.jpg" title="beer glass mug beverage bar pub drink alcohol" alt="beer glass mug beverage bar pub drink alcohol vector image"></noscript></a></li>
+						<li data-id="21662385" data-title="beer poster menu with creative lettering and beer" data-src="https://cdn1.vectorstock.com/i/thumbs/23/85/beer-poster-menu-with-creative-lettering-and-beer-vector-21662385.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-poster-menu-with-creative-lettering-and-beer-vector-21662385" title="beer poster menu with creative lettering and beer vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/23/85/beer-poster-menu-with-creative-lettering-and-beer-vector-21662385.jpg" title="beer poster menu with creative lettering and beer" alt="beer poster menu with creative lettering and beer vector image"></noscript></a></li>
+						<li data-id="21595450" data-title="glass of pub beer icon flat style" data-src="https://cdn1.vectorstock.com/i/thumbs/54/50/glass-of-pub-beer-icon-flat-style-vector-21595450.jpg"><a href="//www.vectorstock.com/royalty-free-vector/glass-of-pub-beer-icon-flat-style-vector-21595450" title="glass of pub beer icon flat style vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/54/50/glass-of-pub-beer-icon-flat-style-vector-21595450.jpg" title="glass of pub beer icon flat style" alt="glass of pub beer icon flat style vector image"></noscript></a></li>
+						<li data-id="21881146" data-title="beer bottle icon hand drawn style" data-src="https://cdn2.vectorstock.com/i/thumbs/11/46/beer-bottle-icon-hand-drawn-style-vector-21881146.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-bottle-icon-hand-drawn-style-vector-21881146" title="beer bottle icon hand drawn style vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/11/46/beer-bottle-icon-hand-drawn-style-vector-21881146.jpg" title="beer bottle icon hand drawn style" alt="beer bottle icon hand drawn style vector image"></noscript></a></li>
+						<li data-id="21262032" data-title="modern professional label for a craft beer" data-src="https://cdn3.vectorstock.com/i/thumbs/20/32/modern-professional-label-for-a-craft-beer-vector-21262032.jpg"><a href="//www.vectorstock.com/royalty-free-vector/modern-professional-label-for-a-craft-beer-vector-21262032" title="modern professional label for a craft beer vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/20/32/modern-professional-label-for-a-craft-beer-vector-21262032.jpg" title="modern professional label for a craft beer" alt="modern professional label for a craft beer vector image"></noscript></a></li>
+						<li data-id="22699727" data-title="set of labels filled with beer mugs bottles of" data-src="https://cdn3.vectorstock.com/i/thumbs/97/27/set-of-labels-filled-with-beer-mugs-bottles-of-vector-22699727.jpg"><a href="//www.vectorstock.com/royalty-free-vector/set-of-labels-filled-with-beer-mugs-bottles-of-vector-22699727" title="set of labels filled with beer mugs bottles of vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/97/27/set-of-labels-filled-with-beer-mugs-bottles-of-vector-22699727.jpg" title="set of labels filled with beer mugs bottles of" alt="set of labels filled with beer mugs bottles of vector image"></noscript></a></li>
+						<li data-id="21618660" data-title="beer bottle logo barrel pub bar tavern brewery" data-src="https://cdn1.vectorstock.com/i/thumbs/86/60/beer-bottle-logo-barrel-pub-bar-tavern-brewery-vector-21618660.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-bottle-logo-barrel-pub-bar-tavern-brewery-vector-21618660" title="beer bottle logo barrel pub bar tavern brewery vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/86/60/beer-bottle-logo-barrel-pub-bar-tavern-brewery-vector-21618660.jpg" title="beer bottle logo barrel pub bar tavern brewery" alt="beer bottle logo barrel pub bar tavern brewery vector image"></noscript></a></li>
+						<li data-id="21664436" data-title="beer festival oktoberfest set of linear icons" data-src="https://cdn2.vectorstock.com/i/thumbs/44/36/beer-festival-oktoberfest-set-of-linear-icons-vector-21664436.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-festival-oktoberfest-set-of-linear-icons-vector-21664436" title="beer festival oktoberfest set of linear icons vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/44/36/beer-festival-oktoberfest-set-of-linear-icons-vector-21664436.jpg" title="beer festival oktoberfest set of linear icons" alt="beer festival oktoberfest set of linear icons vector image"></noscript></a></li>
+						<li data-id="21901320" data-title="craft beer emblem design" data-src="https://cdn1.vectorstock.com/i/thumbs/13/20/craft-beer-emblem-design-vector-21901320.jpg"><a href="//www.vectorstock.com/royalty-free-vector/craft-beer-emblem-design-vector-21901320" title="craft beer emblem design vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/13/20/craft-beer-emblem-design-vector-21901320.jpg" title="craft beer emblem design" alt="craft beer emblem design vector image"></noscript></a></li>
+						<li data-id="21415620" data-title="beer craft logo template design" data-src="https://cdn1.vectorstock.com/i/thumbs/56/20/beer-craft-logo-template-design-vector-21415620.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-craft-logo-template-design-vector-21415620" title="beer craft logo template design vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/56/20/beer-craft-logo-template-design-vector-21415620.jpg" title="beer craft logo template design" alt="beer craft logo template design vector image"></noscript></a></li>
+						<li data-id="21048583" data-title="cartoon ribbed colorful beer mugs icon set" data-src="https://cdn4.vectorstock.com/i/thumbs/85/83/cartoon-ribbed-colorful-beer-mugs-icon-set-vector-21048583.jpg"><a href="//www.vectorstock.com/royalty-free-vector/cartoon-ribbed-colorful-beer-mugs-icon-set-vector-21048583" title="cartoon ribbed colorful beer mugs icon set vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/85/83/cartoon-ribbed-colorful-beer-mugs-icon-set-vector-21048583.jpg" title="cartoon ribbed colorful beer mugs icon set" alt="cartoon ribbed colorful beer mugs icon set vector image"></noscript></a></li>
+						<li data-id="21042222" data-title="beer bottle logo design om white background" data-src="https://cdn3.vectorstock.com/i/thumbs/22/22/beer-bottle-logo-design-om-white-background-vector-21042222.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-bottle-logo-design-om-white-background-vector-21042222" title="beer bottle logo design om white background vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/22/22/beer-bottle-logo-design-om-white-background-vector-21042222.jpg" title="beer bottle logo design om white background" alt="beer bottle logo design om white background vector image"></noscript></a></li>
+						<li data-id="22436358" data-title="four different glasses with three types beer" data-src="https://cdn4.vectorstock.com/i/thumbs/63/58/four-different-glasses-with-three-types-beer-vector-22436358.jpg"><a href="//www.vectorstock.com/royalty-free-vector/four-different-glasses-with-three-types-beer-vector-22436358" title="four different glasses with three types beer vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/63/58/four-different-glasses-with-three-types-beer-vector-22436358.jpg" title="four different glasses with three types beer" alt="four different glasses with three types beer vector image"></noscript></a></li>
+						<li data-id="10020861" data-title="Flat pilsner glass for beer" data-src="https://cdn2.vectorstock.com/i/thumbs/08/61/flat-pilsner-glass-for-beer-vector-10020861.jpg"><a href="//www.vectorstock.com/royalty-free-vector/flat-pilsner-glass-for-beer-vector-10020861" title="Flat pilsner glass for beer vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/08/61/flat-pilsner-glass-for-beer-vector-10020861.jpg" title="Flat pilsner glass for beer" alt="Flat pilsner glass for beer vector image"></noscript></a></li>
+						<li data-id="21429512" data-title="hand drawn beer" data-src="https://cdn3.vectorstock.com/i/thumbs/95/12/hand-drawn-beer-vector-21429512.jpg"><a href="//www.vectorstock.com/royalty-free-vector/hand-drawn-beer-vector-21429512" title="hand drawn beer vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/95/12/hand-drawn-beer-vector-21429512.jpg" title="hand drawn beer" alt="hand drawn beer vector image"></noscript></a></li>
+						<li data-id="22683804" data-title="beer icon with stars on blue background" data-src="https://cdn5.vectorstock.com/i/thumbs/38/04/beer-icon-with-stars-on-blue-background-vector-22683804.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-icon-with-stars-on-blue-background-vector-22683804" title="beer icon with stars on blue background vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/38/04/beer-icon-with-stars-on-blue-background-vector-22683804.jpg" title="beer icon with stars on blue background" alt="beer icon with stars on blue background vector image"></noscript></a></li>
+						<li data-id="22749927" data-title="beer oktoberfest simple line icons set" data-src="https://cdn3.vectorstock.com/i/thumbs/99/27/beer-oktoberfest-simple-line-icons-set-vector-22749927.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-oktoberfest-simple-line-icons-set-vector-22749927" title="beer oktoberfest simple line icons set vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/99/27/beer-oktoberfest-simple-line-icons-set-vector-22749927.jpg" title="beer oktoberfest simple line icons set" alt="beer oktoberfest simple line icons set vector image"></noscript></a></li>
+						<li data-id="20830141" data-title="beer concept with thin line icons" data-src="https://cdn2.vectorstock.com/i/thumbs/01/41/beer-concept-with-thin-line-icons-vector-20830141.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-concept-with-thin-line-icons-vector-20830141" title="beer concept with thin line icons vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/01/41/beer-concept-with-thin-line-icons-vector-20830141.jpg" title="beer concept with thin line icons" alt="beer concept with thin line icons vector image"></noscript></a></li>
+						<li data-id="21577850" data-title="oktoberfest seamless pattern" data-src="https://cdn1.vectorstock.com/i/thumbs/78/50/oktoberfest-seamless-pattern-vector-21577850.jpg"><a href="//www.vectorstock.com/royalty-free-vector/oktoberfest-seamless-pattern-vector-21577850" title="oktoberfest seamless pattern vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/78/50/oktoberfest-seamless-pattern-vector-21577850.jpg" title="oktoberfest seamless pattern" alt="oktoberfest seamless pattern vector image"></noscript></a></li>
+						<li data-id="22768437" data-title="craft beer icon green" data-src="https://cdn3.vectorstock.com/i/thumbs/84/37/craft-beer-icon-green-vector-22768437.jpg"><a href="//www.vectorstock.com/royalty-free-vector/craft-beer-icon-green-vector-22768437" title="craft beer icon green vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/84/37/craft-beer-icon-green-vector-22768437.jpg" title="craft beer icon green" alt="craft beer icon green vector image"></noscript></a></li>
+						<li data-id="22781030" data-title="beer mug with foam and bottle" data-src="https://cdn1.vectorstock.com/i/thumbs/10/30/beer-mug-with-foam-and-bottle-vector-22781030.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-mug-with-foam-and-bottle-vector-22781030" title="beer mug with foam and bottle vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/10/30/beer-mug-with-foam-and-bottle-vector-22781030.jpg" title="beer mug with foam and bottle" alt="beer mug with foam and bottle vector image"></noscript></a></li>
+						<li data-id="21152703" data-title="beer and brewery set of black objects" data-src="https://cdn4.vectorstock.com/i/thumbs/27/03/beer-and-brewery-set-of-black-objects-vector-21152703.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-and-brewery-set-of-black-objects-vector-21152703" title="beer and brewery set of black objects vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/27/03/beer-and-brewery-set-of-black-objects-vector-21152703.jpg" title="beer and brewery set of black objects" alt="beer and brewery set of black objects vector image"></noscript></a></li>
+						<li data-id="21680475" data-title="oktoberfest festival background" data-src="https://cdn1.vectorstock.com/i/thumbs/04/75/oktoberfest-festival-background-vector-21680475.jpg"><a href="//www.vectorstock.com/royalty-free-vector/oktoberfest-festival-background-vector-21680475" title="oktoberfest festival background vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/04/75/oktoberfest-festival-background-vector-21680475.jpg" title="oktoberfest festival background" alt="oktoberfest festival background vector image"></noscript></a></li>
+						<li data-id="21554093" data-title="coffee menu icon collection design template" data-src="https://cdn4.vectorstock.com/i/thumbs/40/93/coffee-menu-icon-collection-design-template-vector-21554093.jpg"><a href="//www.vectorstock.com/royalty-free-vector/coffee-menu-icon-collection-design-template-vector-21554093" title="coffee menu icon collection design template vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/40/93/coffee-menu-icon-collection-design-template-vector-21554093.jpg" title="coffee menu icon collection design template" alt="coffee menu icon collection design template vector image"></noscript></a></li>
+						<li class="more"><div><a href="/royalty-free-vectors/beer-vectors"><span class="lrg">More Beer Images…</span><span class="sml">More</span></a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="group-artist" class="group">
+				<h6><span class="icon"></span><strong>More by <a href="/royalty-free-vectors/vectors-by_vectorgoods" rel="nofollow">vectorgoods</a></strong></h6>
+
+				<div class="gallery large">
+					<ul>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/88/62/beer-types-a-visual-guide-to-types-of-beer-vector-21348862.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348862" title="beer types a visual guide to types of beer vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/88/62/beer-types-a-visual-guide-to-types-of-beer-vector-21348862.jpg" title="beer types a visual guide to types of beer" alt="beer types a visual guide to types of beer vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/88/50/beer-types-a-visual-guide-to-types-of-beer-vector-21348850.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348850" title="beer types a visual guide to types of beer vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/88/50/beer-types-a-visual-guide-to-types-of-beer-vector-21348850.jpg" title="beer types a visual guide to types of beer" alt="beer types a visual guide to types of beer vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/88/69/beer-types-a-visual-guide-to-types-of-beer-vector-21348869.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348869" title="beer types a visual guide to types of beer vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/88/69/beer-types-a-visual-guide-to-types-of-beer-vector-21348869.jpg" title="beer types a visual guide to types of beer" alt="beer types a visual guide to types of beer vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/88/55/beer-types-a-visual-guide-to-types-of-beer-vector-21348855.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348855" title="beer types a visual guide to types of beer vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/88/55/beer-types-a-visual-guide-to-types-of-beer-vector-21348855.jpg" title="beer types a visual guide to types of beer" alt="beer types a visual guide to types of beer vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/88/56/beer-types-a-visual-guide-to-types-of-beer-vector-21348856.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348856" title="beer types a visual guide to types of beer vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/88/56/beer-types-a-visual-guide-to-types-of-beer-vector-21348856.jpg" title="beer types a visual guide to types of beer" alt="beer types a visual guide to types of beer vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/88/48/beer-types-a-visual-guide-to-types-of-beer-vector-21348848.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348848" title="beer types a visual guide to types of beer vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/88/48/beer-types-a-visual-guide-to-types-of-beer-vector-21348848.jpg" title="beer types a visual guide to types of beer" alt="beer types a visual guide to types of beer vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/88/54/beer-types-a-visual-guide-to-types-of-beer-vector-21348854.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348854" title="beer types a visual guide to types of beer vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/88/54/beer-types-a-visual-guide-to-types-of-beer-vector-21348854.jpg" title="beer types a visual guide to types of beer" alt="beer types a visual guide to types of beer vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/88/66/beer-types-a-visual-guide-to-types-of-beer-vector-21348866.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-types-a-visual-guide-to-types-of-beer-vector-21348866" title="beer types a visual guide to types of beer vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/88/66/beer-types-a-visual-guide-to-types-of-beer-vector-21348866.jpg" title="beer types a visual guide to types of beer" alt="beer types a visual guide to types of beer vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/37/64/beer-mug-filled-with-beer-vintage-vector-21013764.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-mug-filled-with-beer-vintage-vector-21013764" title="beer mug filled with beer vintage vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/37/64/beer-mug-filled-with-beer-vintage-vector-21013764.jpg" title="beer mug filled with beer vintage" alt="beer mug filled with beer vintage vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/36/96/beer-mug-filled-with-beer-vintage-vector-21013696.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-mug-filled-with-beer-vintage-vector-21013696" title="beer mug filled with beer vintage vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/36/96/beer-mug-filled-with-beer-vintage-vector-21013696.jpg" title="beer mug filled with beer vintage" alt="beer mug filled with beer vintage vector image"></noscript></a></li>
+					</ul>
+				</div>
+				<div class="gallery small more">
+					<ul>
+						<li data-id="21013753" data-title="beer mug filled with beer vintage" data-src="https://cdn4.vectorstock.com/i/thumbs/37/53/beer-mug-filled-with-beer-vintage-vector-21013753.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-mug-filled-with-beer-vintage-vector-21013753" title="beer mug filled with beer vintage vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/37/53/beer-mug-filled-with-beer-vintage-vector-21013753.jpg" title="beer mug filled with beer vintage" alt="beer mug filled with beer vintage vector image vector image"></noscript></a></li>
+						<li data-id="21013711" data-title="beer mug filled with beer vintage" data-src="https://cdn2.vectorstock.com/i/thumbs/37/11/beer-mug-filled-with-beer-vintage-vector-21013711.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-mug-filled-with-beer-vintage-vector-21013711" title="beer mug filled with beer vintage vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/37/11/beer-mug-filled-with-beer-vintage-vector-21013711.jpg" title="beer mug filled with beer vintage" alt="beer mug filled with beer vintage vector image vector image"></noscript></a></li>
+						<li data-id="21013782" data-title="beer mug filled with beer vintage" data-src="https://cdn3.vectorstock.com/i/thumbs/37/82/beer-mug-filled-with-beer-vintage-vector-21013782.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-mug-filled-with-beer-vintage-vector-21013782" title="beer mug filled with beer vintage vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/37/82/beer-mug-filled-with-beer-vintage-vector-21013782.jpg" title="beer mug filled with beer vintage" alt="beer mug filled with beer vintage vector image vector image"></noscript></a></li>
+						<li data-id="21013733" data-title="beer mug filled with beer vintage" data-src="https://cdn4.vectorstock.com/i/thumbs/37/33/beer-mug-filled-with-beer-vintage-vector-21013733.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-mug-filled-with-beer-vintage-vector-21013733" title="beer mug filled with beer vintage vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/37/33/beer-mug-filled-with-beer-vintage-vector-21013733.jpg" title="beer mug filled with beer vintage" alt="beer mug filled with beer vintage vector image vector image"></noscript></a></li>
+						<li data-id="21348871" data-title="beer bottle and glass isolated icons set" data-src="https://cdn2.vectorstock.com/i/thumbs/88/71/beer-bottle-and-glass-isolated-icons-set-vector-21348871.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-bottle-and-glass-isolated-icons-set-vector-21348871" title="beer bottle and glass isolated icons set vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/88/71/beer-bottle-and-glass-isolated-icons-set-vector-21348871.jpg" title="beer bottle and glass isolated icons set" alt="beer bottle and glass isolated icons set vector image vector image"></noscript></a></li>
+						<li data-id="21292542" data-title="beer bottle and glass isolated icons set" data-src="https://cdn3.vectorstock.com/i/thumbs/25/42/beer-bottle-and-glass-isolated-icons-set-vector-21292542.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-bottle-and-glass-isolated-icons-set-vector-21292542" title="beer bottle and glass isolated icons set vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/25/42/beer-bottle-and-glass-isolated-icons-set-vector-21292542.jpg" title="beer bottle and glass isolated icons set" alt="beer bottle and glass isolated icons set vector image vector image"></noscript></a></li>
+						<li data-id="21292524" data-title="beer production pattern seamless" data-src="https://cdn5.vectorstock.com/i/thumbs/25/24/beer-production-pattern-seamless-vector-21292524.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-production-pattern-seamless-vector-21292524" title="beer production pattern seamless vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/25/24/beer-production-pattern-seamless-vector-21292524.jpg" title="beer production pattern seamless" alt="beer production pattern seamless vector image vector image"></noscript></a></li>
+						<li data-id="21292517" data-title="beer production pattern seamless" data-src="https://cdn3.vectorstock.com/i/thumbs/25/17/beer-production-pattern-seamless-vector-21292517.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-production-pattern-seamless-vector-21292517" title="beer production pattern seamless vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/25/17/beer-production-pattern-seamless-vector-21292517.jpg" title="beer production pattern seamless" alt="beer production pattern seamless vector image vector image"></noscript></a></li>
+						<li data-id="21292521" data-title="beer production pattern seamless" data-src="https://cdn2.vectorstock.com/i/thumbs/25/21/beer-production-pattern-seamless-vector-21292521.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-production-pattern-seamless-vector-21292521" title="beer production pattern seamless vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/25/21/beer-production-pattern-seamless-vector-21292521.jpg" title="beer production pattern seamless" alt="beer production pattern seamless vector image vector image"></noscript></a></li>
+						<li data-id="21292528" data-title="beer production pattern seamless" data-src="https://cdn4.vectorstock.com/i/thumbs/25/28/beer-production-pattern-seamless-vector-21292528.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-production-pattern-seamless-vector-21292528" title="beer production pattern seamless vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/25/28/beer-production-pattern-seamless-vector-21292528.jpg" title="beer production pattern seamless" alt="beer production pattern seamless vector image vector image"></noscript></a></li>
+						<li data-id="21348815" data-title="hand drawn vintage graphic with beer mug and" data-src="https://cdn1.vectorstock.com/i/thumbs/88/15/hand-drawn-vintage-graphic-with-beer-mug-and-vector-21348815.jpg"><a href="//www.vectorstock.com/royalty-free-vector/hand-drawn-vintage-graphic-with-beer-mug-and-vector-21348815" title="hand drawn vintage graphic with beer mug and vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/88/15/hand-drawn-vintage-graphic-with-beer-mug-and-vector-21348815.jpg" title="hand drawn vintage graphic with beer mug and" alt="hand drawn vintage graphic with beer mug and vector image vector image"></noscript></a></li>
+						<li data-id="21348820" data-title="hand drawn vintage graphic with beer glass and" data-src="https://cdn1.vectorstock.com/i/thumbs/88/20/hand-drawn-vintage-graphic-with-beer-glass-and-vector-21348820.jpg"><a href="//www.vectorstock.com/royalty-free-vector/hand-drawn-vintage-graphic-with-beer-glass-and-vector-21348820" title="hand drawn vintage graphic with beer glass and vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/88/20/hand-drawn-vintage-graphic-with-beer-glass-and-vector-21348820.jpg" title="hand drawn vintage graphic with beer glass and" alt="hand drawn vintage graphic with beer glass and vector image vector image"></noscript></a></li>
+						<li data-id="21348810" data-title="beer production stage" data-src="https://cdn1.vectorstock.com/i/thumbs/88/10/beer-production-stage-vector-21348810.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beer-production-stage-vector-21348810" title="beer production stage vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/88/10/beer-production-stage-vector-21348810.jpg" title="beer production stage" alt="beer production stage vector image vector image"></noscript></a></li>
+						<li data-id="21348812" data-title="brewing icons in silhouette of beer mug" data-src="https://cdn3.vectorstock.com/i/thumbs/88/12/brewing-icons-in-silhouette-of-beer-mug-vector-21348812.jpg"><a href="//www.vectorstock.com/royalty-free-vector/brewing-icons-in-silhouette-of-beer-mug-vector-21348812" title="brewing icons in silhouette of beer mug vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/88/12/brewing-icons-in-silhouette-of-beer-mug-vector-21348812.jpg" title="brewing icons in silhouette of beer mug" alt="brewing icons in silhouette of beer mug vector image vector image"></noscript></a></li>
+						<li data-id="21348818" data-title="hand drawn vintage graphic with beer glass and" data-src="https://cdn4.vectorstock.com/i/thumbs/88/18/hand-drawn-vintage-graphic-with-beer-glass-and-vector-21348818.jpg"><a href="//www.vectorstock.com/royalty-free-vector/hand-drawn-vintage-graphic-with-beer-glass-and-vector-21348818" title="hand drawn vintage graphic with beer glass and vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/88/18/hand-drawn-vintage-graphic-with-beer-glass-and-vector-21348818.jpg" title="hand drawn vintage graphic with beer glass and" alt="hand drawn vintage graphic with beer glass and vector image vector image"></noscript></a></li>
+						<li data-id="21348811" data-title="brewing icons in silhouette of beer glass" data-src="https://cdn2.vectorstock.com/i/thumbs/88/11/brewing-icons-in-silhouette-of-beer-glass-vector-21348811.jpg"><a href="//www.vectorstock.com/royalty-free-vector/brewing-icons-in-silhouette-of-beer-glass-vector-21348811" title="brewing icons in silhouette of beer glass vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/88/11/brewing-icons-in-silhouette-of-beer-glass-vector-21348811.jpg" title="brewing icons in silhouette of beer glass" alt="brewing icons in silhouette of beer glass vector image vector image"></noscript></a></li>
+						<li data-id="21348817" data-title="hand drawn vintage graphic with beer mug and" data-src="https://cdn3.vectorstock.com/i/thumbs/88/17/hand-drawn-vintage-graphic-with-beer-mug-and-vector-21348817.jpg"><a href="//www.vectorstock.com/royalty-free-vector/hand-drawn-vintage-graphic-with-beer-mug-and-vector-21348817" title="hand drawn vintage graphic with beer mug and vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/88/17/hand-drawn-vintage-graphic-with-beer-mug-and-vector-21348817.jpg" title="hand drawn vintage graphic with beer mug and" alt="hand drawn vintage graphic with beer mug and vector image vector image"></noscript></a></li>
+						<li data-id="21292534" data-title="vintage hand drawn of brewers" data-src="https://cdn5.vectorstock.com/i/thumbs/25/34/vintage-hand-drawn-of-brewers-vector-21292534.jpg"><a href="//www.vectorstock.com/royalty-free-vector/vintage-hand-drawn-of-brewers-vector-21292534" title="vintage hand drawn of brewers vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/25/34/vintage-hand-drawn-of-brewers-vector-21292534.jpg" title="vintage hand drawn of brewers" alt="vintage hand drawn of brewers vector image vector image"></noscript></a></li>
+						<li data-id="21292531" data-title="vintage hand drawn of brewers" data-src="https://cdn2.vectorstock.com/i/thumbs/25/31/vintage-hand-drawn-of-brewers-vector-21292531.jpg"><a href="//www.vectorstock.com/royalty-free-vector/vintage-hand-drawn-of-brewers-vector-21292531" title="vintage hand drawn of brewers vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/25/31/vintage-hand-drawn-of-brewers-vector-21292531.jpg" title="vintage hand drawn of brewers" alt="vintage hand drawn of brewers vector image vector image"></noscript></a></li>
+						<li data-id="21292537" data-title="vintage hand drawn of brewers" data-src="https://cdn3.vectorstock.com/i/thumbs/25/37/vintage-hand-drawn-of-brewers-vector-21292537.jpg"><a href="//www.vectorstock.com/royalty-free-vector/vintage-hand-drawn-of-brewers-vector-21292537" title="vintage hand drawn of brewers vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/25/37/vintage-hand-drawn-of-brewers-vector-21292537.jpg" title="vintage hand drawn of brewers" alt="vintage hand drawn of brewers vector image vector image"></noscript></a></li>
+						<li class="more"><div><a href="/royalty-free-vectors/vectors-by_vectorgoods" rel="nofollow"><span class="lrg">More Images…</span><span class="sml">More</span></a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="group-keywords" class="group">
+				<h6><span class="icon"></span><strong>Related Searches</strong></h6>
+				<ul>
+					<li><a href="/royalty-free-vectors/beer-vectors">Beer</a></li>
+					<li><a href="/royalty-free-vectors/background-vectors">Background</a></li>
+					<li><a href="/royalty-free-vectors/types-vectors">Types</a></li>
+					<li><a href="/royalty-free-vectors/visual-vectors">Visual</a></li>
+					<li><a href="/royalty-free-vectors/guide-vectors">Guide</a></li>
+					<li><a href="/royalty-free-vectors/illustration-vectors">Illustration</a></li>
+					<li><a href="/royalty-free-vectors/belgian-vectors">Belgian</a></li>
+					<li><a href="/royalty-free-vectors/ale-vectors">Ale</a></li>
+					<li><a href="/royalty-free-vectors/banner-vectors">Banner</a></li>
+					<li><a href="/royalty-free-vectors/bar-vectors">Bar</a></li>
+					<li><a href="/royalty-free-vectors/alcohol-vectors">Alcohol</a></li>
+					<li><a href="/royalty-free-vectors/amber-vectors">Amber</a></li>
+					<li><a href="/royalty-free-vectors/type-vectors">Type</a></li>
+					<li><a href="/royalty-free-vectors/drink-vectors">Drink</a></li>
+					<li><a href="/royalty-free-vectors/infographics-vectors">Infographics</a></li>
+					<li><a href="/royalty-free-vectors/brewing-vectors">Brewing</a></li>
+					<li><a href="/royalty-free-vectors/pilsner-vectors">Pilsner</a></li>
+					<li><a href="/royalty-free-vectors/coal-vectors">Coal</a></li>
+					<li><a href="/royalty-free-vectors/graphic-vectors">Graphic</a></li>
+					<li><a href="/royalty-free-vectors/chalk-vectors">Chalk</a></li>
+					<li><a href="/royalty-free-vectors/design-vectors">Design</a></li>
+					<li><a href="/royalty-free-vectors/foam-vectors">Foam</a></li>
+					<li><a href="/royalty-free-vectors/draft-vectors">Draft</a></li>
+					<li><a href="/royalty-free-vectors/lager-vectors">Lager</a></li>
+					<li><a href="/royalty-free-vectors/vector-vectors">Vector</a></li>
+					<li><a href="/royalty-free-vectors/bitter-vectors">Bitter</a></li>
+					<li><a href="/royalty-free-vectors/icon-vectors">Icon</a></li>
+					<li><a href="/royalty-free-vectors/beverage-vectors">Beverage</a></li>
+					<li><a href="/royalty-free-vectors/craft-vectors">Craft</a></li>
+					<li><a href="/royalty-free-vectors/color-vectors">Color</a></li>
+					<li><a href="/royalty-free-vectors/line-vectors">Line</a></li>
+					<li><a href="/royalty-free-vectors/bottle-vectors">Bottle</a></li>
+					<li><a href="/royalty-free-vectors/cup-vectors">Cup</a></li>
+					<li><a href="/royalty-free-vectors/mug-vectors">Mug</a></li>
+					<li><a href="/royalty-free-vectors/flat-vectors">Flat</a></li>
+					<li><a href="/royalty-free-vectors/classic-vectors">Classic</a></li>
+					<li><a href="/royalty-free-vectors/collection-vectors">Collection</a></li>
+					<li><a href="/royalty-free-vectors/dark-vectors">Dark</a></li>
+					<li><a href="/royalty-free-vectors/contour-vectors">Contour</a></li>
+					<li><a href="/royalty-free-vectors/pint-vectors">Pint</a></li>
+					<li><a href="/royalty-free-vectors/glass-vectors">Glass</a></li>
+					<li><a href="/royalty-free-vectors/stein-vectors">Stein</a></li>
+					<li><a href="/royalty-free-vectors/set-vectors">Set</a></li>
+					<li><a href="/royalty-free-vectors/light-vectors">Light</a></li>
+					<li><a href="/royalty-free-vectors/porter-vectors">Porter</a></li>
+					<li><a href="/royalty-free-vectors/stout-vectors">Stout</a></li>
+					<li><a href="/royalty-free-vectors/snifter-vectors">Snifter</a></li>
+					<li><a href="/royalty-free-vectors/wheat-vectors">Wheat</a></li>
+					<li><a href="/royalty-free-vectors/pub-vectors">Pub</a></li>
+					<li><a href="/royalty-free-vectors/marzen-vectors">Marzen</a></li>
+					<li><a href="/royalty-free-vectors/dunkel-vectors">Dunkel</a></li>
+					<li><a href="/royalty-free-vectors/red-vectors">Red</a></li>
+				</ul>
+			</div>
+		</section>
+	</article>
+
+	<!-- Footer -->
+	<footer>
+
+		<div>
+		<div class="column c1">
+			<nav class="company">
+				<h4>VectorStock</h4>
+				<ul>
+					<li><a href="/" title="Home">Home</a></li>
+					<li class="sel"><a href="/free-vectors" title="Free Vectors">Free Vectors</a></li>
+					<li class="sel"><a href="/royalty-free-vectors" title="All Royalty-Free Vectors">All Vectors</a></li>
+				</ul>
+				<ul>
+					<li><a href="/what-is-a-vector" title="What is a Vector?">What is a Vector?</a></li>
+				</ul>
+				<ul>
+					<li class="sel"><a href="/faq" title="Frequently Asked Questions"><span class="long">Frequently Asked Questions</span><span class="short">FAQs</span></a></li>
+					<li><a href="/faq/members/terms-of-use" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+					<li class="sel"><a href="/contact" title="Contact Us">Contact Us</a></li>
+									</ul>
+			</nav>
+		</div>
+		<div class="column c2">
+			<nav class="account">
+					<h4><span class="title">Account</span><span class="icon"></span></h4>
+					<ul>
+						<li><a href="/signup" title="Join Now">Join Now</a></li>
+						<li><a href="/signup?contributor" title="Become a VectorStock Contributor">Contributor Sign Up</a></li>
+						<li><a href="/faq/artists/why-sell-at-vectorstock" title="Contributor FAQ">Contributor FAQ</a></li>
+					<ul>
+			</nav>
+		</div>
+		<div class="column c3">
+			<nav class="social">
+				<h4>Social</h4>
+				<ul>
+					<li class="facebook sel"><a href="http://www.facebook.com/VectorStock" target="_blank"><span class="title">Facebook</span><span class="icon"></span></a></li>
+					<li class="pinterest sel"><a href="http://pinterest.com/vectorstock/" target="_blank"><span class="title">Pinterest</span><span class="icon"></span></a></li>
+					<li class="twitter sel"><a href="https://twitter.com/VectorStock" target="_blank"><span class="title">Twitter</span><span class="icon"></span></a></li>
+				</ul>
+			</nav>
+			<div class="signoff">
+				<h5><a href="https://www.vectorstock.com/" title="VectorStock®">VectorStock®</a></h5>
+				<p>VectorStock and the VectorStock logo are registered trademarks of VectorStock Media.<br>
+				© 2018. <span>All Rights Reserved.</span></p>
+			</div>
+		</div>
+	</div></footer>
+
+
+	<script src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"02e09611df","applicationID":"156179534","transactionName":"ZV0ENRYCC0RYAkVbDVwXJRQXFwpaFhNeSwNeTB9MAhEAUhQXVFEWXUpJAwEGFxpNGEFXER9ZSxcNEBBWVUxWRwtWXUsVC04RTkkEQh8NVBUEBAERSEFcAkVdEB8KV1JQW10CAQ==","queueTime":0,"applicationTime":36,"atts":"SRoHQ14YGEo=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+</body>
+</html>
