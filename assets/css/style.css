@@ -53,6 +53,7 @@ footer.page-footer {
 .btn-large {
 background: rgba(39, 77, 32, 0.89);
 border-style: 1rem solid black;
+margin-top: 40px;
 }
 
 .btn-large:hover {
