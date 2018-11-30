@@ -186,19 +186,31 @@ String.prototype.capitalize = function () {
 function googlePlaceDetails(googlePlaceId) {
     
     var googleApiKey = "AIzaSyAq8qjNnAwkr_fPwdDQGd7CR_qYMMTWYjY"
-    var queryURL = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" + googlePlaceId + "&fields=formatted_address,opening_hours/open_now&key=" + googleApiKey + "&callback=?"
+    var queryURL = "http://maps.googleapis.com/maps/api/place/details/json?placeid=" + googlePlaceId + "&fields=formatted_address,opening_hours/open_now&key=" + googleApiKey
 
     $.ajax({
         url: queryURL,
-        method: "GET"
-    })
-    .then(function(response) {
-        var results = response.data;
+        type: "GET",   
+        dataType: 'jsonp',
+        cache: false,
+        success: function(response){
+            console.log(response)                          
+            // alert(response);                   
+        }           
+    });  
 
-            console.log(results)
+    // $.ajax({
+    //     url: queryURL,
+    //     dataType: 'jsonp',
+    //     method: "GET"
+    // })
+    // .then(function(response) {
+    //     var results = response.data;
 
-            // //gets the rating from giphy data and puts it in a p tag
-            // var rating = results[i].rating;
-            // var p = $("<p>").text("Rating: " + rating);
-        })
+    //         console.log(results)
+
+    //         // //gets the rating from giphy data and puts it in a p tag
+    //         // var rating = results[i].rating;
+    //         // var p = $("<p>").text("Rating: " + rating);
+    //     })
 }
