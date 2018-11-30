@@ -33,6 +33,7 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             console.log('skipped')
         }
         else {
+            console.log('name: ' + results[i].name + ', id: ' + results[i].placeId)
             // collapsible header
             var collapsibleHeader = $("<div>").addClass("collapsible-header")
             createCollapsibleHeader(i, results[i].breweryId, results[i].name, collapsibleHeader)
@@ -185,10 +186,19 @@ String.prototype.capitalize = function () {
 function googlePlaceDetails(googlePlaceId) {
     
     var googleApiKey = "AIzaSyAq8qjNnAwkr_fPwdDQGd7CR_qYMMTWYjY"
-    var queryURL = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" + googlePlaceId + "&fields=formatted_address,opening_hours/open_now&key=" + googleApiKey + ""
+    var queryURL = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" + googlePlaceId + "&fields=formatted_address,opening_hours/open_now&key=" + googleApiKey + "&callback=?"
 
     $.ajax({
         url: queryURL,
         method: "GET"
     })
+    .then(function(response) {
+        var results = response.data;
+
+            console.log(results)
+
+            // //gets the rating from giphy data and puts it in a p tag
+            // var rating = results[i].rating;
+            // var p = $("<p>").text("Rating: " + rating);
+        })
 }
