@@ -32,5 +32,4 @@ $("#ageForm").submit(function (event) {
     } else {
         window.location = "pages/home.html"
     }
-
 });
