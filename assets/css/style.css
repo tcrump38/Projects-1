@@ -48,6 +48,10 @@ p {
   font-size: inherit;
 }
 
+.material-icons {
+  color: rgba(39, 77, 32, 0.715);
+}
+
 footer.page-footer {
   margin: 0;
 }
@@ -94,7 +98,6 @@ nav {
   font-weight: bold;
   border: none;
   border-radius: 5%;
-  border-style: none;
   background-color: rgba(255, 255, 255, 0.623);
 }
 
@@ -154,6 +157,8 @@ nav {
   font-weight: normal;
   font-style: italic;
 }
+
+
 
 .undefined-styles-button:hover {
   color: black;

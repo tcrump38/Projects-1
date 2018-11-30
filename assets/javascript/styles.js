@@ -22,12 +22,14 @@ database.ref('/stylesWiki').on("value", function (snapshot) {
         }
         else {
             var collHeader = $("<div>").addClass("collapsible-header")
+            var colHeaderIcon = $("<i>").addClass("material-icons").html('local_drink')
+            collHeader.prepend(colHeaderIcon)
             var beerLink = $("<a>").text(results[i].title)
             beerLink.addClass("btn styles-button")
             collHeader.append(beerLink)
             if (typeof results[i].sub != "undefined") {
                 for (j = 0; j < results[i].sub.length; j++) {
-                    var subBeers = $("<a>").text(results[i].sub[j]).addClass("btn undefined-styles-button")
+                    var subBeers = $("<a>").text(results[i].sub[j]).addClass("btn undefined-styles-button hide-on-med-and-down")
                     collHeader.append(subBeers)
                 }
             }
