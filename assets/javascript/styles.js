@@ -49,16 +49,16 @@ $(document).ready(function () {
 });
 
 function callWikiApi(element, wiki) {
-    var contenido = ''
+
     var query = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + wiki + "&callback=?"
-    console.log(query)
+
     $.ajax({
         type: "GET",
         url: query,
         contentType: "application/json; charset=utf-8",
         async: false,
         dataType: "json",
-        success: function (data, textStatus, jqXHR) {
+        success: function (data) {
             var markup = data.parse.text["*"];
             var blurb = $('<div></div>').html(markup).addClass("wiki-para");
             blurb.find('a').each(function () { $(this).replaceWith($(this).html()); });

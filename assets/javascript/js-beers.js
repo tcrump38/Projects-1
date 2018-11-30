@@ -27,10 +27,3 @@ var uniqStlesIds = allStylesIds.reduce(function(a,b){
   return a;
 },[]);
 
-console.log("-----------------")
-console.log("amountOfBeers: " + amountOfBeers)
-console.log("-----------------")
-console.log("uniqCategoriesIds: " + uniqCategoriesIds)
-console.log("-----------------")
-console.log("uniqStlesIds: ")
-console.log(uniqStlesIds)
