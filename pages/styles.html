@@ -47,18 +47,19 @@
     </div>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col s12">
-                <div class="card beers-list-box">
-                    <div class="card-content">
-                        <span class="card-title center-align">Beer Categories</span>
-                        <p class="center-align">Below you will find more beerwiki info on the different categories of beer.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card beers-list-box">
+                        <div class="card-content">
+                            <span class="card-title center-align">Beer Categories</span>
+                            <p class="center-align">Below you will find more beerwiki info on the different categories of beer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
     <!-- Container for the breweries -->
     <div class="container">
         <div class="row">
@@ -70,21 +71,29 @@
         </div>
     </div>
 
-    <div class="container" id="article">
-    </div>
-
     <div class="container infograph">
         <div class="row">
             <div class="col l4 m4 sm4">
 
             </div>
-            <div class="col l4 m4 sm4">
-                <a href="https://www.businessinsider.com/different-types-of-beer-2014-12"><img id="beer-graphic" src="../assets/images/brew_graph.png"
-                        style="border:5px solid rgba(255, 180, 50, 0.822)" alt="beer-infographic"></a>
-                <div class="row">
-                    <div class="col l4 m4 sm4">
 
-                    </div>
+            <div class="col l4 m4 sm4">
+               <!-- Trigger the Modal -->
+            <img id="myImg" src="../assets/images/brew_graph.png" alt="Beer Taxonomy" style="width:100%;max-width:300px">
+
+            <!-- The Modal -->
+                <div id="myModal" class="modal">
+    
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+    
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+    
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+                </div>
+    
                     <div class="col l12 m12 s12">
                         <span id="beer-graphic-subtext">(Click to enlarge taxonomy)</span>
                     </div>
@@ -94,12 +103,6 @@
                 <div class="col l4 m4 sm4">
                 </div>
             </div>
-        </div>
-        <!-- Credit for icons -->
-        <div class="container">
-            <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
-                    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
-                    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
