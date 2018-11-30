@@ -1,5 +1,5 @@
 
-
+/* home.html */
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -50,8 +50,13 @@ footer.page-footer {
   margin: 0;
 }
 
-.buttoni {
-  margin-top: 5%
+.btn-large {
+background: rgba(39, 77, 32, 0.89);
+border-style: 1rem solid black;
+}
+
+.btn-large:hover {
+background: rgba(39, 77, 32, 0.63);
 }
 
 /* brewery.html */

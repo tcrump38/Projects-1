@@ -37,6 +37,8 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             var collapsibleHeader = $("<div>").addClass("collapsible-header")
             createCollapsibleHeader(i, results[i].breweryId, results[i].name, collapsibleHeader)
             addMarker(i + 1, results[i].location, map, results[i].name);
+            var colHeaderIcon = $("<i>").addClass("material-icons").html('call_made')
+            collapsibleHeader.append(colHeaderIcon)
 
             // collapsible body
             var collapsibleBody = $("<div>").addClass("collapsible-body")
