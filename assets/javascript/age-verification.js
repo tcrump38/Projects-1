@@ -1,6 +1,6 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $('.datepicker').datepicker();
-  });
+});
 
 
 
@@ -11,9 +11,9 @@ $("#ageForm").submit(function (event) {
     var day = $("#birthDay").val();
 
     var month = $("#birthMonth").val();
-   
+
     var year = $("#birthYear").val();
-    
+
     var age = 21;
 
     var mydate = new Date();

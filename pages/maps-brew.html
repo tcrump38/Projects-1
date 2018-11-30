@@ -15,13 +15,16 @@
             height: 24px;
             margin: 4px 2px 0 -12px;
         }
+
         .addy>p {
             padding-left: 8px;
         }
+
         .open-close>img {
             height: 24px;
             margin: 4px 4px 0 0;
         }
+
         #map-breweries {
             height: 438px;
             width: 80%;
@@ -29,19 +32,20 @@
             margin-top: 2%;
             box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+
         #beer-icon-key {
             width: 80%;
             text-align: center;
             color: antiquewhite;
             margin-left: 10%;
-            background-color:rgba(39, 77, 32, 0.715);
+            background-color: rgba(39, 77, 32, 0.715);
             margin-top: 1%;
             font-family: 'Nunito', sans-serif;
             border-radius: 5%;
             font-size: 1.3rem;
         }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="../assets/javascript/breweries-list.js"></script>
 </head>
@@ -53,14 +57,14 @@
             <div class="nav-wrapper">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="styles.html">BeerWiki</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="styles.html">BeerWiki</a></li>
             </div>
             <ul class="sidenav" id="mobile-demo">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="maps-brew.html">Brewery Map</a></li>
-                    <li><a href="styles.html">BeerWiki</a></li>
-              </ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="maps-brew.html">Brewery Map</a></li>
+                <li><a href="styles.html">BeerWiki</a></li>
+            </ul>
         </nav>
     </div>
 
@@ -68,17 +72,18 @@
     <div class="container">
         <div class="row">
             <div id="map-breweries" class="col s10">
-             </div>
+            </div>
         </div>
     </div>
 
     <div class="container">
         <div class="row">
             <div id="beer-icon-key" class="col s8">
-                <p><img src="../assets/icons/pint.svg" height= "30px" width= "30px"><strong>: Number of Beers Available</strong><br>
-                    <img src="../assets/icons/beerTypes.svg" height= "30px" width= "30px"><strong>: Number of Beer Styles Available</strong>
+                <p><img src="../assets/icons/pint.svg" height="30px" width="30px"><strong>: Number of Beers Available</strong><br>
+                    <img src="../assets/icons/beerTypes.svg" height="30px" width="30px"><strong>: Number of Beer Styles
+                        Available</strong>
                 </p>
-             </div>
+            </div>
         </div>
     </div>
 
@@ -88,7 +93,7 @@
             <!-- All of the list items for the breweries will show up here -->
         </ul>
     </div>
-    
+
     <!-- Credit for icons -->
     <div class="container">
         <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
