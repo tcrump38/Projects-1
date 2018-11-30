@@ -181,3 +181,14 @@ function initialize() {
 String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
+
+function googlePlaceDetails(googlePlaceId) {
+    
+    var googleApiKey = "AIzaSyAq8qjNnAwkr_fPwdDQGd7CR_qYMMTWYjY"
+    var queryURL = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" + googlePlaceId + "&fields=formatted_address,opening_hours/open_now&key=" + googleApiKey + ""
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    })
+}
