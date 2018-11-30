@@ -27,7 +27,7 @@ function setTable() {
     var beers = results.beers
     for (var i = 0; i < beers.length; i++) {
         var collHeader = $("<div>").addClass("collapsible-header").attr('id', beers[i].breweryID).text(beers[i].name).attr('href', 'table3.html')
-        var colHeaderIcon = $("<i>").addClass("material-icons").html('expand_more')
+        var colHeaderIcon = $("<i>").addClass("material-icons").html('local_drink')
         collHeader.prepend(colHeaderIcon)
         var beerAbv = $("<span class='row beerinfo'>")
         if (typeof beers[i].abv != 'undefined') {
