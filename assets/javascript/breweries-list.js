@@ -1,12 +1,15 @@
 var breweriesATX;
-var geoBrews = [] // used in other js file
+// var geoBrews = [] // used in other js file
 var map
 var markers = []
+var service
 
 $(document).ready(function () {
     $('.sidenav').sidenav();
     $('.collapsible').collapsible();
+    setTimeout(function(){ allPlaces() }, 5000);
 });
+
 
 jQuery(function ($) {
     var script = document.createElement('script');
@@ -35,7 +38,7 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
         else {
             // collapsible header
             var collapsibleHeader = $("<div>").addClass("collapsible-header")
-            createCollapsibleHeader(i, results[i].breweryId, results[i].name, collapsibleHeader)
+            createCollapsibleHeader(i, results[i].breweryId, results[i].name, results[i].placeId, collapsibleHeader)
             addMarker(i + 1, results[i].location, map, results[i].name);
             var colHeaderIcon = $("<i>").addClass("material-icons").html('call_made')
             collapsibleHeader.append(colHeaderIcon)
@@ -101,9 +104,9 @@ function createHoursElement(hours, collapsibleHours) {
 
 
 // create collapsible header --- NOTE:: will need to add extra parameter to find if location is open; currently flagging even indeces as open locations
-function createCollapsibleHeader(i, id, name, collapsibleHeader) {
+function createCollapsibleHeader(i, id, name, placeId, collapsibleHeader) {
     console.log('name: ' + name + ', id: ' + id)
-    var beerLink = $("<a>").attr('id', id).text(name).attr('href', 'brewery.html')
+    var beerLink = $("<a>").attr('id', id).text(name).attr('href', 'brewery.html').data('placeId', placeId)
     beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange brew-button")
     beerLink.on("click", function (event) {
         localStorage.setItem("brewery", event.target.attributes.id.value)
@@ -182,4 +185,61 @@ function initialize() {
 // to capitlize first letter for non-Hours sentence
 String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
+function googlePlaceDetails(googlePlaceId) {
+    service.getDetails({
+        placeId: googlePlaceId,
+    }, function (place, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            console.log(place.name)
+            console.log(place.formatted_address)
+            if (googlePlaceId == 'ChIJayB1n5tIW4YR7q_YExbO_QY') {
+                console.log("ONLY ON SATURDAY")
+            } else {
+                console.log(place.opening_hours.open_now)
+            }
+        }
+        else if (status == "OVER_QUERY_LIMIT"){
+            sleep(5000)
+            console.log("did a wait")
+        }
+    });
+}
+
+
+function getDetailsforBatch(index) {
+    var allBeerLinks = $("#breweries-coll").find('a')
+    service = new google.maps.places.PlacesService(map);
+    foo = [range(0, 9), range(10, 19), range(20, 29), range(30, 39)]
+    list = foo[index]
+    for (i = 0; i < list.length; i++) {
+        j = list[i]
+        item = allBeerLinks[j]
+        console.log($(item).text())
+        var herePi = $(item).data("placeId")
+        googlePlaceDetails(herePi)
+    }
+}
+
+function range(start, end) {
+    var foo = [];
+    for (var i = start; i <= end; i++) {
+        foo.push(i);
+    }
+    return foo;
+}
+
+function allPlaces() {
+    getDetailsforBatch(0)
+    getDetailsforBatch(1)
+    getDetailsforBatch(2)
+    getDetailsforBatch(3)
+}
+
+
+function sleep( millisecondsToWait ) {
+    var now = new Date().getTime();
+    while ( new Date().getTime() < now + millisecondsToWait ) {}
+    console.log("did a wait")
 }
