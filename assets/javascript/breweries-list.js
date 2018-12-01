@@ -155,7 +155,7 @@ function handleLocationError(browserHasGeolocation, youAreHereInfoWindow, pos) {
 
 // init map, asks user for location (everytime -- for now)
 function initialize() {
-    var coordn = { lat: 30.2603535, lng: -97.7145152 };
+    var coordn = { lat: 30.2850284, lng: -97.7335226 };
     map = new google.maps.Map(document.getElementById('map-breweries'), { center: coordn, zoom: 10 });
     youAreHereInfoWindow = new google.maps.InfoWindow();
     // Try HTML5 geolocation. (User location)
