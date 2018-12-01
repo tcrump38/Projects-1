@@ -45,7 +45,7 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             var collapsibleHours = $("<ul>").addClass("collapsible hoursStyle")
             createHoursElement(results[i].hours, collapsibleHours)
             collapsibleBody.append(collapsibleHours)
-            createCollapsibleBody(results[i].amountOfBeers, results[i].styleId, collapsibleBody)
+            createCollapsibleBody(results[i].amountOfBeers, results[i].styleId, collapsibleBody, results[i].address)
 
             // list-item to hold collapsible
             var listItem = $("<li>").append(collapsibleHeader).append(collapsibleBody)
@@ -59,7 +59,7 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
 
 
 // create collapsible body
-function createCollapsibleBody(amountOfBeers, styleId, collapsibleBody) {
+function createCollapsibleBody(amountOfBeers, styleId, collapsibleBody, address) {
     // if beer amount present, load
     if (typeof amountOfBeers != "undefined") {
         collapsibleBody.append($("<div>").addClass("chip").html(amountOfBeers + '<img src="../assets/icons/pint.svg"></img>'))
@@ -70,7 +70,7 @@ function createCollapsibleBody(amountOfBeers, styleId, collapsibleBody) {
     }
     // add address if present (populate off google api) -- using placeholder for now
     var addy = $("<div>").addClass("col s12 m6 addy")
-    addy.append($("<p>").html("<em>Address:<em> 12345 Pauls Valley Rd #2, Austin, TX 78737").addClass("address-info"))
+    addy.append($("<p>").html("<em>Address:<em> " + address).addClass("address-info"))
     collapsibleBody.append(addy)
 }
 
