@@ -18,7 +18,7 @@ database.ref('/stylesWiki').on("value", function (snapshot) {
     breweriesATX = results
     for (var i = 0; i < results.length; i++) {
         if (typeof results[i] == "undefined") {
-            console.log('skipped')
+            // console.log('skipped')
         }
         else {
             var collHeader = $("<div>").addClass("collapsible-header")
@@ -41,7 +41,7 @@ database.ref('/stylesWiki').on("value", function (snapshot) {
             $("#breweries-coll").append(listItem)
         }
     }
-    console.log(snapshot.val());
+    // console.log(snapshot.val());
 }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
 });

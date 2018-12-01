@@ -30,7 +30,7 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
     breweriesATX = results
     for (var i = 0; i < results.length; i++) {
         if (typeof results[i] == "undefined") {
-            console.log('skipped')
+            // console.log('skipped')
         }
         else {
             // collapsible header
@@ -52,7 +52,7 @@ database.ref('/breweriesJSON').on("value", function (snapshot) {
             $("#breweries-coll").append(listItem)
         }
     }
-    console.log(snapshot.val());
+    // console.log(snapshot.val());
 }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
 });
@@ -102,7 +102,7 @@ function createHoursElement(hours, collapsibleHours) {
 
 // create collapsible header --- NOTE:: will need to add extra parameter to find if location is open; currently flagging even indeces as open locations
 function createCollapsibleHeader(i, id, name, collapsibleHeader) {
-    console.log('name: ' + name + ', id: ' + id)
+    // console.log('name: ' + name + ', id: ' + id)
     var beerLink = $("<a>").attr('id', id).text(name).attr('href', 'brewery.html')
     beerLink.addClass("btn yellow accent-4 black-text waves-effect waves-orange brew-button")
     beerLink.on("click", function (event) {
