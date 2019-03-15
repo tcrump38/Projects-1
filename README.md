@@ -26,3 +26,13 @@ Enter on our age verification page:
 Step 2, Find breweries and browse our wiki data on specific beers to gain understanding:
 <img width="958" alt="Screen Shot 2019-03-15 at 11 47 44 AM" src="https://user-images.githubusercontent.com/39817046/54447771-3e35a100-4718-11e9-8cd2-8817ff319f60.png">
 
+"Beer Me" directs the user to maps and info page about local breweries:
+<img width="908" alt="Screen Shot 2019-03-15 at 11 49 37 AM" src="https://user-images.githubusercontent.com/39817046/54448157-0f6bfa80-4719-11e9-8b48-07f41ef22851.png">
+
+Clicking on a brewery will render a beer menu with more details:
+<img width="349" alt="Screen Shot 2019-03-15 at 11 58 13 AM" src="https://user-images.githubusercontent.com/39817046/54448404-a933a780-4719-11e9-87df-121a9dc0c540.png">
+
+Alternatively, the wiki page is available for beer info:
+<img width="941" alt="Screen Shot 2019-03-15 at 11 55 46 AM" src="https://user-images.githubusercontent.com/39817046/54448275-50640f00-4719-11e9-8fb6-a72614c0d73c.png">
+
+
