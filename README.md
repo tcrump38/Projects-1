@@ -1,4 +1,4 @@
-# Projects-1: Cool Story, Brew..
+# Projects-1: Cool Story, Brew
 
 Link to deployed site: https://tcrump38.github.io/Projects-1/
 
